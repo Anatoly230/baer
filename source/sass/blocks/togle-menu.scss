@@ -1,0 +1,62 @@
+$toggle-color: $black;
+
+@mixin toggle-parametrs() {
+  width: rem(24);
+  height: rem(1.5);
+  background-color: $toggle-color;
+}
+
+.togle-menu {
+  position: relative;
+  width: rem(24);
+  height: rem(17.5);
+  border: none;
+  background-color: transparent;
+}
+
+.togle-menu--hide {
+  display: none;
+}
+
+.togle-menu:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.togle-menu:active {
+  opacity: 0.3;
+}
+
+.togle-menu::before,
+.togle-menu::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  content: "";
+  transition: transform 0.2s linear 0s;
+
+  @include toggle-parametrs;
+}
+
+.togle-menu::before {
+  box-shadow: 0 8px 0 $toggle-color;
+  transition: box-shadow 0.2s linear 50ms;
+}
+
+.togle-menu::after {
+  top: rem(16);
+
+  @include toggle-parametrs;
+}
+
+.togle-menu--close::before {
+  box-shadow: 0 0 0 rgba($toggle-color, 0);
+  background-color: $toggle-color;
+  transform: translateY(8px) rotate(45deg);
+}
+
+.togle-menu--close::after {
+  background-color: $toggle-color;
+  transform: translateY(-8px) rotate(-45deg);
+}

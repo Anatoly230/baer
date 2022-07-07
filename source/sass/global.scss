@@ -1,0 +1,31 @@
+:root {
+  box-sizing: border-box;
+  font-size: calc($root-font-size / $initial-font-size) + em;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+  margin: 0;
+}
+
+@font-face {
+  font-family: "oswaldR";
+  src: local("oswaldR"), url("../fonts/oswaldregular.woff2") format("woff2"), url("../fonts/oswaldregular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "oswaldM";
+  src: local("oswaldM"), url("../fonts/oswaldmedium.woff2") format("woff2"), url("../fonts/oswaldmedium.woff") format("woff");
+  font-weight: 500;
+  font-style: bold;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  line-height: 1;
+}

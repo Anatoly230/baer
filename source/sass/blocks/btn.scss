@@ -1,0 +1,40 @@
+$hover-clr: #5eaa2f;
+$hover-show-clr: #ebebeb;
+
+.btn {
+  display: block;
+  font-size: rem(14);
+  text-transform: uppercase;
+  font-weight: 400;
+  background-color: $base-green;
+  color: $white;
+  text-decoration: none;
+  text-align: center;
+  padding: 1rem;
+  border: none;
+
+  @include tablet {
+    font-size: rem(20);
+  }
+}
+
+.btn--empty {
+  background-color: $pale-gray;
+  color: $off-black;
+}
+
+.btn:hover {
+  background-color: $hover-clr;
+}
+
+.btn:active {
+  color: rgba($white, 0.3);
+}
+
+.btn--empty:hover {
+  background-color: $hover-show-clr;
+}
+
+.btn--empty:active {
+  color: rgba($off-black, 0.3);
+}
