@@ -14,9 +14,41 @@
   <link rel="manifest" href="manifest.webmanifest">
 </head>
 
-<body class="page__body page-body page-body--index">
-  <div class="page-body__header-wrapper">
-    <header class="page-body__header main-header">
+<body class="page__body page-body">
+  <header class="page__header header" >
+    <nav class="header__nav">
+      <div class="header__toggle-wrapper">
+        <a class="header__logo logo" href="#">
+          <span class="visually-hidden">перейти на главную</span>
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/icons/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/icons/logo-tablet.svg">
+            <img class="logo__pic" src="img/icons/logo-mobile.svg" alt="логотип компании cat energy" width="86"
+              height="35">
+          </picture>
+        </a>
+        <button class="header__togle-menu togle-menu"><span class=" visually-hidden">Закрыть</span></button>
+      </div>
+      <menu class="header__menu menu">
+        <li class="menu__item">Каталог товаров</li>
+        <li class="menu__item">Вязание на заказ</li>
+      </menu>
+      <ul class="header__helpers helper">
+        <li class="helper__item">Поиск по сайту</li>
+        <li class="helper__item">Корзина: пока пуста</li>
+      </ul>
+
+        <div class="header__adding-info info">
+        <ul class="info__item event">
+          <li class="event__item">Новые поступления</li>
+          <li class="event__item">Распродажа</li>
+        </ul>
+        <p class="info__item info__item--sheep">Бесплатная доставка по России</p>
+      </div>
+
+    </nav>
+  </header>
+  <!-- <header class="page-body__header main-header">
       <nav class="main-nav">
         <div class="main-nav__togles-wrapper">
           <a class="main-nav__logo main-nav__logo logo" href="#">
@@ -35,45 +67,24 @@
           </a>
           <button class="main-nav__togle-menu togle-menu"><span class=" visually-hidden">Закрыть</span></button>
         </div>
-        <menu class="main-nav__menu menu">
-          <li class="menu__item">
-            <a class="menu__item-link menu__item-link-index menu__item-link--current menu__item-link--current-index"
-              href="#">Главная</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__item-link menu__item-link-index " href="catalog.html">Каталог продукции</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__item-link menu__item-link-index" href="form.html">Подбор программы</a>
-          </li>
-        </menu>
       </nav>
-    </header>
+      <menu class="main-nav__menu menu">
+        <li class="menu__item">
+          <a class="menu__item-link menu__item-link-index menu__item-link--current menu__item-link--current-index"
+            href="#">Главная</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__item-link menu__item-link-index " href="catalog.html">Каталог продукции</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__item-link menu__item-link-index" href="form.html">Подбор программы</a>
+        </li>
+      </menu>
+    </header> -->
 
-    <section class="page__promo promo">
-      <div class="promo__content-wrapper">
-        <h2 class="promo__title">Функциональное питание для котов</h2>
-        <p class="promo__desc">Занялся собой? Займись котом!</p>
 
-        <picture>
-          <source type="image/webp" media="(min-width: 1440px)"
-            srcset="img/index/desktop-cup.webp, img/index/desktop-cup@2x.webp 2x">
-          <source type="image/png" media="(min-width: 1440px)"
-            srcset="img/index/desktop-cup.png, img/index/desktop-cup@2x.png 2x">
-          <source type="image/webp" media="(min-width: 768px)"
-            srcset="img/index/tablet-cup.webp, img/index/tablet-cup@2x.webp 2x">
-          <source type="image/png" media="(min-width: 768px)"
-            srcset="img/index/tablet-cup.png, img/index/tablet-cup@2x.png 2x">
-          <img class="promo__pic" src="img/index/mobile-cup.png" srcset="img/index/mobile-cup@2x.png 2x"
-            alt="Пример упаковки для еды" width="552" height="499">
-        </picture>
-
-        <a href="form.html" class="promo__link btn">Подобрать программу</a>
-      </div>
-    </section>
-  </div>
   <main class="page__content content">
-    <h1 class="visually-hidden">Полезное питание для кошек</h1>
+    <!-- <h1 class="visually-hidden">Полезное питание для кошек</h1>
     <section class="content__description description">
       <h2 class="visually-hidden">Описание программ питания</h2>
       <ul class="description__list">
@@ -221,11 +232,13 @@
           width="600" height="450" allowfullscreen="" loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
-    </section>
+    </section> -->
+
+
   </main>
 
   <footer class="page-body__footer main-footer">
-    <div class="main-footer__wrapper">
+    <!-- <div class="main-footer__wrapper">
       <a href="#" class="main-footer__item  main-footer__logo-link logo">
         <span class="visually-hidden">перейти на главную</span>
         <svg class="main-footer__logo-pic" width="128" height="24">
@@ -264,12 +277,12 @@
           <use xlink:href="img/icons/sprite.svg#academy"></use>
         </svg>
       </a>
-    </div>
+    </div> -->
   </footer>
 
 
   <script src="js/toggle-menu.min.js"></script>
-  <script src="js/miracles.min.js"></script>
+  <!--  <script src="js/miracles.min.js"></script> -->
 </body>
 
 </html>

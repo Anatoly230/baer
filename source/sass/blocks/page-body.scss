@@ -9,13 +9,14 @@
   grid-template-rows: min-content 1fr min-content;
   min-height: 100%;
   font-family: "oswaldR", "Arial", sans-serif;
-  background: $white;
+  // background-color: $white;
+  background-color: rgba(grey, 0.1);
   color: $black;
   font-weight: 400;
-  line-height: calc(18 / 14);
+  line-height: calc(24 / 15);
 
   @include tablet {
-    font-size: rem(16);
+    font-size: rem(17);
     line-height: calc(24 / 16);
   }
 }
