@@ -1,22 +1,13 @@
-$font-color: $black;
-
-
-.menu {
+.helper {
   background-color: $white;
   @include reset-list-style;
 
   @include tablet {
-    background-color: transparent;
-    font-size: rem(15);
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    width: 50%;
+align-items: center;
   }
 
   @include desktop {
-    align-items: center;
-    background-color: $white;
     max-width: rem(410);
     font-size: rem(17);
   }
@@ -28,11 +19,14 @@ $font-color: $black;
     border-bottom: 1px solid rgba($black, 0.1);
 
     @include tablet {
+      text-align: right;
       padding: 0;
-      text-align: left;
       border-bottom: none;
       width: 50%;
     }
-  }
 
+    @include desktop {
+      padding: 0;
+    }
+  }
 }
