@@ -8,6 +8,7 @@
 *.sublime*
 node_modules/
 build/
+zip/
 previews/
 tasks/
 npm-debug.*
