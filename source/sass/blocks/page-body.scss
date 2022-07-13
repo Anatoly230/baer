@@ -8,9 +8,9 @@
   grid-template-columns: 1fr;
   grid-template-rows: min-content 1fr min-content;
   min-height: 100%;
-  font-family: "oswaldR", "Arial", sans-serif;
+  font-family: "opensans", "Arial", sans-serif;
   // background-color: $white;
-  background-color: grey;
+  background-color: rgba(grey, 0.2);
   color: $black;
   font-weight: 400;
   line-height: calc(24 / 15);
