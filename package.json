@@ -1,9 +1,9 @@
 {
   "name": "cat-energy",
   "private": true,
-  "description": "второй проект от HTML Academy - cat-energy",
+  "description": "третий проект от HTML Academy - Bear",
   "main": "index.js",
-  "homepage": "https://github.com/Anatoly230/cat-energy",
+  "homepage": "https://github.com/Anatoly230/baer",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
     "autoprefixer": "10.4.0",
@@ -24,6 +24,7 @@
     "gulp-terser": "2.0.1",
     "gulp-typograf": "^4.0.3",
     "gulp-webp": "4.0.1",
+    "gulp-zip": "^5.1.0",
     "postcss": "8.3.11",
     "postcss-csso": "5.0.1",
     "stylelint": "13.13.1",
@@ -37,7 +38,7 @@
     "lintfix": "stylelint \"source/sass/**/*.scss\" --fix --syntax scss --ignore-path .gitignore",
     "build": "gulp build",
     "start": "gulp"
-  },
+    },
   "browserslist": [
     "last 2 versions",
     "not dead",
@@ -59,6 +60,7 @@
   "type": "module",
   "dependencies": {
     "browser-sync": "^2.27.10",
+    "gulp-lintspaces": "^1.0.1",
     "typograf": "^6.14.1"
   }
 }

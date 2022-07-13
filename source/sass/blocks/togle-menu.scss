@@ -1,15 +1,15 @@
 $toggle-color: $black;
 
 @mixin toggle-parametrs() {
-  width: rem(24);
-  height: rem(1.5);
+  width: rem(20);
+  height: rem(2);
   background-color: $toggle-color;
 }
 
 .togle-menu {
   position: relative;
-  width: rem(24);
-  height: rem(17.5);
+  width: rem(20);
+  height: rem(14);
   border: none;
   background-color: transparent;
 }
@@ -40,12 +40,12 @@ $toggle-color: $black;
 }
 
 .togle-menu::before {
-  box-shadow: 0 8px 0 $toggle-color;
+  box-shadow: 0 6px 0 $toggle-color;
   transition: box-shadow 0.2s linear 50ms;
 }
 
 .togle-menu::after {
-  top: rem(16);
+  top: rem(12);
 
   @include toggle-parametrs;
 }
@@ -53,10 +53,10 @@ $toggle-color: $black;
 .togle-menu--close::before {
   box-shadow: 0 0 0 rgba($toggle-color, 0);
   background-color: $toggle-color;
-  transform: translateY(8px) rotate(45deg);
+  transform: translateY(6px) rotate(45deg);
 }
 
 .togle-menu--close::after {
   background-color: $toggle-color;
-  transform: translateY(-8px) rotate(-45deg);
+  transform: translateY(-6px) rotate(-45deg);
 }

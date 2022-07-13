@@ -14,6 +14,7 @@ import svgstore from 'gulp-svgstore';
 import del from 'del';
 import imagemin from 'gulp-imagemin';
 import webp from 'gulp-webp';
+import tozip from 'gulp-zip';
 import concat from 'gulp-concat';
 
 const source = "source";
@@ -56,6 +57,33 @@ const scripts = () => {
     .pipe(browser.stream());
 }
 
+// to zip
+
+const leadingZero = function (number) {
+  return number < 10 ? `0${number}` : number;
+};
+
+const getDateTime = function () {
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = leadingZero(now.getMonth() + 1);
+  const day = leadingZero(now.getDate());
+  const hours = leadingZero(now.getHours());
+  const minutes = leadingZero(now.getMinutes());
+  const seconds = leadingZero(now.getSeconds());
+
+  return `${year}-${month}-${day}-${hours}-${minutes}-${seconds}`;
+};
+
+export const zip = function () {
+  let dateTime = getDateTime();
+  let fileName = `dist-${dateTime}.zip`;
+  console.log(dateTime)
+  return gulp.src('./build/**/*.*')
+    .pipe(tozip(fileName))
+    .pipe(gulp.dest('zip'));
+}
+// to zip
 
 // Images
 
@@ -189,3 +217,5 @@ export default gulp.series(
     watcher
   )
 )
+
+

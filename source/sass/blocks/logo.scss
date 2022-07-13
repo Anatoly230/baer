@@ -1,28 +1,26 @@
-.logo:hover {
-  opacity: 0.8;
+.logo {
+display: block;
+
+  &__pic {
+    display: block;
+    margin: 0 auto;
+
+
+    @include tablet {
+      width: rem(114);
+    }
+
+    @include desktop {
+      width: rem(149);
+    }
+  }
 }
 
-.logo:active {
+.logo:hover {
   opacity: 0.6;
 }
 
-.logo__pic {
-  width: rem(33);
-  height: rem(37);
-
-  @include tablet {
-    width: rem(174);
-    height: rem(52);
-  }
-
-  @include desktop {
-    width: rem(202);
-    height: rem(59);
-  }
+.logo:active {
+  opacity: 0.3;
 }
 
-.logo__pic-title {
-  @include tablet {
-    display: none;
-  }
-}
