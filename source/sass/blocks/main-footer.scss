@@ -11,9 +11,9 @@
   @include section-wrapper;
 
   @include tablet {
-    padding-bottom: rem(56);
+    padding-bottom: rem(30);
     flex-direction: row;
-    padding-top: rem(57);
+    padding-top: rem(23);
   }
 }
 
@@ -29,16 +29,17 @@
   }
 }
 
+
 .main-footer__item:last-child {
   border: none;
 }
 
 .main-footer__logo-link {
-  padding-top: rem(39);
-  padding-bottom: rem(32);
-  text-align: center;
+
+  display: none;
 
   @include tablet {
+    display: initial;
     padding: 0;
     text-align: left;
   }
@@ -60,11 +61,16 @@
 }
 
 .main-footer__devs {
-  font-size: rem(16);
+  font-size: rem(19);
+  font-weight: bold;
 
   @include tablet {
     margin-right: rem(20);
   }
+}
+
+.main-footer__devs-logo {
+  fill: #63d1bb;
 }
 
 .main-footer__devs-link:hover .main-footer__devs-logo {

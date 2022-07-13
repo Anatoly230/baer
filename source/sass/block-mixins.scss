@@ -42,11 +42,6 @@
   padding-left: rem(30);
   padding-right: rem(30);
 
-  @media (min-width: 321px) {
-    padding-left: calc(30 / 320 * 100%);
-    padding-right: calc(30 / 320 * 100%);
-  }
-
   @include tablet {
     padding-left: rem(50);
     padding-right: rem(50);
