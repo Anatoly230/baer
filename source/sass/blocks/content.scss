@@ -1,0 +1,37 @@
+.content {
+
+  &__advantages {
+    padding-block-start: rem(30);
+  }
+
+  &__advantages-wrapper {
+    @include section-wrapper-b;
+  }
+
+  &__advantages-title {
+    font-size: rem(25);
+    line-height: calc(30 / 25);
+    font-weight: bold;
+    margin-block-end: rem(5);
+
+    @include tablet {
+      font-size: rem(43);
+      line-height: calc(50 / 43);
+      margin-block-end: rem(18);
+    }
+
+    @include desktop {
+      font-size: rem(53);
+      line-height: calc(57 / 53);
+      margin-block-end: rem(16);
+    }
+  }
+
+  &__promo {
+    padding-block-start: rem(73);
+
+    @include tablet {
+      padding-block-start: rem(110);
+    }
+  }
+}

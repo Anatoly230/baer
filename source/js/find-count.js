@@ -1,14 +1,24 @@
 
-let rootElement = document.querySelector(".advantages")
-let styles = getComputedStyle(rootElement);
-let counter = styles.getPropertyValue("--counter");
 
-let childrens = rootElement.childElementCount;
-let count;
-if(childrens % 2 !== 0 ){
-  count = Math.ceil(childrens / 2)
-}else{
-  count = childrens / 2;
+function equating(domElem, colCount) {
+  let element = document.querySelector(`.${domElem}`);
+  if (element !== null) {
+
+    let childrens = element.childElementCount;
+    let count;
+
+    if (childrens % colCount !== 0) {
+      count = Math.ceil(childrens / colCount)
+    } else {
+      count = childrens / colCount;
+    }
+    element.style.gridAutoFlow = 'column';
+    element.style.gridTemplateRows = `repeat(${count}, auto)`;
+    element.style.gridTemplateColumns = `repeat(${colCount}, 1fr)`;
+  } else {
+    console.log(`element not found`)
+  }
 }
 
-rootElement.style.setProperty("--counter" , count);
+equating("advantages", 2);
+

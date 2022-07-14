@@ -1,10 +1,12 @@
+$green: #46c1ae;
 .social-list {
   display: flex;
   flex-wrap: wrap;
   margin: 0;
-  padding: rem(22) 0 rem(12);
+  padding: rem(30) 0 rem(30);
   justify-content: center;
   max-width: 100%;
+  gap: rem(24);
 
   @include tablet {
     padding: 0;
@@ -14,19 +16,16 @@
 
 .social-list__item {
   @include reset-list-style;
-  margin-bottom: rem(10);
+
 }
 
-.social-list__item:not(:last-of-type) {
-  margin-right: rem(24);
-}
 
 .social-list__item:hover .social-list__item-pic {
-  fill: $base-green;
+  fill: $green;
 }
 
 .social-list__item:active .social-list__item-pic {
-  opacity: 0.5;
+  opacity: 0.3;
 }
 
 .social-list__item-pic {

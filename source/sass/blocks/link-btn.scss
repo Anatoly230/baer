@@ -1,0 +1,54 @@
+.link-btn {
+  width: 100%;
+  text-decoration: none;
+  padding: rem(24) rem(30) rem(31);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  column-gap: rem(30);
+  background-color: #63d1bb;
+  margin: 0;
+
+  @include tablet {
+    padding: rem(25) rem(36) rem(34);
+  }
+
+  &:nth-last-of-type(odd) {
+    background-color: #56c3b2;
+  }
+
+  &::after {
+    opacity: 0.5;
+    display: block;
+    content: url("../img/icons/lamp.svg");
+  }
+
+  &:nth-last-of-type(1):after {
+    opacity: 0.5;
+    display: block;
+    content: url("../img/icons/toy.svg");
+  }
+
+  &:hover::after {
+    opacity: 0.7;
+
+  }
+
+  &:active::after {
+    opacity: 0.3;
+  }
+
+  &__text {
+    font-size: rem(19);
+    line-height: calc(24 / 19);
+    font-weight: bold;
+    color: $white;
+    max-width: rem(110);
+
+    @include tablet {
+      font-size: rem(20);
+      line-height: calc(30 / 20);
+      max-width: rem(113);
+    }
+  }
+}
