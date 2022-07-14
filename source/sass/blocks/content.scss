@@ -1,6 +1,7 @@
 .content {
 
   &__advantages {
+    background-color: $white;
     padding-block-start: rem(30);
   }
 
@@ -33,5 +34,9 @@
     @include tablet {
       padding-block-start: rem(110);
     }
+  }
+
+  &__special {
+
   }
 }
