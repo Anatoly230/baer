@@ -1,0 +1,48 @@
+.content {
+
+  &__advantages {
+    background-color: $white;
+    padding-block-start: rem(30);
+  }
+
+  &__advantages-wrapper {
+    @include section-wrapper-b;
+  }
+
+  &__advantages-title {
+    max-width: rem(260);
+    font-size: rem(25);
+    line-height: calc(30 / 25);
+    font-weight: bold;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    margin-block-end: rem(5);
+
+    @include tablet {
+      max-width: rem(420);
+      font-size: rem(43);
+      line-height: calc(50 / 43);
+      margin-inline-start: initial;
+      margin-inline-end: initial;
+      margin-block-end: rem(18);
+    }
+
+    @include desktop {
+      font-size: rem(53);
+      line-height: calc(57 / 53);
+      margin-block-end: rem(16);
+    }
+  }
+
+  &__promo {
+    padding-block-start: rem(73);
+
+    @include tablet {
+      padding-block-start: rem(110);
+    }
+  }
+
+  &__special {
+
+  }
+}

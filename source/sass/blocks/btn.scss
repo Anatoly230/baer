@@ -3,38 +3,29 @@ $hover-show-clr: #ebebeb;
 
 .btn {
   display: block;
-  font-size: rem(14);
+  font-size: rem(18);
+  line-height: calc(20 / 18);
   text-transform: uppercase;
-  font-weight: 400;
-  background-color: $base-green;
-  color: $white;
+  font-weight: bold;
+  background-color: $white;
+  color: $black;
   text-decoration: none;
   text-align: center;
-  padding: 1rem;
-  border: none;
+  padding: rem(16);
+  border: 2px solid $off-black;
 
   @include tablet {
-    font-size: rem(20);
+    font-size: rem(17);
+    line-height: calc(20 / 17);
   }
 }
 
-.btn--empty {
-  background-color: $pale-gray;
-  color: $off-black;
-}
 
 .btn:hover {
-  background-color: $hover-clr;
+  background-color: $off-black;
+  color: $white;
 }
 
 .btn:active {
   color: rgba($white, 0.3);
-}
-
-.btn--empty:hover {
-  background-color: $hover-show-clr;
-}
-
-.btn--empty:active {
-  color: rgba($off-black, 0.3);
 }
