@@ -104,6 +104,7 @@ $font-color: $black;
 
 
   &__item-link--helper {
+
     width: 100%;
     display: grid;
     grid-template-columns: 1fr minmax(30px, auto) 1fr;
@@ -134,6 +135,15 @@ $font-color: $black;
   }
 
   &__item--helper-desc {
+    display: inline;
+    font-size: inherit;
+    font-weight: inherit;
+    background-color: inherit;
+    line-height: inherit;
+    padding: 0;
+    color: inherit;
+    border: none;
+
     @include tablet {
       display: none;
     }

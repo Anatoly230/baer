@@ -27,7 +27,8 @@
               height="35">
           </picture>
         </a>
-        <button class="header__togle-menu togle-menu"><span class=" visually-hidden">Закрыть</span></button>
+        <button class="header__togle-menu togle-menu" type="submit"><span
+            class=" visually-hidden">Закрыть</span></button>
       </div>
       <ul class="header__menu menu">
         <li class="menu__item menu__item--main menu__item--separator menu__item">
@@ -43,7 +44,7 @@
             <svg class="menu__item-icon" width="18" height="18">
               <use xlink:href="./img/icons/sprite.svg#search"></use>
             </svg>
-            <span class="menu__item--helper-desc">Поиск по сайту</span>
+            <button class="menu__item--helper-desc">Поиск по сайту</button>
           </a>
         </li>
         <li class="menu__item">
@@ -74,7 +75,7 @@
 
   <main main class="page-body__content content">
     <h1 class="visually-hidden">Вязанные изделия</h1>
-    <section class="content__promo promo">
+    <!-- <section class="content__promo promo">
 
       <h2 class="promo__title">Милые штуки ручной работы для дома</h2>
       <div class="promo__link-btns-wrapper">
@@ -185,7 +186,31 @@
           </li>
         </ul>
       </div>
+    </section> -->
+
+
+    <section class="content__reviews reviews">
+      <h2 class="reviews__title">Отзывы</h2>
+      <blockquote class="quote">
+        <p class="quote__text">
+          Я&nbsp;молодая мама, но&nbsp;всё равно фотографии не&nbsp;набирали и&nbsp;близко такого количества лайков, как
+          у&nbsp;популярных инстамамочек. В&nbsp;отчаянии, я&nbsp;накупила аксессуаров и&nbsp;игрушек в&nbsp;Мишке,
+          и&nbsp;мои фотографии сразу стали более стильными, а&nbsp;также набирают больше лайков!
+        </p>
+        <cite class="quote__author">
+          <span class="quote__author-name">Анастасия Красильникова</span>
+          <span class="quote__author-social">@misssssiskras</span>
+        </cite>
+      </blockquote>
+      <div class="quote__slide-btn-wrapper">
+        <button class="quote__slide-btn" type="button"><span class="visually-hidden">влево</span></button>
+        <button class="quote__slide-btn" type="button"><span class="visually-hidden">вправо</span></button>
+      </div>
+      <a href="#" class="quote__feebback-btn btn">
+        Написать
+      </a>
     </section>
+
   </main>
 
   <footer class="page-body__footer main-footer">
