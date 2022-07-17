@@ -1,28 +1,57 @@
 .content {
-  @include section-wrapper;
 
-  &__reviews {}
+  &__reviews {
+    @include section-wrapper;
+
+  }
 }
 
 .reviews {
+  position: relative;
+  overflow-x: hidden;
+  background-color: $white;
   padding-block-start: rem(36);
   padding-block-end: rem(46);
 
   @include tablet {
+    padding-block-end: rem(85);
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr) rem(175);
     grid-template-rows: repeat(2, auto);
     grid-template-areas:
     "title title fb"
     "quote quote quote";
     row-gap: rem(20);
-    
-    @include desktop {
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-areas:
-        ". title title fb"
-        ". quote quote quote";
+    background-image: url("../img/background/review-tablet.jpg");
+    background-position: left top;
+    background-size: auto;
+    background-repeat: no-repeat;
+  }
 
+  @include desktop {
+    grid-template-columns: repeat(3, 1fr) rem(175);
+    grid-template-areas:
+      ". title title fb"
+      ". quote quote quote";
+
+  }
+
+  &::before {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    width: 100vw;
+    height: rem(6);
+    background-image: url("../img/icons/pattern-wave.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: repeat-x;
+
+    @include tablet {
+      height: rem(17);
     }
   }
 
@@ -88,10 +117,10 @@
     margin-block-end: rem(51);
 
     @include tablet {
-        z-index: 1;
-        align-self: end;
-        grid-column: -1 / -2;
-        grid-row: -1 / 2;
+      z-index: 1;
+      align-self: end;
+      grid-column: -1 / -2;
+      grid-row: -1 / 2;
     }
   }
 
