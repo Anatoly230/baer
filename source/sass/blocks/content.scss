@@ -45,4 +45,9 @@
   &__special {
 
   }
+
+  &__reviews {
+    @include section-wrapper;
+
+  }
 }
