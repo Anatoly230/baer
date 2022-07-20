@@ -1,4 +1,5 @@
 .special {
+  overflow: hidden;
   position: relative;
   @include section-wrapper;
   background-color: $white;
@@ -24,8 +25,9 @@
   @include desktop {
     padding-block-start: rem(54);
     padding-block-end: rem(96);
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: rem(110) repeat(5, 1fr);
     grid-template-rows: 1fr repeat(3, auto);
+    gap: 0;
     grid-template-areas:
       "k t t i i i"
       ". d d i i i"
@@ -41,6 +43,8 @@
     background-position: center;
     background-size: contain;
     width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: 0;
     height: auto;
     height: rem(6);
@@ -141,6 +145,10 @@
     @include tablet {
       margin-block-end: initial;
       object-fit: cover;
+    }
+
+    @include desktop {
+      margin-inline-start: rem(42);
     }
   }
 
