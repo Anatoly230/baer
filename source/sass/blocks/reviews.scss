@@ -1,0 +1,70 @@
+
+.reviews {
+    position: relative;
+    overflow-x: hidden;
+    background-color: $white;
+    padding-block-start: rem(36);
+    padding-block-end: rem(46);
+
+    @include tablet {
+      padding-block-start: rem(70);
+      padding-block-end: rem(141);
+      display: grid;
+      grid-template-columns: repeat(2, 1fr) rem(175);
+      grid-template-rows: repeat(2, auto);
+      grid-template-areas:
+        "title title fb"
+        "quote quote quote";
+      // row-gap: rem(20);
+      background-image: url("../img/background/review-tablet.jpg");
+      background-position: left top;
+      background-size: auto;
+      background-repeat: no-repeat;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/background/review-tablet@2x.jpg");
+      }
+    }
+
+    @include desktop {
+      grid-template-columns: rem(110) repeat(2, 1fr) rem(175);
+      grid-template-areas:
+        ". title title fb"
+        ". quote quote quote";
+      padding-block-end: rem(180);
+
+    }
+
+    &::before {
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      content: "";
+      width: 100vw;
+      height: rem(6);
+      background-image: url("../img/icons/pattern-wave.svg");
+      background-size: contain;
+      background-position: center;
+      background-repeat: repeat-x;
+
+      @include tablet {
+        height: rem(17);
+      }
+    }
+
+    &__title {
+      font-size: rem(25);
+      line-height: calc(30 / 25);
+      margin-block-end: rem(14);
+
+      @include tablet {
+        margin-block-end: 0;
+        font-size: rem(43);
+        line-height: calc(50 / 43);
+        grid-area: title;
+      }
+
+    }
+  }

@@ -11,7 +11,7 @@ $hover-show-clr: #ebebeb;
   color: $black;
   text-decoration: none;
   text-align: center;
-  padding: rem(16);
+  padding: rem(14);
   border: 2px solid $off-black;
 
   @include tablet {
@@ -22,10 +22,12 @@ $hover-show-clr: #ebebeb;
 
 
 .btn:hover {
+  border-color: transparent;
   background-color: $off-black;
   color: $white;
 }
 
 .btn:active {
+  border-color: transparent;
   color: rgba($white, 0.3);
 }

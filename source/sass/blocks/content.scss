@@ -6,7 +6,10 @@
   }
 
   &__advantages-wrapper {
-    @include section-wrapper-b;
+    @include section-wrapper;
+
+      max-width: rem(768);
+
   }
 
   &__advantages-title {
@@ -43,6 +46,11 @@
   }
 
   &__special {
+
+  }
+
+  &__reviews {
+    @include section-wrapper;
 
   }
 }

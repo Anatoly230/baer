@@ -22,7 +22,7 @@ $font-color: $black;
   &--helper {
     @include tablet {
       grid-template-columns: rem(84) 1fr;
-
+// justify-content: space-between;
     }
   }
 
