@@ -1,11 +1,11 @@
-
-
-
 .header {
   position: relative;
-  background-color: #f9f9f9;
+  background-color: #f1f1f1;
   overflow: hidden;
 
+  &--main-page {
+    background-color: #f9f9f9;
+  }
 
   &__nav {
 

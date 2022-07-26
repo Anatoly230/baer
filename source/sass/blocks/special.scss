@@ -25,17 +25,17 @@
   @include desktop {
     padding-block-start: rem(54);
     padding-block-end: rem(96);
-    grid-template-columns: rem(110) repeat(5, 1fr);
+    grid-template-columns: rem(175) rem(292) rem(50) 1fr;
     grid-template-rows: 1fr repeat(3, auto);
-    gap: 0;
+    column-gap: 0;
     grid-template-areas:
-      "k t t i i i"
-      ". d d i i i"
-      ". p p i i i"
-      ". b b i i i";
+      "k t . i"
+      ". d . i "
+      ". p . i"
+      ". b . i";
   }
 
-  &::before {
+  &::after {
     position: absolute;
     display: block;
     content: "";
@@ -50,6 +50,7 @@
     height: rem(6);
 
     @include tablet {
+      width: calc(100% - (50px * 2));
       height: rem(17);
     }
   }
@@ -148,7 +149,7 @@
     }
 
     @include desktop {
-      margin-inline-start: rem(42);
+      // margin-inline-start: rem(42);
     }
   }
 
