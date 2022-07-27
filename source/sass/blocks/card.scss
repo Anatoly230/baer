@@ -11,9 +11,16 @@
 
   }
 
-  &:focus-within {
-    // box-shadow: 10px 10px 10px #63d1bb;
- color: red;
+  &:hover &__info-wrapper {
+    @include desktop {
+      box-shadow: 0 6px 10px rgba($black, 0.1);
+    }
+  }
+
+  &:active &__info-wrapper {
+    @include desktop {
+      box-shadow: 0 3px 5px rgba($black, 0.1);
+    }
   }
 
   &__pic-link {
@@ -22,6 +29,11 @@
 
     @include tablet {
       height: 100%;
+    }
+
+    @include desktop {
+      position: relative;
+      z-index: 1;
     }
   }
 

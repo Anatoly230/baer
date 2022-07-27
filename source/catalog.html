@@ -243,6 +243,22 @@
 
   <script src="js/toggle-menu.min.js"></script>
 
+  <div class="window-background--close">
+    <div class="window-background__modal modal">
+      <p class="modal__title">Добавить в корзину</p>
+      <p class="modal__desc">Выберите размер:</p>
+      <div class="modal__choice-wrapper">
+        <input class="modal__choice modal-choice modal-choice--s" id="small" type="radio" name="size" value="small"
+          checked>
+        <label class="modal__choice-name" for="small">s</label>
+        <input class="modal__choice modal-choice modal-choice--m" id="medium" type="radio" name="size" value="medium">
+        <label class="modal__choice-name" for="medium">m</label>
+        <input class="modal__choice modal-choice modal-choice--l" id="large" type="radio" name="size" value="large">
+        <label class="modal__choice-name" for="large">l</label>
+      </div>
+      <button class="modal__submit btn btn--modal" type="button">Добавить</button>
+    </div>
+  </div>
 
 </body>
 
