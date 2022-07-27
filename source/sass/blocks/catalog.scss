@@ -1,0 +1,10 @@
+.catalog {
+
+  &__title {}
+
+
+
+  &__assortiment {
+    @include section-wrapper;
+  }
+}

@@ -1,0 +1,19 @@
+.wave {
+  &::after {
+    @include tablet {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      display: block;
+      width: 100%;
+      height: rem(34);
+      content: "";
+      background-image: url("../img/icons/pattern.svg");
+      background-color: transparent;
+      background-position: center;
+      background-size: contain;
+      border: none;
+    }
+  }
+}

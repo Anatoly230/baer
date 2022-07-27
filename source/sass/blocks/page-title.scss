@@ -1,0 +1,41 @@
+.page-title {
+  background-color: #f1f1f1;
+  padding-block-start: rem(73);
+  padding-block-end: rem(73);
+  padding-inline-start: rem(30);
+  padding-inline-end: rem(30);
+
+  @include tablet {
+    position: relative;
+    padding-block-start: rem(41);
+    padding-block-end: rem(87);
+  }
+
+  @include desktop {
+    padding-block-start: rem(39);
+    padding-block-end: rem(112);
+  }
+
+  &__text {
+    color: $black;
+    font-size: rem(27);
+    line-height: calc(30 / 27);
+    font-weight: bold;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+
+    @include tablet {
+      font-size: rem(43);
+      line-height: calc(50 / 43);
+
+    }
+
+    @include desktop {
+      font-size: rem(53);
+      line-height: calc(57 / 53);
+
+    }
+  }
+
+}

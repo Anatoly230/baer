@@ -37,7 +37,7 @@
 
 @mixin section-wrapper() {
   width: 100%;
-  max-width: $max-content-width;
+  max-width: $desktop-width;
   margin: 0 auto;
   padding-left: rem(30);
   padding-right: rem(30);
