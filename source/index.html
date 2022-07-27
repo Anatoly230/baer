@@ -35,7 +35,7 @@
           <a href="catalog.html" class="menu__item-link"> Каталог товаров</a>
         </li>
         <li class="menu__item">
-          <a href="#" class="menu__item-link">Вязание на заказ</a>
+          <a href="./form.html" class="menu__item-link">Вязание на заказ</a>
         </li>
       </ul>
       <ul class="header__menu header__menu--helper menu menu--helper">
@@ -216,44 +216,44 @@
 
     <section class="content__contact-us contact-us">
 
-        <div class="contact-us__info-wrapper">
-          <h2 class="contact-us__title">Контакты</h2>
-          <dl class="contact-us__contact-info contact-info">
-            <div class="contact-info__wrapper">
-              <dt class="contact-info__name">e-mail:</dt>
-              <dd class="contact-info__value">info@mimimishkashop.ru</dd>
-            </div>
-            <div class="contact-info__wrapper">
-              <dt class="contact-info__name">адрес:</dt>
-              <dd class="contact-info__value">
-                <address class="contact-info__value-addres">г. Санкт-Петербургул. Большая Конюшенная д. 19/8, офис 101
-                </address>
-              </dd>
-            </div>
-          </dl>
-        </div>
-        <div class="contact-us__map map">
-          <picture>
-            <source type="image/webp" media="(min-width: 1440px)"
-              srcset="./img/desktop-map.webp 1x, ./img/desktop-map@2x.webp 2x">
-            <source type="image/jpg" media="(min-width: 1440px)"
-              srcset="./img/desktop-map.jpg 1x, ./img/desktop-map@2x.jpg 2x">
-            <source type="image/webp" media="(min-width: 768px)"
-              srcset="./img/tablet-map.webp 1x, ./img/tablet-map@2x.webp 2x">
-            <source type="image/jpg" media="(min-width: 768px)"
-              srcset="./img/tablet-map.jpg 1x, ./img/tablet-map@2x.jpg 2x">
-            <img class="map__replacement" src="./img/mobile-map.jpg" alt="карта расположения магазина"
-              srcset="./img/mobile-map@2x.jpg 2x" width="320" height="362">
-          </picture>
-          <iframe class="map__reference"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2237.4008564625838!2d37.6357461163052!3d55.89040698059036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b5372cafd22be1%3A0x4718a89e0c347737!2z0JzQtdC40LrQn9GA0L4!5e0!3m2!1sru!2sru!4v1650029500447!5m2!1sru!2sru"
-            width="600" height="450" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="contact-us__info-wrapper">
+        <h2 class="contact-us__title">Контакты</h2>
+        <dl class="contact-us__contact-info contact-info">
+          <div class="contact-info__wrapper">
+            <dt class="contact-info__name">e-mail:</dt>
+            <dd class="contact-info__value">info@mimimishkashop.ru</dd>
+          </div>
+          <div class="contact-info__wrapper">
+            <dt class="contact-info__name">адрес:</dt>
+            <dd class="contact-info__value">
+              <address class="contact-info__value-addres">г. Санкт-Петербургул. Большая Конюшенная д. 19/8, офис 101
+              </address>
+            </dd>
+          </div>
+        </dl>
+      </div>
+      <div class="contact-us__map map">
+        <picture>
+          <source type="image/webp" media="(min-width: 1440px)"
+            srcset="./img/desktop-map.webp 1x, ./img/desktop-map@2x.webp 2x">
+          <source type="image/jpg" media="(min-width: 1440px)"
+            srcset="./img/desktop-map.jpg 1x, ./img/desktop-map@2x.jpg 2x">
+          <source type="image/webp" media="(min-width: 768px)"
+            srcset="./img/tablet-map.webp 1x, ./img/tablet-map@2x.webp 2x">
+          <source type="image/jpg" media="(min-width: 768px)"
+            srcset="./img/tablet-map.jpg 1x, ./img/tablet-map@2x.jpg 2x">
+          <img class="map__replacement" src="./img/mobile-map.jpg" alt="карта расположения магазина"
+            srcset="./img/mobile-map@2x.jpg 2x" width="320" height="362">
+        </picture>
+        <iframe class="map__reference"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2237.4008564625838!2d37.6357461163052!3d55.89040698059036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b5372cafd22be1%3A0x4718a89e0c347737!2z0JzQtdC40LrQn9GA0L4!5e0!3m2!1sru!2sru!4v1650029500447!5m2!1sru!2sru"
+          width="600" height="450" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 
-        </div>
+      </div>
 
-        <a href="form.html" class="contact-us__write btn">Напишите нам</a>
+      <a href="form.html" class="contact-us__write btn">Напишите нам</a>
 
     </section>
   </main>
@@ -304,6 +304,23 @@
 
   <script src="js/toggle-menu.min.js"></script>
   <script src="./js/find-count.min.js"></script>
+
+  <div class="window-background--close">
+    <div class="window-background__modal modal">
+      <p class="modal__title">Добавить в корзину</p>
+      <p class="modal__desc">Выберите размер:</p>
+      <div class="modal__choice-wrapper">
+        <input class="modal__choice modal-choice modal-choice--s" id="small" type="radio" name="size" value="small"
+          checked>
+        <label class="modal__choice-name" for="small">s</label>
+        <input class="modal__choice modal-choice modal-choice--m" id="medium" type="radio" name="size" value="medium">
+        <label class="modal__choice-name" for="medium">m</label>
+        <input class="modal__choice modal-choice modal-choice--l" id="large" type="radio" name="size" value="large">
+        <label class="modal__choice-name" for="large">l</label>
+      </div>
+      <button class="modal__submit btn btn--modal" type="button">Добавить</button>
+    </div>
+  </div>
 
 </body>
 

@@ -3,6 +3,7 @@ $hover-show-clr: #ebebeb;
 
 .btn {
   display: block;
+  width: 100%;
   font-size: rem(18);
   line-height: calc(20 / 18);
   text-transform: uppercase;
@@ -18,7 +19,14 @@ $hover-show-clr: #ebebeb;
     font-size: rem(17);
     line-height: calc(20 / 17);
   }
+
+  &--modal {
+    color: $white;
+    background-color: #63d1bb;
+    border-color: transparent;
+  }
 }
+
 
 
 .btn:hover {
@@ -30,4 +38,9 @@ $hover-show-clr: #ebebeb;
 .btn:active {
   border-color: transparent;
   color: rgba($white, 0.3);
+}
+
+.btn--modal:hover {
+  border-color: #63d1bb;
+  background-color: rgba($color: #63d1bb, $alpha: 0.9);
 }
