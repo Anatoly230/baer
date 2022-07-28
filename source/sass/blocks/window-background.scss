@@ -1,0 +1,23 @@
+.window-background {
+  overflow: hidden;
+  z-index: 2;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($white, 0.9);
+
+  &--close {
+    display: none;
+  }
+
+  &__modal {
+    position: absolute;
+    bottom: 10%;
+
+    @include tablet {
+      left: 50%;
+      transform: translateX(-50%);
+
+    }
+  }
+}

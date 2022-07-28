@@ -81,10 +81,26 @@
         и&nbsp;мы&nbsp;свяжемся
         с&nbsp;вами, чтобы уточнить детали.</p>
       <form action="https://echo.htmlacademy.ru" method="post">
-<div>
-  <h3></h3>
-  <input type="radio" name="type-of-order">
-</div>
+        <div class="fieldset">
+          <h3 class="fieldset__title">Тип</h3>
+          <div class="fieldset__group">
+            <div class="fieldset__item field">
+              <input class="field__item-select" id="accessories" type="radio" name="type-of-order" value="accessories">
+              <label class="field__name field__thing" for="accessories"><span
+                  class="field__thing-item field__thing-item--radio"></span>Аксессуар для интерьера</label>
+            </div>
+            <div class="fieldset__item field">
+              <input class="field__item-select" id="DFBN" type="radio" name="type-of-order" value="DFBN">
+              <label class="field__name field__thing" for="DFBN"><span
+                  class="field__thing-item field__thing-item--radio"></span>Аксессуар для интерьера</label>
+            </div>
+            <div class="fieldset__item field">
+              <input class="field__item-select" id="check" type="checkbox" name="type-of-order" value="check">
+              <label class="field__name field__thing" for="check"><span
+                  class="field__thing-item field__thing-item--checkbox"></span>Аксессуар для интерьера</label>
+            </div>
+          </div>
+        </div>
       </form>
     </section>
   </main>
