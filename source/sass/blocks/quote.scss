@@ -1,28 +1,28 @@
 .quote {
     margin-block-end: rem(43);
-  
+
     @include tablet {
       margin-block-end: initial;
       grid-area: quote;
     }
-  
+
     &__text {
       line-height: calc(30 / 15);
       margin-block-end: rem(33);
-  
+
       @include tablet {
         font-size: rem(17);
         line-height: calc(30 / 17);
         margin-block-start: rem(40);
         margin-block-end: rem(60);
       }
-  
+
       @include desktop {
         margin-block-start: rem(35);
         margin-block-end: rem(44);
       }
     }
-  
+
     &__author {
       font-size: rem(17);
       line-height: calc(24 / 17);
@@ -30,75 +30,14 @@
       flex-direction: column;
       gap: rem(10);
       font-style: normal;
-  
+
       @include tablet {
         font-size: rem(18);
       }
     }
-  
+
     &__author-name {
+      color: $black;
       font-weight: bold;
-    }
-  
-    &__author-social {}
-  
-    &__slide-btn-wrapper {
-      display: flex;
-      justify-content: center;
-      // gap: rem(37);
-      // padding: rem(13) rem(38);
-      margin-block-end: rem(51);
-  
-      @include tablet {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        row-gap: rem(10);
-        z-index: 1;
-        align-self: end;
-        grid-column: -1 / -2;
-        grid-row: -1 / 2;
-        margin-block-end: initial;
-      }
-    }
-  
-    &__slide-btn {
-      // @include show-outline;
-      border: 1px solid #ececec;
-      padding: 0;
-      margin: 0;
-      background-color: transparent;
-      width: rem(130);
-      height: rem(52);
-      background-image: url("../img/icons/arrow-l.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 50px 26px;
-      box-shadow: none;
-  
-      @include tablet {
-        border: none;
-        width: 50%;
-      }
-    }
-  
-    &__slide-btn:nth-of-type(2) {
-      background-image: url("../img/icons/arrow-r.svg");
-      border-inline-start: none;
-    }
-  
-    &__slide-btn:hover {
-      opacity: 0.6;
-    }
-  
-    &__slide-btn:active {
-      opacity: 0.3;
-    }
-  
-    &__feebback-btn {
-      @include tablet {
-        align-self: start;
-        grid-area: fb;
-      }
     }
   }

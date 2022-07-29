@@ -52,6 +52,7 @@
   }
 
   &__title {
+    color: $black;
     font-size: rem(25);
     line-height: calc(30 / 25);
     margin-block-end: rem(28);

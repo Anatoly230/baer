@@ -12,7 +12,6 @@
 @import "blocks/accent-title.scss";
 @import "blocks/parametrs.scss";
 @import "blocks/special.scss";
-// @import "blocks/page.scss";
 @import "blocks/page-body.scss";
 @import "blocks/logo.scss";
 @import "blocks/menu.scss";
@@ -30,6 +29,13 @@
 @import "blocks/catalog.scss";
 @import "blocks/assortiment.scss";
 @import "blocks/card.scss";
+@import "blocks/video-review.scss";
+@import "blocks/modal.scss";
+@import "blocks/window-background.scss";
+
+@import "blocks/field.scss";
+@import "blocks/fieldset.scss";
+@import "blocks/form.scss";
 
 @import "blocks/wave.scss";
 @import "blocks/content.scss";
@@ -38,8 +44,8 @@
 @import "blocks/social-list.scss";
 @import "blocks/main-footer.scss";
 
-@import "blocks/fields.scss";
+// @import "blocks/fields.scss";
 // @import "blocks/form.scss";
 // @import "blocks/data.scss";
-@import "blocks/reception.scss";
+// @import "blocks/reception.scss";
 @import "blocks/visually-hidden.scss";
