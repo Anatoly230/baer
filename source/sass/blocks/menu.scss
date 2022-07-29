@@ -97,6 +97,7 @@ $font-color: $black;
   }
 
   &__item-link:hover {
+    cursor: pointer;
     color: rgba($black, 0.8);
   }
 
@@ -135,6 +136,11 @@ $font-color: $black;
 
   &__item-link--helper:active &__item-icon {
     opacity: 0.3;
+  }
+
+  &__item-link--active:hover {
+    opacity: 1;
+    cursor: auto;
   }
 
   &__item--helper-desc {

@@ -15,10 +15,14 @@ $box-size: rem(42);
     padding: rem(17);
     height: rem(280);
     resize: none;
-    border: 1px solid $black;
+    border: 2px solid $black;
+    color: $black;
+    font-size: rem(17);
+    line-height: calc(18 / 17);
 
     @include tablet {
       height: rem(142);
+      font-size: rem(19);
     }
   }
 
@@ -26,32 +30,43 @@ $box-size: rem(42);
     color: rgba($black, 0.3);
     font-size: rem(17);
     line-height: calc(18 / 17);
-    font-weight: bold;
 
     @include tablet {
       font-size: rem(19);
     }
   }
 
-  &--textarea:focus {
-    border-color: #62d1ba;
-  }
-
   &--textarea:hover {
     border-color: #62d1ba;
   }
 
+  &--textarea:focus {
+    outline: none;
+    border-color: #62d1ba;
+  }
+
   &__item {
+    appearance: none;
     display: block;
     width: 100%;
     border: none;
     box-shadow: 0 2px 0 $black;
     padding: rem(16) rem(17) rem(17) 0;
     background-color: transparent;
+    font-size: rem(17);
+    line-height: calc(18 / 17);
 
     @include tablet {
+      font-size: rem(19);
+      line-height: calc(19 / 18);
       padding: rem(16) rem(18) rem(18);
     }
+  }
+
+  &__item:-webkit-autofill,
+  &__item:-webkit-autofill:focus {
+    // &__item::internal-autofill-selected {
+    transition: background-color 600000s 0s, color 600000s 0s;
   }
 
   &__item:hover {
@@ -62,6 +77,10 @@ $box-size: rem(42);
     box-shadow: 0 2px 0 rgba(#62d1ba, 1);
   }
 
+  &__item:focus {
+    box-shadow: 0 2px 0 rgba(#62d1ba, 1);
+    outline: none;
+  }
 
   &__item::placeholder {
     color: rgba($black, 0.3);
@@ -71,7 +90,6 @@ $box-size: rem(42);
     @include tablet {
       font-size: rem(19);
       line-height: calc(19 / 18);
-
     }
   }
 
@@ -95,8 +113,6 @@ $box-size: rem(42);
       font-size: rem(19);
     }
   }
-
-  &__thing {}
 
   &__thing-item {
     position: relative;
