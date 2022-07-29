@@ -1,0 +1,65 @@
+.form {
+  background-color: $white;
+  padding-inline-start: rem(30);
+  padding-inline-end: rem(30);
+  padding-block-start: rem(17);
+  padding-block-end: rem(55);
+
+  @include tablet {
+    padding-block-start: rem(54);
+    padding-block-end: rem(50);
+    padding-inline-start: 0;
+    padding-inline-end: 0;
+  }
+
+  &__section {
+    @include tablet {
+      background-color: #f1f1f1;
+    }
+  }
+
+  &__desc {
+    @include tablet {
+      @include section-wrapper;
+    }
+  }
+
+  &__submit-wrapper {
+    padding-block-start: rem(17);
+
+    @include tablet {
+      @include section-wrapper;
+      display: grid;
+      grid-template-columns: rem(230) 1fr;
+      gap: rem(20);
+    }
+
+    @include desktop {
+      grid-template-columns: rem(150) rem(230) 1fr;
+      column-gap: rem(20);
+    }
+  }
+
+  &__submit-obligatory {
+    margin-block-end: rem(30);
+
+    @include tablet {
+      justify-self: end;
+    }
+
+    @include desktop {
+      grid-column: -1 / -2;
+    }
+  }
+
+  &__submit-btn {
+
+    @include tablet {
+      order: -1;
+    }
+
+    @include desktop {
+      grid-column: 2 / 3;
+    }
+  }
+}
