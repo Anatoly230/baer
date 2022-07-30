@@ -65,7 +65,6 @@ $box-size: rem(42);
 
   &__item:-webkit-autofill,
   &__item:-webkit-autofill:focus {
-    // &__item::internal-autofill-selected {
     transition: background-color 600000s 0s, color 600000s 0s;
   }
 
@@ -149,9 +148,10 @@ $box-size: rem(42);
     opacity: 1;
   }
 
-  &__item-select:focus-visible+.field__thing {
-    outline: 2px solid $black;
+  &__item-select:focus-visible+.field__thing{
+    outline: 2px solid rgba(#62d1ba, 0.7);
     outline-offset: -2 px;
+
   }
 
   &__thing-item::before {

@@ -138,9 +138,18 @@ $font-color: $black;
     opacity: 0.3;
   }
 
-  &__item-link--active:hover {
-    opacity: 1;
+  &__item-link--active {
+    color: $black;
     cursor: auto;
+  }
+
+  &__item-link--active:hover {
+    color: $black;
+    cursor: auto;
+  }
+
+  &__item-link--active:active {
+    color: $black;
   }
 
   &__item--helper-desc {

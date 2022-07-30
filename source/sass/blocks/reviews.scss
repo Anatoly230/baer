@@ -30,10 +30,10 @@
       ". title title fb"
       ". quote quote quote";
     padding-block-end: rem(180);
-
+    background-position: rem(50) top;
   }
 
-  &::before {
+  &::after {
     display: block;
     position: absolute;
     bottom: 0;
@@ -48,8 +48,11 @@
     background-repeat: repeat-x;
 
     @include tablet {
-      width: calc(100% - (50px * 2));
       height: rem(17);
+    }
+
+    @include desktop {
+      width: calc(100% - (50px * 2));
     }
   }
 
