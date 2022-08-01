@@ -1,6 +1,6 @@
 // global styles
 @charset "UTF-8";
-@charset "normalize.scss";
+@import "normalize.scss";
 @import "global-variables.scss";
 @import "functions.scss";
 @import "block-mixins.scss";

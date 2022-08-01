@@ -37,6 +37,9 @@ main {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 
+
+//  Сомнительный стиль - желательно закомментировать, но пока оставляю
+
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
@@ -346,4 +349,11 @@ template {
 
 [hidden] {
   display: none;
+}
+
+// экспериментальный - обнуление закурглений углов у яблочноподобных устройств
+input,
+textarea,
+button {
+  border-radius: 0;
 }

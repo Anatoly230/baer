@@ -1,6 +1,6 @@
 .reviews {
   position: relative;
-  overflow-x: hidden;
+  // overflow-x: hidden;
   background-color: $white;
   padding-block-start: rem(36);
   padding-block-end: rem(46);
@@ -16,7 +16,8 @@
       "quote quote quote";
     background-image: url("../img/background/review-tablet.jpg");
     background-position: left top;
-    background-size: 350px 457px;
+    background-size: auto calc(457 / 514 * 100%);
+    // background-size: 350px 457px;
     background-repeat: no-repeat;
 
     @media (min-resolution: 2dppx) {

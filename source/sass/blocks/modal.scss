@@ -1,4 +1,5 @@
 .modal {
+  position: relative;
   width: 100%;
   padding: rem(29) rem(30) rem(46);
   background-color: $white;
@@ -7,6 +8,54 @@
   @include tablet {
     padding: rem(38) rem(100) rem(45);
     width: rem(566);
+  }
+
+  &__close {
+    display: none;
+    position: absolute;
+    right: rem(15);
+    top: rem(15);
+    width: rem(30);
+    height: rem(30);
+    padding: rem(20);
+    margin: 0;
+    background-color: transparent;
+    border: none;
+    transition: transform;
+    transition-duration: 100ms;
+  }
+
+  &__close--show {
+    display: initial;
+  }
+
+  &__close:hover &__close-line {
+    background-color: #d16363;
+    opacity: 0.6;
+  }
+
+  &__close:active &__close-line {
+    background-color: #d16363;
+    opacity: 0.4;
+  }
+
+  &__close-line {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform-origin: center;
+    transform: translateX(-50%) rotate(45deg);
+    display: block;
+    width: 70%;
+    height: rem(2);
+    background-color: $black;
+    opacity: 0.6;
+  }
+
+  &__close-line:nth-of-type(2) {
+    transform: translateX(-50%) rotate(-45deg);
   }
 
   &__title {

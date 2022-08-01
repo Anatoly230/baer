@@ -21,6 +21,7 @@
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(2, auto);
       @include section-wrapper;
+
     }
 
     @include desktop {
@@ -47,9 +48,7 @@
 
   &__nav--show {
     @include mobile-only {
-      transition-property: height;
-      transition-duration: 10ms;
-      transition: all;
+      z-index: 1;
       height: auto;
     }
 

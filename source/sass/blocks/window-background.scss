@@ -1,4 +1,5 @@
 .window-background {
+  display: none;
   overflow: hidden;
   z-index: 2;
   position: fixed;
@@ -6,8 +7,8 @@
   height: 100%;
   background-color: rgba($white, 0.9);
 
-  &--close {
-    display: none;
+  &--show {
+    display: initial;
   }
 
   &__modal {
