@@ -50,8 +50,11 @@
     height: rem(6);
 
     @include tablet {
-      width: calc(100% - (50px * 2));
       height: rem(17);
+    }
+
+    @include desktop {
+      width: calc(100% - (50px * 2));
     }
   }
 

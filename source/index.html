@@ -18,7 +18,7 @@
   <header class="page__header header header--main-page">
     <nav class="header__nav">
       <div class="header__toggle-wrapper">
-        <a class="header__logo logo" href="#">
+        <a class="header__logo logo logo--active">
           <span class="visually-hidden">перейти на главную</span>
           <picture>
             <source media="(min-width: 1150px)" srcset="img/icons/logo-desktop.svg">
@@ -27,10 +27,12 @@
               height="35">
           </picture>
         </a>
-        <button class="header__togle-menu togle-menu" type="submit"><span
-            class=" visually-hidden">Закрыть</span></button>
+        <button class="header__toggle-menu toggle-menu toggle-menu--hide" type="submit">
+          <span class=" visually-hidden">Закрыть</span>
+        </button>
       </div>
-      <ul class="header__menu menu">
+
+      <ul class="header__menu menu ">
         <li class="menu__item menu__item--main menu__item--separator menu__item">
           <a href="catalog.html" class="menu__item-link"> Каталог товаров</a>
         </li>
@@ -44,7 +46,7 @@
             <svg class="menu__item-icon" width="18" height="18">
               <use xlink:href="./img/icons/sprite.svg#search"></use>
             </svg>
-            <button class="menu__item--helper-desc">Поиск по сайту</button>
+            <span class="menu__item-hide"> Поиск по сайту</span>
           </a>
         </li>
         <li class="menu__item">
@@ -56,8 +58,6 @@
           </a>
         </li>
       </ul>
-
-
       <ul class="header__menu header__menu--events menu">
         <li class="menu__item">
           <a href="#" class="menu__item-link">Новые поступления</a>
@@ -67,12 +67,13 @@
         </li>
       </ul>
       <p class="header__sheep-info">Бесплатная доставка по России</p>
+
     </nav>
   </header>
 
 
 
-  <main main class="page-body__content content">
+  <main class="page-body__content content">
     <h1 class="visually-hidden">Вязанные изделия</h1>
     <section class="content__promo promo wave">
 
@@ -127,7 +128,7 @@
       </div>
       <div class="special__buy-wrapper">
         <p class="special__price">Цена: 990 руб.</p>
-        <a class="special__buy-btn btn" href="#">Заказать</a>
+        <a class="special__buy-btn btn js-to-basket" href="./add-to-basket.html">Заказать</a>
       </div>
     </section>
 
@@ -190,7 +191,7 @@
 
     <section class="content__reviews reviews">
       <h2 class="reviews__title">Отзывы</h2>
-      <blockquote class="quote">
+      <blockquote class="quote quote--show">
         <p class="quote__text">
           Я&nbsp;молодая мама, но&nbsp;всё равно фотографии не&nbsp;набирали и&nbsp;близко такого количества лайков, как
           у&nbsp;популярных инстамамочек. В&nbsp;отчаянии, я&nbsp;накупила аксессуаров и&nbsp;игрушек в&nbsp;Мишке,
@@ -201,15 +202,64 @@
           <span class="quote__author-social">@misssssiskras</span>
         </cite>
       </blockquote>
-      <div class="quote__slide-btn-wrapper">
-        <button class="quote__slide-btn" type="button">
+      <blockquote class="quote">
+        <p class="quote__text">
+          С&nbsp;компанией знаком довольно давно, весьма располагают к&nbsp;себе элементарно в&nbsp;общении
+          с&nbsp;клиентом. Когда дело дошло до&nbsp;качества продукции и&nbsp;ассортимента, восхищению моему
+          не&nbsp;было предела, я&nbsp;в&nbsp;неописуемом восторге. Игрушки мало того что качественно сплетены, так ещё
+          и&nbsp;обладают невероятной износостойкостью, у&nbsp;кого есть маленькие дети &laquo;всёгрызущего&raquo;
+          периода меня поймёт))
+        </p>
+        <cite class="quote__author">
+          <span class="quote__author-name">Анатолий Китаев</span>
+          <span class="quote__author-social">@mkagent</span>
+        </cite>
+      </blockquote>
+      <blockquote class="quote">
+        <p class="quote__text">
+          Ой, ну&nbsp;что тут говорить. Ну&nbsp;вообще, увидел, всё понравилось. Слов нет, просто красотища, просто как
+          какой-то наркотик, не&nbsp;могу остановиться. Зайчики, медвежата, таракашки&nbsp;&mdash; ну&nbsp;милота. Даже
+          не&nbsp;сказал&nbsp;бы что дорого, хотя какие разговоры о&nbsp;деньгах, когда такое искусство.
+        </p>
+        <cite class="quote__author">
+          <span class="quote__author-name">Быстряков Купец</span>
+          <span class="quote__author-social">@superLoshara</span>
+        </cite>
+      </blockquote>
+      <blockquote class="quote">
+        <p class="quote__text">
+          Не&nbsp;знаю, столько положительных отзывов, наверняка проплаченные. Крайне не&nbsp;понравилось общение
+          по&nbsp;телефону, почему я&nbsp;должен ждать 5&nbsp;секунд, пока они что-то там проверяют по&nbsp;базам?
+          Да&nbsp;и&nbsp;вообще, за&nbsp;какие-то нитки столько денег выкладывать просят, я&nbsp;считаю это грабёж средь
+          бела дня. На&nbsp;эту контору пора пожаловаться в&nbsp;ОБЭП.
+        </p>
+        <cite class="quote__author">
+          <span class="quote__author-name">Злой Торгаш</span>
+          <span class="quote__author-social">@nomanynohany</span>
+        </cite>
+      </blockquote>
+      <blockquote class="quote">
+        <p class="quote__text">
+          Добрый день! никак не&nbsp;могу связаться с&nbsp;вашим руководителем, вот, решил отписаться сюда))
+          С&nbsp;вашей продукцией знаком не&nbsp;понаслышке, хотелось&nbsp;бы представлять вас в&nbsp;солнечном дольнем
+          востоке, хотелось&nbsp;бы также партнёрских скидок, вы&nbsp;же понимаете, дальний восток не&nbsp;Москва, здесь
+          желательно чуть снизить цену, главное чтобы нас узнали, а&nbsp;потом поднимем цены когда поймут насколько
+          мы&nbsp;хороши.
+        </p>
+        <cite class="quote__author">
+          <span class="quote__author-name">Подхалим Лстетыч</span>
+          <span class="quote__author-social">@bezmila</span>
+        </cite>
+      </blockquote>
+      <div class="reviews__btn-wrapper">
+        <button class="reviews__slide-btn js-slide-left" type="button">
           <span class="visually-hidden">Слайд влево</span>
         </button>
-        <button class="quote__slide-btn" type="button">
+        <button class="reviews__slide-btn js-slide-right" type="button">
           <span class="visually-hidden">Слайд вправо</span>
         </button>
       </div>
-      <a href="#" class="quote__feebback-btn btn  ">
+      <a href="#" class="reviews__feebback-btn btn  ">
         Написать
       </a>
     </section>
@@ -260,12 +310,14 @@
 
   <footer class="page-body__footer main-footer">
     <div class="main-footer__wrapper">
-      <a href="#" class="main-footer__item  main-footer__logo-link">
-        <span class="visually-hidden">перейти на главную</span>
-        <svg class="main-footer__logo-pic" width="102" height="34">
-          <use xlink:href="./img/icons/sprite.svg#logo-footer"></use>
-        </svg>
-      </a>
+      <div class="main-footer__item main-footer__item--logo">
+        <a href="#" class="main-footer__link main-footer__link--logo">
+          <span class="visually-hidden">перейти на главную</span>
+          <svg class="main-footer__logo-pic" width="102" height="34">
+            <use xlink:href="./img/icons/sprite.svg#logo-footer"></use>
+          </svg>
+        </a>
+      </div>
       <ul class="main-footer__item main-footer__social-list social-list">
         <li class="social-list__item">
           <a class="social-list__item-link" href="#">
@@ -292,35 +344,46 @@
           </a>
         </li>
       </ul>
-      <a class="main-footer__item  main-footer__devs-link" href="https://htmlacademy.ru/intensive/adaptive">
-        <span class="main-footer__devs">Разработано</span>
-        <svg class="main-footer__devs-logo" width="27" height="34">
-          <use xlink:href="./img/icons/sprite.svg#logo-htmlacademy"></use>
-        </svg>
-      </a>
+      <div class="main-footer__item">
+        <a class="main-footer__link main-footer__link--devs" href="https://htmlacademy.ru/intensive/adaptive">
+          <span class="main-footer__devs">Разработано</span>
+          <svg class="main-footer__devs-logo" width="27" height="34">
+            <use xlink:href="./img/icons/sprite.svg#logo-htmlacademy"></use>
+          </svg>
+        </a>
+      </div>
     </div>
   </footer>
 
+  <div class="window-background">
 
-  <script src="js/toggle-menu.min.js"></script>
-  <script src="./js/find-count.min.js"></script>
-
-  <div class="window-background--close">
     <div class="window-background__modal modal">
+      <button class="modal__close">
+        <span class="modal__close-line"></span>
+        <span class="modal__close-line"></span>
+      </button>
       <p class="modal__title">Добавить в корзину</p>
       <p class="modal__desc">Выберите размер:</p>
       <div class="modal__choice-wrapper">
-        <input class="modal__choice modal-choice modal-choice--s" id="small" type="radio" name="size" value="small"
+
+        <input class="modal__choice modal-choice modal-choice--s" id="small" type="checkbox" name="size" value="small"
           checked>
         <label class="modal__choice-name" for="small">s</label>
-        <input class="modal__choice modal-choice modal-choice--m" id="medium" type="radio" name="size" value="medium">
+        <input class="modal__choice modal-choice modal-choice--m" id="medium" type="checkbox" name="size"
+          value="medium">
         <label class="modal__choice-name" for="medium">m</label>
-        <input class="modal__choice modal-choice modal-choice--l" id="large" type="radio" name="size" value="large">
+        <input class="modal__choice modal-choice modal-choice--l" id="large" type="checkbox" name="size" value="large">
         <label class="modal__choice-name" for="large">l</label>
       </div>
       <button class="modal__submit btn btn--modal" type="button">Добавить</button>
     </div>
   </div>
+
+  <script src="js/toggle-menu.min.js"></script>
+  <script src="./js/find-count.min.js"></script>
+  <script src="js/modal.min.js"></script>
+  <script src="./js/reviews_slider.min.js"></script>
+
 
 </body>
 

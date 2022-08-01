@@ -83,7 +83,17 @@
       line-height: calc(24 / 20);
       max-width: rem(238);
     }
+
   }
+
+  &__name-link:hover {
+    color: rgba($color: $black, $alpha: 0.6);
+  }
+
+  &__name-link:active {
+    color: rgba($color: $black, $alpha: 0.3);
+  }
+
 
   &__parametrs {
     margin-block-end: rem(17);

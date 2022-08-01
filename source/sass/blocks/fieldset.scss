@@ -1,0 +1,96 @@
+.fieldset {
+  padding-block-start: rem(30);
+
+
+  @include tablet {
+    @include section-wrapper;
+    display: grid;
+    grid-template-columns: rem(150) 1fr;
+    column-gap: rem(20);
+    row-gap: rem(34);
+    padding-block-start: rem(50);
+    padding-block-end: rem(50);
+
+    @include desktop {
+      column-gap: rem(24);
+    }
+  }
+
+  &__title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-block-end: rem(25);
+
+    @include tablet {
+      align-self: start;
+      // @include show-outline(green);
+      min-height: rem(52);
+      justify-content: initial;
+    }
+
+    @include desktop {
+      padding-inline-start: rem(60);
+    }
+  }
+
+  &__title--label {
+    margin: 0;
+  }
+
+  &__title-text {
+    text-transform: uppercase;
+    font-size: rem(17);
+    font-weight: bold;
+    color: #63d1ba;
+    flex-shrink: 0;
+  }
+
+  &__title::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #63d1ba;
+    margin-inline-start: rem(25);
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__group {
+    display: grid;
+    gap: rem(10);
+    justify-content: start;
+    // @include show-outline(violet);
+
+    @include tablet {
+      padding: 0;
+      gap: rem(24);
+    }
+  }
+
+  &__group--some-cols {
+    gap: rem(23);
+    justify-content: stretch;
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+      gap: rem(24);
+    }
+
+    @include desktop {
+      grid-template-columns: repeat(3, 1fr);
+
+    }
+  }
+
+  &__group-text {
+    justify-content: initial;
+    row-gap: rem(22);
+
+    @include tablet {
+      row-gap: rem(22);
+    }
+  }
+}

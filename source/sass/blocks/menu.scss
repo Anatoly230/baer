@@ -22,7 +22,7 @@ $font-color: $black;
   &--helper {
     @include tablet {
       grid-template-columns: rem(84) 1fr;
-// justify-content: space-between;
+      // justify-content: space-between;
     }
   }
 
@@ -77,9 +77,12 @@ $font-color: $black;
   }
 
   &__item-link {
+    background-color: transparent;
+    border: none;
     display: block;
     color: $black;
     text-decoration: none;
+    font-size: rem(15);
     font-weight: bold;
     padding-top: rem(28);
     padding-bottom: rem(26);
@@ -94,6 +97,7 @@ $font-color: $black;
   }
 
   &__item-link:hover {
+    cursor: pointer;
     color: rgba($black, 0.8);
   }
 
@@ -134,6 +138,20 @@ $font-color: $black;
     opacity: 0.3;
   }
 
+  &__item-link--active {
+    color: $black;
+    cursor: auto;
+  }
+
+  &__item-link--active:hover {
+    color: $black;
+    cursor: auto;
+  }
+
+  &__item-link--active:active {
+    color: $black;
+  }
+
   &__item--helper-desc {
     display: inline;
     font-size: inherit;
@@ -144,6 +162,10 @@ $font-color: $black;
     color: inherit;
     border: none;
 
+
+  }
+
+  &__item-hide {
     @include tablet {
       display: none;
     }

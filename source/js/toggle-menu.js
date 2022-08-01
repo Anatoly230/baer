@@ -1,22 +1,20 @@
 /* stylelint-disable */
-const toggleMenu = document.querySelector(".togle-menu");
-const mainMenu = document.querySelector(".menu");
+const header = document.querySelector(".header");
+const toggleMenu = header.querySelector(".toggle-menu");
+const nav = header.querySelector(".header__nav");
 
+if (!nav.classList.contains("header__nav--hide")) {
 
-if (!mainMenu.classList.contains("menu--hide")) {
-
-  mainMenu.classList.add("menu--scriptable");
-  mainMenu.classList.add("menu--hide");
-} else {
-  toggleMenu.classList.add("togle-menu--hide");
+  nav.classList.add("header__nav--hide");
+  header.classList.add("header--hide");
+  toggleMenu.classList.remove("toggle-menu--hide");
 }
-
 
 toggleMenu.addEventListener("click", function (e) {
   e.preventDefault();
-  if (e.target.classList.contains("togle-menu")) {
-    mainMenu.classList.toggle("menu--hide");
-    toggleMenu.classList.toggle("togle-menu--close");
+  if (e.target.classList.contains("toggle-menu")) {
+    nav.classList.toggle("header__nav--show");
+    toggleMenu.classList.toggle("toggle-menu--close");
   }
 })
 

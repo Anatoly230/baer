@@ -6,7 +6,7 @@ $toggle-color: $black;
   background-color: $toggle-color;
 }
 
-.togle-menu {
+.toggle-menu {
   position: relative;
   width: rem(20);
   height: rem(14);
@@ -14,21 +14,21 @@ $toggle-color: $black;
   background-color: transparent;
 }
 
-.togle-menu--hide {
+.toggle-menu--hide {
   display: none;
 }
 
-.togle-menu:hover {
+.toggle-menu:hover {
   opacity: 0.6;
   cursor: pointer;
 }
 
-.togle-menu:active {
+.toggle-menu:active {
   opacity: 0.3;
 }
 
-.togle-menu::before,
-.togle-menu::after {
+.toggle-menu::before,
+.toggle-menu::after {
   position: absolute;
   top: 0;
   left: 0;
@@ -39,24 +39,24 @@ $toggle-color: $black;
   @include toggle-parametrs;
 }
 
-.togle-menu::before {
+.toggle-menu::before {
   box-shadow: 0 6px 0 $toggle-color;
   transition: box-shadow 0.2s linear 50ms;
 }
 
-.togle-menu::after {
+.toggle-menu::after {
   top: rem(12);
 
   @include toggle-parametrs;
 }
 
-.togle-menu--close::before {
+.toggle-menu--close::before {
   box-shadow: 0 0 0 rgba($toggle-color, 0);
   background-color: $toggle-color;
   transform: translateY(6px) rotate(45deg);
 }
 
-.togle-menu--close::after {
+.toggle-menu--close::after {
   background-color: $toggle-color;
   transform: translateY(-6px) rotate(-45deg);
 }

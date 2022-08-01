@@ -57,7 +57,7 @@
   &__link-btns-wrapper {
     @include tablet {
       @include section-wrapper;
-      overflow: hidden;
+      // overflow: hidden;
       position: relative;
       display: flex;
       flex-wrap: wrap;
