@@ -17,6 +17,7 @@
   }
 
   &__title {
+
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -24,9 +25,10 @@
 
     @include tablet {
       align-self: start;
-      // @include show-outline(green);
       min-height: rem(52);
-      justify-content: initial;
+
+      // @include show-outline(green);
+      // justify-content: initial;
     }
 
     @include desktop {
@@ -39,6 +41,7 @@
   }
 
   &__title-text {
+    max-width: 100%;
     text-transform: uppercase;
     font-size: rem(17);
     font-weight: bold;

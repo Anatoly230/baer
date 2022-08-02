@@ -29,6 +29,7 @@ function showModal() {
 }
 
 
+
 toBasketButtons.forEach(function (item) {
   item.addEventListener("click" || "touch", function (e) {
     e.preventDefault();

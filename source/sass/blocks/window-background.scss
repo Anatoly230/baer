@@ -11,6 +11,14 @@
     display: initial;
   }
 
+  &--normal {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
   &__modal {
     position: absolute;
     bottom: 10%;
@@ -20,5 +28,10 @@
       transform: translateX(-50%);
 
     }
+  }
+
+  &__modal--normal {
+    position: initial;
+    transform: initial;
   }
 }
