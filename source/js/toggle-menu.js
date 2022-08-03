@@ -17,4 +17,3 @@ toggleMenu.addEventListener("click", function (e) {
     toggleMenu.classList.toggle("toggle-menu--close");
   }
 })
-

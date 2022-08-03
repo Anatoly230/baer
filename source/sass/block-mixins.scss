@@ -2,37 +2,7 @@
   width: 100%;
   max-width: $content-width;
   margin: 0 auto;
-  // @include show-outline(2px, violet);
 }
-
-
-// @mixin section-wrapper() {
-//   width: 100%;
-//   max-width: $max-content-width;
-//   margin: 0 auto;
-//   padding-left: rem(20);
-//   padding-right: rem(20);
-//   // @include show-outline(2px, green);
-
-//   @include tablet {
-//     padding-left: rem(29);
-//     padding-right: rem(29);
-//   }
-
-//   @include desktop {
-//     padding-left: 0;
-//     padding-right: 0;
-//   }
-// }
-
-// @mixin section-wrapper() {
-//   max-width: $max-content-width;
-//   margin: 0 auto;
-//   width: calc((100 - (20 / 320 * 100)) * 1%);
-//   @include tablet {
-//     width: calc((100 - (30 / 768 * 100)) * 1%);
-//   }
-// }
 
 
 @mixin section-wrapper() {
@@ -46,6 +16,7 @@
     padding-left: calc(30 / 320 * 100%);
     padding-right: calc(30 / 320 * 100%);
   }
+
   @include tablet {
     padding-left: rem(50);
     padding-right: rem(50);
@@ -63,16 +34,17 @@
     padding-left: calc(30 / 320 * 100%);
     padding-right: calc(30 / 320 * 100%);
   }
+
   @include tablet {
     padding-left: calc(50 / 320 * 100%);
     padding-right: calc(50 / 320 * 100%);
   }
+
   @include desktop {
     padding-left: rem(224);
     padding-right: rem(224);
   }
 }
-
 
 @mixin block-width($current-media, $mxWidth) {
   width: calc($mxWidth / $current-media * 100%);
@@ -107,5 +79,4 @@
   outline: $weight dashed $color;
   outline-offset: -$weight;
 }
-
 // for block debug end

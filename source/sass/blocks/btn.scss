@@ -19,15 +19,13 @@ $hover-show-clr: #ebebeb;
     font-size: rem(17);
     line-height: calc(20 / 17);
   }
-
-  &--modal {
-    color: $white;
-    background-color: #63d1bb;
-    border-color: transparent;
-  }
 }
 
-
+.btn--modal {
+  color: $white;
+  background-color: #63d1bb;
+  border-color: transparent;
+}
 
 .btn:hover {
   border-color: transparent;

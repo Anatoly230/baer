@@ -2,19 +2,21 @@
   padding-block-start: rem(30);
   padding-block-end: rem(30);
 
-  &__list {
-    @include reset-list-style;
-    display: grid;
-    gap: rem(30);
+  @include section-wrapper;
+}
 
-    @include tablet {
-      gap: rem(54);
-    }
+.assortiment__list {
+  @include reset-list-style;
+  display: grid;
+  gap: rem(30);
 
-    @include desktop {
-      grid-template-columns: repeat(3, 1fr);
-      align-items: stretch;
-      gap: rem(50);
-    }
+  @include tablet {
+    gap: rem(54);
+  }
+
+  @include desktop {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: stretch;
+    gap: rem(50);
   }
 }

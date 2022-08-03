@@ -11,77 +11,77 @@
     padding-inline-start: 0;
     padding-inline-end: 0;
   }
+}
 
-  &__section {
-    @include tablet {
-      background-color: #f1f1f1;
-    }
+.form__section {
+  @include tablet {
+    background-color: #f1f1f1;
+  }
+}
+
+.form__desc {
+  @include tablet {
+    @include section-wrapper;
   }
 
-  &__desc {
-    @include tablet {
-      @include section-wrapper;
-    }
-    @include desktop {
-      display: grid;
-      grid-template-columns: rem(150) 1fr;
-      column-gap: rem(20);
-    }
+  @include desktop {
+    display: grid;
+    grid-template-columns: rem(150) 1fr;
+    column-gap: rem(20);
+  }
+}
+
+.form__desc-text {
+  font-size: rem(13);
+  line-height: calc(24 / 13);
+
+  @include tablet {
+    font-size: rem(17);
+    line-height: calc(30 / 17);
   }
 
-  &__desc-text {
-    font-size: rem(13);
-    line-height: calc(24 / 13);
+  @include desktop {
+    grid-column: -1 / -2;
+  }
+}
 
-    @include tablet {
-      font-size: rem(17);
-      line-height: calc(30 / 17);
-    }
+.form__submit-wrapper {
+  padding-block-start: rem(17);
 
-    @include desktop {
-      grid-column: -1 / -2;
-    }
+  @include tablet {
+    @include section-wrapper;
+    display: grid;
+    grid-template-columns: rem(230) 1fr;
+    gap: rem(20);
+    padding: 0;
   }
 
-  &__submit-wrapper {
-    padding-block-start: rem(17);
+  @include desktop {
+    grid-template-columns: rem(150) rem(230) 1fr;
+    column-gap: rem(20);
+  }
+}
 
-    @include tablet {
-      @include section-wrapper;
-      display: grid;
-      grid-template-columns: rem(230) 1fr;
-      gap: rem(20);
-      padding:0;
-    }
+.form__submit-obligatory {
+  margin-block-end: rem(30);
 
-    @include desktop {
-      grid-template-columns: rem(150) rem(230) 1fr;
-      column-gap: rem(20);
-    }
+  @include tablet {
+    margin: 0;
+    justify-self: end;
+    align-self: center;
   }
 
-  &__submit-obligatory {
-    margin-block-end: rem(30);
+  @include desktop {
+    grid-column: -1 / -2;
+  }
+}
 
-    @include tablet {
-      margin: 0;
-      justify-self: end;
-      align-self: center;
-    }
-
-    @include desktop {
-      grid-column: -1 / -2;
-    }
+.form__submit-btn {
+  @include tablet {
+    order: -1;
   }
 
-  &__submit-btn {
-
-    @include tablet {
-      order: -1;
-    }
-
-    @include desktop {
-      grid-column: 2 / 3;
-    }
+  @include desktop {
+    grid-column: 2 / 3;
   }
 }

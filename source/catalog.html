@@ -31,7 +31,7 @@
             class=" visually-hidden">Закрыть</span></button>
       </div>
       <ul class="header__menu menu">
-        <li class="menu__item menu__item--main menu__item--separator menu__item">
+        <li class="menu__item menu__item--main menu__item--separator">
           <a href="#" class="menu__item-link menu__item-link--active"> Каталог товаров</a>
         </li>
         <li class="menu__item">
@@ -56,8 +56,6 @@
           </a>
         </li>
       </ul>
-
-
       <ul class="header__menu header__menu--events menu">
         <li class="menu__item">
           <a href="#" class="menu__item-link">Новые поступления</a>
@@ -69,13 +67,11 @@
       <p class="header__sheep-info">Бесплатная доставка по России</p>
     </nav>
   </header>
-
-  <main class="page-body__catalog catalog">
-
-    <h1 class="catalog__title page-title wave">
+  <main class="page-body__catalog ">
+    <h1 class="page-title wave">
       <span class="page-title__text">Каталог товаров</span>
     </h1>
-    <section class="catalog__assortiment assortiment">
+    <section class="assortiment">
       <h2 class="visually-hidden">Ассортимент вязаных игрушек</h2>
       <ul class="assortiment__list">
         <li class="assortiment__item card">
@@ -164,11 +160,11 @@
         </li>
       </ul>
     </section>
-    <section class="catalog__video-review video-review">
+    <section class="video-review">
       <h2 class="visually-hidden">Видео-обзор производства</h2>
       <div class="video-review__wrapper">
         <div class="video-review__pic-wrapper">
-          <a href="#" class="video-review__btn" type="button">
+          <a href="#" class="video-review__btn">
             <svg class="video-review__btn-pic" width="100" height="77">
               <use xlink:href="./img/icons/sprite.svg#play-btn"></use>
             </svg>
@@ -178,7 +174,6 @@
               srcset="./img/catalog/video-tablet.webp 1x, ./img/catalog/video-tablet@2x.webp 2x">
             <source media="(min-width:768px)"
               srcset="./img/catalog/video-tablet.jpg 1x, ./img/catalog/video-tablet@2x.jpg 2x">
-
             <img class="video-review__pic" src="./img/catalog/video-mobile.jpg"
               srcset="./img/catalog/video-mobile@2x.jpg 2x" alt="Наглядное видео процеса производства">
           </picture>
@@ -195,7 +190,6 @@
       </div>
     </section>
   </main>
-
   <footer class="page-body__footer main-footer">
     <div class="main-footer__wrapper">
       <div class="main-footer__item main-footer__item--logo">
@@ -242,7 +236,6 @@
       </div>
     </div>
   </footer>
-
   <div class="window-background">
     <div class="window-background__modal modal">
 
@@ -253,23 +246,20 @@
       <p class="modal__title">Добавить в корзину</p>
       <p class="modal__desc">Выберите размер:</p>
       <div class="modal__choice-wrapper">
-        <input class="modal__choice modal-choice modal-choice--s" id="small" type="radio" name="size" value="small"
+        <input class="modal__choice modal-choice modal-choice--s" id="small" type="checkbox" name="size" value="small"
           checked>
         <label class="modal__choice-name" for="small">s</label>
-        <input class="modal__choice modal-choice modal-choice--m" id="medium" type="radio" name="size" value="medium">
+        <input class="modal__choice modal-choice modal-choice--m" id="medium" type="checkbox" name="size"
+          value="medium">
         <label class="modal__choice-name" for="medium">m</label>
-        <input class="modal__choice modal-choice modal-choice--l" id="large" type="radio" name="size" value="large">
+        <input class="modal__choice modal-choice modal-choice--l" id="large" type="checkbox" name="size" value="large">
         <label class="modal__choice-name" for="large">l</label>
       </div>
       <button class="modal__submit btn btn--modal" type="button">Добавить</button>
     </div>
   </div>
-
   <script src="js/toggle-menu.min.js"></script>
   <script src="js/modal.min.js"></script>
-
-
-
 </body>
 
 </html>

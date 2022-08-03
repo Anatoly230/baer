@@ -36,5 +36,3 @@ toBasketButtons.forEach(function (item) {
     showModal();
   })
 })
-
-

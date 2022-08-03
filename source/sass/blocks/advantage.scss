@@ -1,7 +1,6 @@
 .advantage {
   color: $black;
   position: relative;
-  // @include show-outline;
   padding-block-start: rem(12);
   padding-block-end: rem(12);
   max-width: rem(260);
@@ -12,23 +11,22 @@
     margin: initial;
     padding-block-end: rem(37);
   }
+}
 
-  &__icon {
-    margin-inline-start: rem(10);
-    margin-block-end: rem(20);
-    max-width: rem(55);
-    max-height: rem(38);
-    fill: #63d1bb;
-  }
+.advantage__icon {
+  margin-inline-start: rem(10);
+  margin-block-end: rem(20);
+  max-width: rem(55);
+  max-height: rem(38);
+  fill: #63d1bb;
+}
 
-  &__text {
-    max-width: rem(250);
-    line-height: calc(20 / 17);
+.advantage__text {
+  max-width: rem(250);
+  line-height: calc(20 / 17);
 
-    @include tablet {
-      max-width: rem(325);
-      font-size: rem(20);
-      // line-height: calc(22 / 20);
-    }
+  @include tablet {
+    max-width: rem(325);
+    font-size: rem(20);
   }
 }

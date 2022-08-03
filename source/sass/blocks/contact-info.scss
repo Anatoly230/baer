@@ -16,55 +16,50 @@
     max-width: rem(300);
     display: initial;
   }
+}
 
-  &__wrapper {
-    display: flex;
+.contact-info__wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: rem(30);
+
+  @include tablet {
+    justify-content: flex-start;
+    width: 50%;
+  }
+
+  @include desktop {
+    gap: rem(25);
     justify-content: space-between;
-    flex-wrap: wrap;
-    gap: rem(30);
+    width: 100%;
+  }
+}
 
-    @include tablet {
-      justify-content: flex-start;
-      width: 50%;
-    }
+.contact-info__name {
+  width: 1fr;
+  margin-block-end: rem(40);
+}
 
-    @include desktop {
-      gap: rem(25);
-      justify-content: space-between;
-      width: 100%;
-    }
+.contact-info__value {
+  width: rem(183);
 
+  @include tablet {
+    width: rem(205);
   }
 
-
-
-  &__name {
-    width: 1fr;
-    margin-block-end: rem(40);
-
+  @include desktop {
+    max-width: rem(220);
   }
+}
 
-  &__value {
-    width: rem(183);
+.contact-info__wrapper:first-of-type .contact-info__value {
+  text-decoration: underline;
+  text-decoration-color: #62d1ba;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 6px;
+}
 
-    @include tablet {
-      width: rem(205);
-    }
-
-    @include desktop {
-      max-width: rem(220);
-    }
-  }
-
-  &__wrapper:first-of-type &__value {
-    text-decoration: underline;
-    text-decoration-color: #62d1ba;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 6px;
-  }
-
-  &__value-addres {
-    font-style: normal;
-  }
-
+.contact-info__value-addres {
+  font-style: normal;
 }
