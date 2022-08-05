@@ -1,24 +1,13 @@
 $green: #46c1ae;
+
 .social-list {
+  @include reset-list-style;
   display: flex;
   flex-wrap: wrap;
-  margin: 0;
-  padding: rem(30) 0 rem(30);
   justify-content: center;
   max-width: 100%;
-  gap: rem(24);
-
-  @include tablet {
-    padding: 0;
-    margin-bottom: rem(-10);
-  }
+  gap: rem(34);
 }
-
-.social-list__item {
-  @include reset-list-style;
-
-}
-
 
 .social-list__item:hover .social-list__item-pic {
   fill: $green;
@@ -31,4 +20,10 @@ $green: #46c1ae;
 .social-list__item-pic {
   margin: 0;
   padding: 0;
+}
+
+.social-list__item-link {
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
 }

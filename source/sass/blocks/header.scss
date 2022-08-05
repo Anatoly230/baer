@@ -1,176 +1,192 @@
 .header {
   position: relative;
   background-color: #f1f1f1;
-  overflow: hidden;
-
-  &--main-page {
+}
+  .header--main-page {
     background-color: #f9f9f9;
   }
 
-  &__nav {
-
-    @include tablet {
-      $paddings: 50;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      @include section-wrapper;
-    }
-
-    @include desktop {
-      width: 100%;
-      display: grid;
-      grid-template-columns: rem(440) 1fr rem(349);
-      grid-template-rows: repeat(2, auto);
-      grid-template-areas:
-        "main-menu logo-wrapper helper"
-        "events . sheep-info"
-      ;
+  .header--hide {
+    @include mobile-only {
+      margin-block-end: rem(80);
     }
   }
 
-  &__toggle-wrapper {
+
+.header__nav {
+  @include tablet {
+    position: relative;
+    $paddings: 50;
+    display: grid;
+    grid-template-columns: 47% 1fr;
+    grid-template-rows: repeat(2, auto);
+
+    @include section-wrapper;
+  }
+
+  @include desktop {
+    width: 100%;
+    display: grid;
+    grid-template-columns: rem(440) 1fr rem(349);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas:
+      "main-menu logo-wrapper helper"
+      "events . sheep-info";
+  }
+}
+
+.header__nav--hide {
+  @include mobile-only {
+    width: 100%;
+    top: 0;
+    position: absolute;
+    overflow-y: hidden;
+    height: rem(80);
+  }
+}
+
+.header__nav--show {
+  @include mobile-only {
+    z-index: 1;
+    height: auto;
+  }
+}
+
+.header__nav::before {
+  @include tablet {
+    position: absolute;
+    // left: calc((100vw - $scroll-width - 100%) / -2);
+    left: calc((100vw - 100%) / -2);
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    display: block;
+    content: "";
+    // width: calc(100vw - $scroll-width);
+    // width: calc(99.45% + (100vw - 100%));
+    width: 100vw;
+    height: 100%;
     background-color: $white;
+    border-bottom: 1px solid rgba($black, 0.1);
+  }
+}
+
+.header__toggle-wrapper {
+  position: relative;
+  background-color: $white;
+  z-index: 1;
+  padding-top: rem(22);
+  padding-bottom: rem(22);
+  padding-left: rem(30);
+  padding-right: rem(30);
+  width: 100%;
+  border-bottom: 1px solid rgba($black, 0.1);
+
+  @include tablet {
+    background-color: initial;
+    display: flex;
+    align-items: center;
+    order: 1;
+    border: 0;
+    padding: 0;
+    padding-top: rem(22);
+    padding-bottom: rem(20);
+    width: calc(320 / (768 - 100) * 100%);
+    flex-shrink: 1;
+  }
+
+  @include desktop {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    grid-area: logo-wrapper;
+    order: initial;
+    padding-top: rem(9);
+    padding-bottom: rem(14);
+  }
+}
+
+.header__logo {
+  width: fit-content;
+  margin: 0 auto;
+
+  @include tablet {
     position: relative;
     z-index: 1;
-    padding-top: rem(22);
-    padding-bottom: rem(22);
-    padding-left: rem(30);
-    padding-right: rem(30);
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  @include desktop {
+    margin-left: rem(12);
+  }
+}
+
+
+.header__toggle-menu {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: rem(28);
+  // margin-right: rem(30);
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.header__menu {
+  @include tablet {
+    z-index: 1;
     width: 100%;
-    border-bottom: 1px solid rgba($black, 0.1);
-
-    @include tablet {
-      display: flex;
-      align-items: center;
-      order: 1;
-      border: 0;
-      padding: 0;
-      padding-top: rem(22);
-      padding-bottom: rem(20);
-      width: calc(320 / (768 - 100) * 100%);
-      flex-shrink: 1;
-    }
-
-    @include desktop {
-      width: 100%;
-      height: auto;
-      // flex-basis: rem(200);
-      // flex-grow: 1;
-      // flex-shrink: 2;
-      margin: 0;
-      grid-area: logo-wrapper;
-      order: initial;
-      padding-top: rem(9);
-      padding-bottom: rem(14);
-    }
+    order: 3;
   }
 
-  &__toggle-wrapper::before {
-    @include tablet {
-      background-color: $white;
-      z-index: 0;
-      position: absolute;
-      top: 0;
-      content: "";
-      display: block;
-      width: 155vw;
-      left: 50%;
-      transform: translateX(-50%);
-      height: 100%;
-      border-bottom: 1px solid rgba($black, 0.1);
-    }
+  @include desktop {
+    grid-area: main-menu;
+    width: 100%;
+    order: initial;
+  }
+}
+
+.header__menu--helper {
+  @include tablet {
+    justify-self: end;
+    max-width: rem(350);
+    order: 2;
+    flex-grow: 1;
   }
 
-  &__logo {
-    width: fit-content;
-    margin: 0 auto;
+  @include desktop {
+    justify-self: end;
+    grid-area: helper;
+    order: initial;
+  }
+}
 
-    @include tablet {
-      position: relative;
-      z-index: 1;
-      margin-left: 0;
-      margin-right: auto;
-    }
+.header__menu--events {
+  display: none;
 
-    @include desktop {
-      margin-left: rem(12);
-    }
+  @include desktop {
+    display: grid;
+    grid-area: events;
+    order: initial;
+  }
+}
+
+.header__sheep-info {
+  display: none;
+
+  @include tablet {
+    font-size: rem(15);
+    line-height: calc(24 / 15);
+    order: 4;
+    margin-left: auto;
+    align-self: stretch;
+    display: flex;
+    align-items: center;
   }
 
-
-  &__togle-menu {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 0;
-    margin-right: rem(30);
-
-    @include tablet {
-      display: none;
-    }
-  }
-
-  &__menu {
-    @include tablet {
-      z-index: 1;
-      width: calc(340 / (768 - 100) * 100%);
-      order: 3;
-      // @include show-outline;
-    }
-
-    @include desktop {
-      // flex-shrink: 2;
-      // flex-grow: 0;
-      // width: calc(375 / (1050 - 100) * 100%);
-      // width: 35%;
-      grid-area: main-menu;
-      width: 100%;
-      order: initial;
-    }
-  }
-
-  &__menu--helper {
-    @include tablet {
-      width: fit-content;
-      max-width: rem(350);
-      order: 2;
-      flex-grow: 0;
-    }
-
-    @include desktop {
-      justify-self: end;
-      grid-area: helper;
-      order: initial;
-
-    }
-  }
-
-  &__menu--events {
-    display: none;
-
-    @include desktop {
-      display: grid;
-      grid-area: events;
-      order: initial;
-    }
-  }
-
-  &__sheep-info {
-    display: none;
-
-    @include tablet {
-      order: 4;
-      // order: initial;
-      display: initial;
-      margin-left: auto;
-      align-self: stretch;
-      display: flex;
-      align-items: center;
-    }
-
-    @include desktop {
-      grid-area: sheep-info;
-    }
+  @include desktop {
+    grid-area: sheep-info;
   }
 }

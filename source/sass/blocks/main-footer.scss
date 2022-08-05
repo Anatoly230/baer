@@ -8,21 +8,31 @@ $green: #46c1ae;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 
   @include section-wrapper;
 
   @include tablet {
-    padding-bottom: rem(30);
+    padding-block-start: rem(56);
+    padding-block-end: rem(58);
     flex-direction: row;
-    padding-top: rem(23);
+    gap: rem(30);
+  }
+
+  @include desktop {
+    padding-block-start: rem(54);
   }
 }
 
 .main-footer__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  text-align: center;
+  text-align: left;
   border-bottom: 2px solid $whity-gray;
+  padding-block-start: rem(30);
+  padding-block-end: rem(30);
 
   @include tablet {
     border: none;
@@ -31,14 +41,11 @@ $green: #46c1ae;
   }
 }
 
-
-
 .main-footer__item:last-child {
   border: none;
 }
 
-.main-footer__logo-link {
-
+.main-footer__item--logo {
   display: none;
 
   @include tablet {
@@ -48,49 +55,45 @@ $green: #46c1ae;
   }
 }
 
-.main-footer__logo-link:hover {
+.main-footer__item--devs {
+  padding-block-start: rem(22);
+}
+
+.main-footer__link {
+  display: inline-block;
+}
+
+.main-footer__link--logo:hover {
   fill: $green;
 }
 
-.main-footer__logo-link:active {
+.main-footer__link--logo:active {
   opacity: 0.3;
 }
 
-.main-footer__devs-link {
+
+.main-footer__link--devs {
   text-decoration: none;
   color: $black;
-  padding: rem(30) 0;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
+  font-size: rem(19);
+  font-weight: bold;
 
   @include tablet {
-    padding: 0;
-    justify-content: flex-end;
-    width: calc(100 / 3) * 1%;
+    margin-inline-start: auto;
   }
 }
 
-.main-footer__devs {
-  font-size: rem(19);
-  font-weight: bold;
-  margin-inline-end: rem(27);
+.main-footer__link--devs:hover > .main-footer__devs-logo {
+  fill: #46c1ae;
+}
+
+.main-footer__link--devs:active > .main-footer__devs-logo {
+  fill: rgba(#46c1ae, 0.3);
 }
 
 .main-footer__devs-logo {
-  flex-shrink: 0;
-  fill: #63d1bb;
-
-}
-
-.main-footer__devs-link:hover .main-footer__devs-logo {
-  fill: $green;
-}
-
-.main-footer__devs-link:active  {
-  opacity: 0.3;
-}
-
-.main-footer__devs-link:hover .main-footer__devs {
-  color: $off-black;
+  margin-inline-start: rem(25);
 }

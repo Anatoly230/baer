@@ -1,0 +1,65 @@
+$toggle-color: $black;
+
+@mixin toggle-parametrs() {
+  width: rem(20);
+  height: rem(2);
+  background-color: $black;
+}
+
+.toggle-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: rem(27);
+  height: rem(14);
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+
+.toggle-menu--hide {
+  display: none;
+}
+
+.toggle-menu:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.toggle-menu:active {
+  opacity: 0.3;
+}
+
+.toggle-menu::before,
+.toggle-menu::after {
+  @include toggle-parametrs;
+  content: "";
+  transition: transform 0.2s linear 0s;
+
+}
+
+.toggle-menu::before {
+  box-shadow: 0 6px 0 $toggle-color;
+  transition: box-shadow 0.2s linear 50ms;
+}
+
+.toggle-menu::after {
+  // top: rem(12);
+
+  // @include toggle-parametrs;
+}
+
+.toggle-menu--close::before {
+width: 100%;
+box-shadow: 0 0 0 rgba($toggle-color, 0);
+background-color: $toggle-color;
+transform: translateY(6px) rotate(45deg);
+}
+
+
+.toggle-menu--close::after {
+  width: 100%;
+  background-color: $toggle-color;
+  transform: translateY(-6px) rotate(-45deg);
+}

@@ -5,10 +5,6 @@
   @return math.div($inPixel, $fs) * 1rem;
 }
 
-@function em($inPixel, $blockFs: $root-font-size) {
-  @return math.div($inPixel, $blockFs) * 1em;
-}
-
 // функция считает сколько  будет в rem  количество пикселей указанных в аргументе функции
 // $inPixel - размер объекта в пикселях
 // $fs и $root-font-size - размеры теукщего  root Em размера шрифта
