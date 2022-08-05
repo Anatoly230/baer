@@ -31,7 +31,6 @@ $green: #46c1ae;
   width: 100%;
   text-align: left;
   border-bottom: 2px solid $whity-gray;
-
   padding-block-start: rem(30);
   padding-block-end: rem(30);
 
@@ -54,6 +53,10 @@ $green: #46c1ae;
     padding: 0;
     text-align: left;
   }
+}
+
+.main-footer__item--devs {
+  padding-block-start: rem(22);
 }
 
 .main-footer__link {
@@ -92,5 +95,5 @@ $green: #46c1ae;
 }
 
 .main-footer__devs-logo {
-  margin-inline-start: rem(22);
+  margin-inline-start: rem(25);
 }

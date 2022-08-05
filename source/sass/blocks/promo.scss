@@ -2,7 +2,8 @@
   background-image: url("../img/background/hero-mobile.jpg");
   background-color: #f9f9f9;
   background-size: initial;
-  background-position: center -10px;
+  background-position: center -19px;
+  // background-position: center rem(62);
   background-repeat: no-repeat;
 
   @media (min-resolution: 2dppx) {
@@ -35,7 +36,8 @@
   font-weight: bold;
   margin-inline-start: auto;
   margin-inline-end: auto;
-  margin-block-end: rem(120);
+  // margin-block-start: rem(78);
+  margin-block-end: rem(119);
   text-align: center;
   max-width: rem(250);
 
@@ -54,6 +56,12 @@
     max-width: rem(620);
   }
 }
+
+// .promo__title-transfer {
+//   @include tablet {
+//     display: none;
+//   }
+// }
 
 .promo__link-btns-wrapper {
   @include tablet {

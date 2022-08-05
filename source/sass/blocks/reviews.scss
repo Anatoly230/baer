@@ -1,7 +1,7 @@
 .reviews {
   position: relative;
   background-color: $white;
-  padding-block-start: rem(36);
+  padding-block-start: rem(13);
   padding-block-end: rem(46);
 
   @include tablet {
@@ -74,7 +74,7 @@
 .reviews__btn-wrapper {
   display: flex;
   justify-content: center;
-  margin-block-end: rem(51);
+  margin-block-end: rem(40);
 
   @include tablet {
     width: 100%;
