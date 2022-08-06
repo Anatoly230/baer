@@ -41,15 +41,15 @@
       <ul class="header__menu header__menu--helper menu menu--helper">
         <li class="menu__item menu__item--separator">
           <a href="#" class="menu__item-link menu__item-link--helper">
-            <svg class="menu__item-icon" width="18" height="18">
+            <svg aria-hidden="true" class="menu__item-icon" width="18" height="18">
               <use xlink:href="./img/icons/sprite.svg#search"></use>
             </svg>
-            <span class="menu__item-hide"> Поиск по сайту</span>
+            <span role="search" class="menu__item-hide"> Поиск по сайту</span>
           </a>
         </li>
         <li class="menu__item">
           <a href="#" class="menu__item-link menu__item-link--helper">
-            <svg class="menu__item-icon " width="21" height="18">
+            <svg aria-hidden="true" class="menu__item-icon " width="21" height="18">
               <use xlink:href="./img/icons/sprite.svg#cart"></use>
             </svg>
             Корзина: пока пуста
@@ -166,13 +166,23 @@
             <span class="fieldset__title-text">Тел</span>
           </label>
           <div class="fieldset__item field field--text">
-            <input class="field__item" id="phone" type="tel" name="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
+            <input class="field__item field__item--icon-place" id="phone" type="tel" name="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
+            <span class="field__item-icon-wrapper">
+              <svg class="field__item-icon" width="25" height="24">
+                <use xlink:href="./img/icons/sprite.svg#phone"></use>
+              </svg>
+            </span>
           </div>
           <label class="fieldset__title fieldset__title--label" for="mail">
             <span class="fieldset__title-text">E-mail</span>
           </label>
-          <div class="fieldset__item field field--text">
-            <input class="field__item" id="mail" type="email" name="mail" placeholder="Ваш Email*">
+          <div class="fieldset__item field field--text ">
+            <input class="field__item field__item--icon-place" id="mail" type="email" name="mail" placeholder="Ваш Email*">
+            <span class="field__item-icon-wrapper">
+              <svg class="field__item-icon" width="32" height="21">
+                <use xlink:href="./img/icons/sprite.svg#mail"></use>
+              </svg>
+            </span>
           </div>
         </div>
       </div>
@@ -195,43 +205,40 @@
   <footer class="page-body__footer main-footer">
     <div class="main-footer__wrapper">
       <div class="main-footer__item main-footer__item--logo">
-        <a href="#" class="main-footer__link main-footer__link--logo">
-          <span class="visually-hidden">перейти на главную</span>
-          <svg class="main-footer__logo-pic" width="102" height="34">
+        <a href="#" aria-label="перейти на главную" class="main-footer__link main-footer__link--logo">
+          <svg aria-hidden="true" class="main-footer__logo-pic" width="102" height="34">
             <use xlink:href="./img/icons/sprite.svg#logo-footer"></use>
           </svg>
         </a>
       </div>
       <ul class="main-footer__item main-footer__social-list social-list">
         <li class="social-list__item">
-          <a class="social-list__item-link" href="#">
-            <span class="visually-hidden">мы во Вконтакте</span>
-            <svg class="social-list__item-pic" width="26" height="17">
+          <a aria-label="мы во Вконтакте" class="social-list__item-link" href="#">
+            <svg aria-hidden="true" class="social-list__item-pic" width="26" height="17">
               <use xlink:href="./img/icons/sprite.svg#vk"></use>
             </svg>
           </a>
         </li>
         <li class="social-list__item">
-          <a class="social-list__item-link" href="#">
-            <span class="visually-hidden">мы на Youtube</span>
+          <a aria-label="мы на Youtube" class="social-list__item-link" href="#">
             <svg class="social-list__item-pic" width="24" height="19">
               <use xlink:href="./img/icons/sprite.svg#yt"></use>
             </svg>
           </a>
         </li>
         <li class="social-list__item">
-          <a class="social-list__item-link" href="#">
-            <span class="visually-hidden">наш канал в телеграмм</span>
-            <svg class="social-list__item-pic" width="20" height="17">
+          <a aria-label="наш канал в телеграмм" class="social-list__item-link" href="#">
+            <svg aria-hidden="true" class="social-list__item-pic" width="20" height="17">
               <use xlink:href="./img/icons/sprite.svg#tm"></use>
             </svg>
           </a>
         </li>
       </ul>
       <div class="main-footer__item main-footer__item--devs">
-        <a class="main-footer__link main-footer__link--devs" href="https://htmlacademy.ru/intensive/adaptive">
+        <a aria-label="Перейти на сайт разработчика" class="main-footer__link main-footer__link--devs"
+          href="https://htmlacademy.ru/intensive/adaptive">
           <span class="main-footer__devs">Разработано</span>
-          <svg class="main-footer__devs-logo" width="27" height="34">
+          <svg aria-label="Логотип компании" class="main-footer__devs-logo" width="27" height="34">
             <use xlink:href="./img/icons/sprite.svg#logo-htmlacademy"></use>
           </svg>
         </a>
@@ -240,7 +247,7 @@
   </footer>
   <div class="window-background">
     <div class="window-background__modal modal">
-      <button class="modal__close">
+      <button type="button" aria-label="Закрыть" class="modal__close">
         <span class="modal__close-line"></span>
         <span class="modal__close-line"></span>
       </button>

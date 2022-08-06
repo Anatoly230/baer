@@ -1,6 +1,7 @@
 $box-size: rem(42);
 
 .field {
+  position: relative;
   @include tablet {
     display: flex;
     gap: rem(24);
@@ -51,7 +52,6 @@ $box-size: rem(42);
   display: block;
   width: 100%;
   border: none;
-  // box-shadow: 0 2px 0 $black;
   padding: rem(16) rem(17) rem(17) 0;
   background-color: transparent;
   font-size: rem(17);
@@ -106,6 +106,37 @@ $box-size: rem(42);
   height: 1;
 }
 
+.field__item--icon-place {
+  padding-inline-end: rem(45);
+}
+
+
+
+.field__item-icon-wrapper {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  min-width: rem(38);
+  max-width: 20%;
+  height: 100%;
+}
+
+.field__item-icon {
+  fill: #cccccc;
+}
+
+.field__item--icon-place:hover + .field__item-icon-wrapper .field__item-icon {
+  fill: #62d1ba;
+}
+
+.field__item--icon-place:active + .field__item-icon-wrapper .field__item-icon {
+  fill: #62d1ba;
+}
+
 .field__name {
   display: flex;
   align-items: center;
@@ -157,6 +188,10 @@ $box-size: rem(42);
 .field__item-select:focus-visible + .field__thing {
   outline: 2px solid rgba(#62d1ba, 0.7);
   outline-offset: -2 px;
+}
+
+.field__item:focus-visible + .field__item-icon-wrapper .field__item-icon  {
+  fill: #62d1ba;
 }
 
 .field__thing-item::before {
