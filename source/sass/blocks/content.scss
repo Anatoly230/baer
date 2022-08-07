@@ -1,57 +1,78 @@
 .content {
+  background-color: $white;
+}
 
-  &__advantages {
-    background-color: $white;
-    padding-block-start: rem(30);
+.content__special {
+  @include section-wrapper;
+
+  @include tablet {
+    max-width: rem(900);
+  }
+  @include desktop {
+    max-width: $desktop-width;
+  }
+}
+
+.content__advantages {
+  background-color: $white;
+  padding-block-start: rem(30);
+
+  @include tablet {
+    padding-block-start: rem(54);
+    padding-block-end: rem(50);
+  }
+}
+
+.content__advantages-wrapper {
+  @include section-wrapper;
+
+  @include tablet {
+    max-width: rem(900);
   }
 
-  &__advantages-wrapper {
-    @include section-wrapper;
+  @include desktop {
+    padding: 0;
+  }
+}
 
-    @include desktop {
-      max-width: rem(700);
-      padding: 0;
-    }
+.content__advantages-title {
+  color: $black;
+  max-width: rem(260);
+  font-size: rem(25);
+  line-height: calc(30 / 25);
+  font-weight: bold;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  margin-block-end: rem(5);
+
+  @include tablet {
+    max-width: rem(420);
+    font-size: rem(43);
+    line-height: calc(50 / 43);
+    margin-inline-start: initial;
+    margin-inline-end: initial;
+    margin-block-end: rem(18);
   }
 
-  &__advantages-title {
-    color: $black;
-    max-width: rem(260);
-    font-size: rem(25);
-    line-height: calc(30 / 25);
-    font-weight: bold;
-    margin-inline-start: auto;
-    margin-inline-end: auto;
-    margin-block-end: rem(5);
+  @include desktop {
+    font-size: rem(53);
+    line-height: calc(57 / 53);
+    margin-block-end: rem(16);
+  }
+}
 
-    @include tablet {
-      max-width: rem(420);
-      font-size: rem(43);
-      line-height: calc(50 / 43);
-      margin-inline-start: initial;
-      margin-inline-end: initial;
-      margin-block-end: rem(18);
-    }
+.content__promo {
 
-    @include desktop {
-      font-size: rem(53);
-      line-height: calc(57 / 53);
-      margin-block-end: rem(16);
-    }
+
+  @include tablet {
+
   }
 
-  &__promo {
-    padding-block-start: rem(73);
-
-    @include tablet {
-      padding-block-start: rem(110);
-    }
-  }
-
-  &__special {}
-
-  &__reviews {
-    @include section-wrapper;
+  @include desktop {
 
   }
+}
+
+.content__reviews {
+  @include section-wrapper;
 }

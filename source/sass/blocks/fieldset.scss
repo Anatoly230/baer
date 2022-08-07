@@ -10,87 +10,86 @@
     row-gap: rem(34);
     padding-block-start: rem(50);
     padding-block-end: rem(50);
-
-    @include desktop {
-      column-gap: rem(24);
-    }
   }
 
-  &__title {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-block-end: rem(25);
+  @include desktop {
+    column-gap: rem(24);
+  }
+}
 
-    @include tablet {
-      align-self: start;
-      // @include show-outline(green);
-      min-height: rem(52);
-      justify-content: initial;
-    }
+.fieldset__title {
 
-    @include desktop {
-      padding-inline-start: rem(60);
-    }
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-block-end: rem(25);
+
+  @include tablet {
+    align-self: start;
+    min-height: rem(52);
   }
 
-  &__title--label {
-    margin: 0;
+  @include desktop {
+    padding-inline-start: rem(60);
+  }
+}
+
+.fieldset__title--label {
+  margin: 0;
+}
+
+.fieldset__title-text {
+  max-width: 100%;
+  text-transform: uppercase;
+  font-size: rem(17);
+  font-weight: bold;
+  color: #63d1ba;
+  flex-shrink: 0;
+}
+
+.fieldset__title::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #63d1ba;
+  margin-inline-start: rem(25);
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.fieldset__group {
+  display: grid;
+  gap: rem(10);
+  justify-content: start;
+  // @include show-outline(violet);
+
+  @include tablet {
+    padding: 0;
+    gap: rem(24);
+  }
+}
+
+.fieldset__group--some-cols {
+  gap: rem(23);
+  justify-content: stretch;
+
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(24);
   }
 
-  &__title-text {
-    text-transform: uppercase;
-    font-size: rem(17);
-    font-weight: bold;
-    color: #63d1ba;
-    flex-shrink: 0;
+  @include desktop {
+    grid-template-columns: repeat(3, 1fr);
   }
+}
 
-  &__title::after {
-    content: "";
-    width: 100%;
-    height: 1px;
-    background-color: #63d1ba;
-    margin-inline-start: rem(25);
+.fieldset__group-text {
+  justify-content: initial;
+  row-gap: rem(22);
 
-    @include tablet {
-      display: none;
-    }
-  }
-
-  &__group {
-    display: grid;
-    gap: rem(10);
-    justify-content: start;
-    // @include show-outline(violet);
-
-    @include tablet {
-      padding: 0;
-      gap: rem(24);
-    }
-  }
-
-  &__group--some-cols {
-    gap: rem(23);
-    justify-content: stretch;
-
-    @include tablet {
-      grid-template-columns: repeat(2, 1fr);
-      gap: rem(24);
-    }
-
-    @include desktop {
-      grid-template-columns: repeat(3, 1fr);
-
-    }
-  }
-
-  &__group-text {
-    justify-content: initial;
+  @include tablet {
     row-gap: rem(22);
-
-    @include tablet {
-      row-gap: rem(22);
-    }
   }
 }

@@ -15,3 +15,33 @@ img {
   height: auto;
   line-height: 1;
 }
+
+// стилизация скролбара - мне нужно для того чтобы конролировать контролировать ширину просмотра экрана
+// 100vw - $scroll-width = ширина просмотра экрана
+
+body::-webkit-scrollbar {
+  width: $scroll-width;
+  /* ширина всей полосы прокрутки */
+}
+
+body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  /* цвет зоны отслеживания */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #c1c1c1;
+  /* цвет бегунка */
+  border-radius: 4px;
+  /* округлось бегунка */
+  border: 1px solid #f1f1f1;
+  /* отступ вокруг бегунка */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(#c1c1c1, 0.9);
+}
+
+body::-webkit-scrollbar-thumb:active {
+  background-color: rgba(#c1c1c1, 0.8);
+}

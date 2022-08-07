@@ -1,49 +1,57 @@
 .quote {
   display: none;
-  margin-block-end: rem(43);
+  margin-block-end: rem(29);
 
   @include tablet {
     margin-block-end: initial;
     grid-area: quote;
   }
+}
 
-  &--show {
-    display: block;
+.quote--show {
+  display: block;
+}
 
-  }
+.quote__text {
+  line-height: calc(30 / 15);
+  margin-block-end: rem(33);
 
-  &__text {
-    line-height: calc(30 / 15);
-    margin-block-end: rem(33);
-
-    @include tablet {
-      font-size: rem(17);
-      line-height: calc(30 / 17);
-      margin-block-start: rem(40);
-      margin-block-end: rem(60);
-    }
-
-    @include desktop {
-      margin-block-start: rem(35);
-      margin-block-end: rem(44);
-    }
-  }
-
-  &__author {
+  @include tablet {
     font-size: rem(17);
-    line-height: calc(24 / 17);
-    display: flex;
-    flex-direction: column;
-    gap: rem(10);
-    font-style: normal;
-
-    @include tablet {
-      font-size: rem(18);
-    }
+    line-height: calc(30 / 17);
+    margin-block-start: rem(40);
+    margin-block-end: rem(60);
   }
 
-  &__author-name {
-    color: $black;
-    font-weight: bold;
+  @include desktop {
+    margin-block-start: rem(35);
+    margin-block-end: rem(44);
   }
+}
+
+.quote__author {
+  font-size: rem(17);
+  line-height: calc(24 / 17);
+  display: flex;
+  flex-direction: column;
+  gap: rem(5);
+  font-style: normal;
+
+  @include tablet {
+    font-size: rem(18);
+  }
+}
+
+.quote__author-social {
+  @include tablet {
+    font-size: rem(17);
+    line-height: calc(30 / 17);
+  }
+}
+
+
+
+.quote__author-name {
+  color: $black;
+  font-weight: bold;
 }

@@ -1,16 +1,15 @@
 .advantages {
   @include reset-list-style;
-  padding-block-start: rem(10);
-  padding-block-end: rem(20);
+  padding-block-start: rem(23);
+  padding-block-end: rem(10);
   font-size: rem(17);
   font-weight: bold;
 
   @include tablet {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: rem(30);
-    // align-items: start;
+    column-gap: rem(5);
+    row-gap: rem(30);
+    // padding-block-end: rem(50);
   }
 }
-
-

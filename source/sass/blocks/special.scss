@@ -1,23 +1,23 @@
 .special {
   overflow: hidden;
   position: relative;
-  @include section-wrapper;
   background-color: $white;
   padding-block-start: rem(31);
   padding-block-end: rem(42);
 
   @include tablet {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: rem(292) repeat(2, 1fr);
     grid-template-rows: repeat(4, auto);
     justify-content: space-between;
-    align-items: end;
-    column-gap: rem(42);
+    align-items: start;
+    column-gap: rem(40);
+    row-gap: rem(15);
     grid-template-areas:
-      "t t t k"
-      "d d i i"
-      "p p i i"
-      "b b i i";
+      "t t k"
+      "d i i"
+      "p i i"
+      "b i i";
     padding-block-start: rem(40);
     padding-block-end: rem(69);
   }
@@ -26,7 +26,7 @@
     padding-block-start: rem(54);
     padding-block-end: rem(96);
     grid-template-columns: rem(175) rem(292) rem(50) 1fr;
-    grid-template-rows: 1fr repeat(3, auto);
+    grid-template-rows: repeat(4, auto);
     column-gap: 0;
     grid-template-areas:
       "k t . i"
@@ -34,142 +34,145 @@
       ". p . i"
       ". b . i";
   }
+}
 
-  &::after {
-    position: absolute;
-    display: block;
-    content: "";
-    background-image: url("../img/icons/pattern-wave.svg");
-    background-position: center;
-    background-size: contain;
-    width: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 0;
-    height: auto;
-    height: rem(6);
+.special::after {
+  position: absolute;
+  display: block;
+  content: "";
+  background-image: url("../img/icons/wave-line.svg");
+  background-position: center;
+  background-size: contain;
+  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  height: rem(6);
 
-    @include tablet {
-      height: rem(17);
-    }
-
-    @include desktop {
-      width: calc(100% - (50px * 2));
-    }
+  @include tablet {
+    height: rem(17);
   }
 
-  &__title {
-    color: $black;
-    font-size: rem(25);
-    line-height: calc(30 / 25);
-    font-weight: bold;
-    margin-block-end: rem(4);
+  @include desktop {
+    width: calc(100% - (50px * 2));
+  }
+}
 
-    @include tablet {
-      max-width: rem(450);
-      font-size: rem(43);
-      line-height: calc(50 / 43);
-      margin-block-end: initial;
-      grid-area: t;
-      margin-block-end: rem(50);
-    }
+.special__title {
+  color: $black;
+  font-size: rem(25);
+  line-height: calc(30 / 25);
+  font-weight: bold;
+  margin-block-end: rem(4);
 
-    @include desktop {
-      margin-block-end: initial;
-      max-width: rem(545);
-      font-size: rem(53);
-      line-height: calc(57 / 53);
-      align-self: end;
-      z-index: 2;
-      grid-column: 2 / 6;
-      grid-row: 1 / 2;
-      align-self: center;
-    }
+  @include tablet {
+    max-width: rem(450);
+    font-size: rem(43);
+    line-height: calc(50 / 43);
+    grid-area: t;
+    margin-block-end: rem(34.5);
+    align-self: start;
   }
 
-  &__category {
-    color: #63d1bb;
-    font-size: rem(17);
-    line-height: calc(20 / 17);
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-block-end: rem(17);
-
-    @include tablet {
-      text-align: center;
-      max-width: rem(80);
-      line-height: calc(17 / 17);
-      margin-block-end: rem(50);
-      align-self: center;
-      justify-self: center;
-    }
-
-    @include desktop {
-      grid-area: k;
-      margin-block-end: initial;
-    }
+  @include desktop {
+    margin-block-end: initial;
+    max-width: rem(545);
+    font-size: rem(53);
+    line-height: calc(57 / 53);
+    z-index: 2;
+    grid-column: 2 / 6;
+    grid-row: 1 / 2;
+    align-self: center;
   }
+}
 
-  &__desc {
-    line-height: calc(24 / 15);
-    margin-block-end: rem(28);
+.special__category {
+  color: #63d1bb;
+  font-size: rem(17);
+  line-height: calc(20 / 17);
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-block-end: rem(17);
 
-    @include tablet {
-      align-self: start;
-      grid-area: d;
-    }
-
-  }
-
-  &__parametrs {
-    margin-block-end: rem(28);
-
-    @include tablet {
-      grid-area: p;
-      align-self: center;
-    }
-  }
-
-  &__parametrs-wrapper {}
-
-  &__pic-wrapper {
-
-    @include tablet {
-      grid-area: i;
-      align-self: stretch;
-    }
-  }
-
-  &__pic {
-    display: block;
-    width: 100%;
-    height: 100%;
-    margin-block-end: rem(25);
-    object-fit: contain;
-
-    @include tablet {
-      margin-block-end: initial;
-      object-fit: cover;
-    }
-
-    @include desktop {
-      // margin-inline-start: rem(42);
-    }
-  }
-
-  &__buy-wrapper {
-    @include tablet {
-      grid-area: b;
-    }
-  }
-
-  &__price {
-    font-size: rem(17);
-    line-height: calc(24 / 17);
-    font-weight: bold;
-    margin-block-end: rem(25);
+  @include tablet {
     text-align: center;
+    max-width: rem(80);
+    line-height: calc(17 / 17);
+    align-self: start;
+    justify-self: center;
+    margin-block-start: rem(7);
+    margin-inline-start: rem(19);
+
   }
 
-  &__buy-btn {}
+  @include desktop {
+    grid-area: k;
+    margin-block-end: initial;
+  }
+}
+
+.special__desc {
+  line-height: calc(24 / 15);
+  margin-block-end: rem(18);
+
+  @include tablet {
+    font-size: rem(17);
+    line-height: calc(30 / 17);
+    align-self: start;
+    grid-area: d;
+    margin-block-start: -1ex;
+    margin-block-end: 0;
+
+  }
+}
+
+.special__parametrs {
+  margin-block-end: rem(28);
+
+  @include tablet {
+    grid-area: p;
+    align-self: start;
+    margin-block-end: rem(5);
+  }
+}
+
+.special__pic-wrapper {
+  @include tablet {
+    grid-area: i;
+    align-self: stretch;
+  }
+}
+
+.special__pic {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin-block-end: rem(28);
+  object-fit: contain;
+
+  @include tablet {
+    margin-block-end: initial;
+    object-fit: cover;
+  }
+}
+
+.special__buy-wrapper {
+  @include tablet {
+    grid-area: b;
+    align-self: end;
+  }
+}
+
+.special__price {
+  font-size: rem(17);
+  line-height: calc(24 / 17);
+  font-weight: bold;
+  margin-block-end: rem(23);
+  text-align: center;
+
+  @include tablet {
+    font-size: rem(20);
+    line-height: calc(24 / 20);
+    margin-block-end: rem(34);
+  }
 }

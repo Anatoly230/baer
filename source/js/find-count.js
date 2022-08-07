@@ -21,4 +21,3 @@ function equating(domElem, colCount) {
 }
 
 equating("advantages", 2);
-

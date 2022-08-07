@@ -1,11 +1,12 @@
 $green: #46c1ae;
+
 .social-list {
   @include reset-list-style;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   max-width: 100%;
-  gap: rem(24);
+  gap: rem(34);
 }
 
 .social-list__item:hover .social-list__item-pic {

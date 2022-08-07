@@ -2,6 +2,7 @@ $font-color: $black;
 
 .menu {
   overflow: hidden;
+
   @include reset-list-style;
   width: 100%;
   background-color: $white;
@@ -14,161 +15,212 @@ $font-color: $black;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(auto-fill, minmax(rem(50), 1fr));
     grid-auto-rows: 1fr;
-    gap: rem(20);
+    gap: rem(16);
     align-items: center;
     justify-content: space-between;
   }
 
-  &--helper {
-    @include tablet {
-      grid-template-columns: rem(84) 1fr;
-      // justify-content: space-between;
-    }
+  @include desktop {
+    grid-template-columns: repeat(2, auto);
+    justify-content: start;
+    gap: rem(72);
   }
+}
 
-  &--helper::before {
-    @include tablet {
-      position: absolute;
-      display: block;
-      content: "";
-      width: 1px;
-      height: 100vw;
-      left: 1;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: #e6e6e6;
-    }
+.menu--helper {
+  @include tablet {
+    grid-template-columns: rem(82) 1fr;
+    gap: rem(16);
   }
+}
 
-  &__item {
-    position: relative;
-    border-bottom: 1px solid rgba($black, 0.1);
-
-    @include tablet {
-      display: flex;
-      align-items: center;
-      border: initial;
-    }
-  }
-
-  &__item--separator::before {
+.menu--helper::before {
+  @include tablet {
     position: absolute;
-
-    @include tablet {
-      display: block;
-      right: 0;
-      top: 50%;
-      content: "";
-      width: 1px;
-      height: 100vw;
-      transform: translateY(-50%);
-      background-color: #e6e6e6;
-    }
-  }
-
-  &__item--main::before {
-    @include tablet {
-      display: none;
-    }
-
-    @include desktop {
-      display: block;
-    }
-  }
-
-  &__item-link {
-    background-color: transparent;
-    border: none;
     display: block;
-    color: $black;
-    text-decoration: none;
-    font-size: rem(15);
-    font-weight: bold;
-    padding-top: rem(28);
-    padding-bottom: rem(26);
-    padding-left: 1em;
-    padding-right: 1em;
-    text-align: center;
-
-    @include tablet {
-      padding: 1em 0;
-      text-align: initial;
-    }
+    content: "";
+    width: 1px;
+    height: 100vw;
+    left: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #e6e6e6;
   }
+}
 
-  &__item-link:hover {
-    cursor: pointer;
-    color: rgba($black, 0.8);
-  }
+.menu--events {
+ @include desktop {
+  grid-template-columns: repeat(2, auto);
+  gap: rem(63);
+ }
+}
 
-  &__item-link:active {
-    color: rgba($black, 0.3);
-  }
+.menu__item {
+  position: relative;
+  border-bottom: 1px solid rgba($black, 0.1);
 
-
-
-  &__item-link--helper {
-
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr minmax(30px, auto) 1fr;
-    gap: rem(26);
+  @include tablet {
+    display: flex;
     align-items: center;
+    border: initial;
+  }
+}
 
-    @include tablet {
-      text-align: right;
-      display: flex;
-      justify-content: center;
-    }
+.menu__item--separator::before {
+  position: absolute;
+  @include tablet {
+    display: block;
+    right: 0;
+    top: 50%;
+    content: "";
+    width: 1px;
+    height: 100vw;
+    transform: translateY(-50%);
+    background-color: #e6e6e6;
+  }
+}
+
+.menu__item--separator-between::before {
+  @include desktop{
+    right: rem(-36);
+  }
+}
+
+.menu__item--main::before {
+  @include tablet {
+    display: none;
   }
 
-  &__item-icon {
-    margin-inline-start: auto;
+  @include desktop {
+    display: block;
+  }
+}
 
-    @include tablet {
-      margin-inline-start: 0;
-    }
+.menu__item-link {
+  background-color: transparent;
+  border: none;
+  display: block;
+  color: $black;
+  text-decoration: none;
+  font-size: rem(17);
+  line-height: calc(24 / 17);
+  font-weight: bold;
+  padding-block-start: rem(28);
+  padding-block-end: rem(26);
+  text-align: center;
+
+  @include tablet {
+    padding-block-start: rem(21);
+    padding-block-end: rem(21);
+    font-size: rem(15);
+    line-height: calc(24 / 15);
+    text-align: initial;
   }
 
-  &__item-link--helper:hover &__item-icon {
-    fill: #63d1bb;
+  @include desktop {
+    font-size: rem(17);
+    line-height: calc(24 / 15);
+    padding-block-start: rem(20);
+    padding-block-end: rem(20);
+  }
+}
+
+.menu__item-link:hover {
+  cursor: pointer;
+  color: rgba($black, 0.8);
+}
+
+.menu__item-link:active {
+  color: rgba($black, 0.3);
+}
+
+.menu__item-link--helper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(rem(50), 1fr) minmax(30px, auto) 1fr;
+  gap: rem(27);
+  align-items: center;
+
+  @include tablet {
+    padding-block-start: rem(24);
+    // padding-block-end: rem(21);
+    font-size: rem(17);
+    line-height: calc(24 / 17);
+    text-align: right;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.menu__item-link--search {
+  @include tablet {
+    // justify-content: end;
+  }
+}
+
+.menu__item-link--basket {
+  @include tablet {
+    gap: rem(30);
+    justify-content: end;
   }
 
-  &__item-link--helper:active &__item-icon {
-    opacity: 0.3;
+  @include desktop {
+    margin-inline-end: rem(2);
   }
+}
 
-  &__item-link--active {
-    color: $black;
-    cursor: auto;
+.menu__item-link--events {
+  @include desktop {
+    padding-block-start: rem(18);
+    font-size: rem(15);
+    line-height: calc(24 / 15);
   }
+}
 
-  &__item-link--active:hover {
-    color: $black;
-    cursor: auto;
+.menu__item-icon {
+margin-inline-start: auto;
+fill: #cccccc;
+
+  @include tablet {
+    margin-inline-start: 0;
   }
+}
 
-  &__item-link--active:active {
-    color: $black;
+.menu__item-link--helper:hover .menu__item-icon {
+  fill: #63d1bb;
+}
+
+.menu__item-link--helper:active .menu__item-icon {
+  opacity: 0.3;
+}
+
+.menu__item-link--active {
+  color: $black;
+  cursor: auto;
+}
+
+.menu__item-link--active:hover {
+  color: $black;
+  cursor: auto;
+}
+
+.menu__item-link--active:active {
+  color: $black;
+}
+
+.menu__item--helper-desc {
+  display: inline;
+  font-size: inherit;
+  font-weight: inherit;
+  background-color: inherit;
+  line-height: inherit;
+  padding: 0;
+  color: inherit;
+  border: none;
+}
+
+.menu__item-hide {
+  @include tablet {
+    display: none;
   }
-
-  &__item--helper-desc {
-    display: inline;
-    font-size: inherit;
-    font-weight: inherit;
-    background-color: inherit;
-    line-height: inherit;
-    padding: 0;
-    color: inherit;
-    border: none;
-
-
-  }
-
-  &__item-hide {
-    @include tablet {
-      display: none;
-    }
-  }
-
 }
