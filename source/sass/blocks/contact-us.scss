@@ -4,7 +4,8 @@
   padding-block-end: rem(39);
 
   @include tablet {
-    padding-block-start: rem(68);
+    padding-block-start: rem(45
+    );
     padding-block-end: rem(57);
   }
 
@@ -59,7 +60,7 @@
 
   @include tablet {
     display: flex;
-    margin-block-end: rem(28);
+    margin-block-end: rem(22.5);
     justify-content: space-between;
     align-items: center;
     font-size: rem(43);
@@ -84,6 +85,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    margin-block-end: rem(20);
   }
 
   @include desktop {
@@ -97,7 +99,7 @@
   margin-block-end: rem(62);
 
   @include tablet {
-    margin-block-end: rem(49);
+    margin-block-end: rem(47);
   }
 }
 

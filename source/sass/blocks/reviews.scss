@@ -5,17 +5,17 @@
   padding-block-end: rem(46);
 
   @include tablet {
-    padding-block-start: rem(70);
-    padding-block-end: rem(141);
+    padding-block-start: rem(80);
+    padding-block-end: rem(130);
     display: grid;
     grid-template-columns: repeat(2, 1fr) rem(175);
     grid-template-rows: repeat(2, auto);
     grid-template-areas:
-      "title title fb"
-      "quote quote quote";
+    "title title fb"
+    "quote quote quote";
     background-image: url("../img/background/review-tablet.jpg");
     background-position: left top;
-    background-size: auto calc(457 / 514 * 100%);
+    background-size: auto calc(434 / 514 * 100%);
     // background-size: 350px 457px;
     background-repeat: no-repeat;
 
@@ -43,7 +43,7 @@
   content: "";
   width: 100vw;
   height: rem(6);
-  background-image: url("../img/icons/pattern-wave.svg");
+  background-image: url("../img/icons/wave-line.svg");
   background-size: contain;
   background-position: center;
   background-repeat: repeat-x;
@@ -68,6 +68,7 @@
     font-size: rem(43);
     line-height: calc(50 / 43);
     grid-area: title;
+    align-self: end;
   }
 }
 
@@ -105,6 +106,7 @@
   @include tablet {
     border: none;
     width: 50%;
+    height: rem(60);
   }
 }
 

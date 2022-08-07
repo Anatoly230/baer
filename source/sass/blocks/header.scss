@@ -18,7 +18,7 @@
     position: relative;
     $paddings: 50;
     display: grid;
-    grid-template-columns: 47% 1fr;
+    grid-template-columns: 48% 1fr;
     grid-template-rows: repeat(2, auto);
 
     @include section-wrapper;
@@ -101,7 +101,7 @@
     grid-area: logo-wrapper;
     order: initial;
     padding-top: rem(9);
-    padding-bottom: rem(14);
+    padding-bottom: rem(9);
   }
 }
 
@@ -117,7 +117,7 @@
   }
 
   @include desktop {
-    margin-left: rem(12);
+    margin-left: rem(10);
   }
 }
 

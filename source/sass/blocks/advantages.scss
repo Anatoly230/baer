@@ -8,6 +8,8 @@
   @include tablet {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: rem(30);
+    column-gap: rem(5);
+    row-gap: rem(30);
+    // padding-block-end: rem(50);
   }
 }

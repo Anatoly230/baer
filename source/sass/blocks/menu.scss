@@ -15,15 +15,22 @@ $font-color: $black;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(auto-fill, minmax(rem(50), 1fr));
     grid-auto-rows: 1fr;
-    gap: rem(20);
+    gap: rem(16);
     align-items: center;
     justify-content: space-between;
+  }
+
+  @include desktop {
+    grid-template-columns: repeat(2, auto);
+    justify-content: start;
+    gap: rem(72);
   }
 }
 
 .menu--helper {
   @include tablet {
-    grid-template-columns: rem(84) 1fr;
+    grid-template-columns: rem(82) 1fr;
+    gap: rem(16);
   }
 }
 
@@ -41,6 +48,13 @@ $font-color: $black;
   }
 }
 
+.menu--events {
+ @include desktop {
+  grid-template-columns: repeat(2, auto);
+  gap: rem(63);
+ }
+}
+
 .menu__item {
   position: relative;
   border-bottom: 1px solid rgba($black, 0.1);
@@ -54,7 +68,6 @@ $font-color: $black;
 
 .menu__item--separator::before {
   position: absolute;
-
   @include tablet {
     display: block;
     right: 0;
@@ -64,6 +77,12 @@ $font-color: $black;
     height: 100vw;
     transform: translateY(-50%);
     background-color: #e6e6e6;
+  }
+}
+
+.menu__item--separator-between::before {
+  @include desktop{
+    right: rem(-36);
   }
 }
 
@@ -86,15 +105,23 @@ $font-color: $black;
   font-size: rem(17);
   line-height: calc(24 / 17);
   font-weight: bold;
-  padding-top: rem(28);
-  padding-bottom: rem(26);
+  padding-block-start: rem(28);
+  padding-block-end: rem(26);
   text-align: center;
 
   @include tablet {
+    padding-block-start: rem(21);
+    padding-block-end: rem(21);
     font-size: rem(15);
     line-height: calc(24 / 15);
-    padding: 1em 0;
     text-align: initial;
+  }
+
+  @include desktop {
+    font-size: rem(17);
+    line-height: calc(24 / 15);
+    padding-block-start: rem(20);
+    padding-block-end: rem(20);
   }
 }
 
@@ -108,7 +135,6 @@ $font-color: $black;
 }
 
 .menu__item-link--helper {
-
   width: 100%;
   display: grid;
   grid-template-columns: minmax(rem(50), 1fr) minmax(30px, auto) 1fr;
@@ -116,6 +142,8 @@ $font-color: $black;
   align-items: center;
 
   @include tablet {
+    padding-block-start: rem(24);
+    // padding-block-end: rem(21);
     font-size: rem(17);
     line-height: calc(24 / 17);
     text-align: right;
@@ -124,8 +152,34 @@ $font-color: $black;
   }
 }
 
+.menu__item-link--search {
+  @include tablet {
+    // justify-content: end;
+  }
+}
+
+.menu__item-link--basket {
+  @include tablet {
+    gap: rem(30);
+    justify-content: end;
+  }
+
+  @include desktop {
+    margin-inline-end: rem(2);
+  }
+}
+
+.menu__item-link--events {
+  @include desktop {
+    padding-block-start: rem(18);
+    font-size: rem(15);
+    line-height: calc(24 / 15);
+  }
+}
+
 .menu__item-icon {
 margin-inline-start: auto;
+fill: #cccccc;
 
   @include tablet {
     margin-inline-start: 0;

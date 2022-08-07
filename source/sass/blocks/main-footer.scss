@@ -13,7 +13,7 @@ $green: #46c1ae;
   @include section-wrapper;
 
   @include tablet {
-    padding-block-start: rem(56);
+    padding-block-start: rem(48.5);
     padding-block-end: rem(58);
     flex-direction: row;
     gap: rem(30);
@@ -57,6 +57,10 @@ $green: #46c1ae;
 
 .main-footer__item--devs {
   padding-block-start: rem(22);
+
+  @include tablet {
+    padding: 0;
+  }
 }
 
 .main-footer__link {

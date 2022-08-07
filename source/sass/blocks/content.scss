@@ -2,16 +2,35 @@
   background-color: $white;
 }
 
+.content__special {
+  @include section-wrapper;
+
+  @include tablet {
+    max-width: rem(900);
+  }
+  @include desktop {
+    max-width: $desktop-width;
+  }
+}
+
 .content__advantages {
   background-color: $white;
   padding-block-start: rem(30);
+
+  @include tablet {
+    padding-block-start: rem(54);
+    padding-block-end: rem(50);
+  }
 }
 
 .content__advantages-wrapper {
   @include section-wrapper;
 
+  @include tablet {
+    max-width: rem(900);
+  }
+
   @include desktop {
-    max-width: rem(700);
     padding: 0;
   }
 }
@@ -43,10 +62,14 @@
 }
 
 .content__promo {
-  padding-block-start: rem(73);
+
 
   @include tablet {
-    padding-block-start: rem(110);
+
+  }
+
+  @include desktop {
+
   }
 }
 
