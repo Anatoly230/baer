@@ -21,7 +21,6 @@
 .contact-info__wrapper {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
   gap: rem(26);
 
   @include tablet {
@@ -31,7 +30,6 @@
 
   @include desktop {
     gap: rem(25);
-    justify-content: space-between;
     width: 100%;
   }
 }
@@ -47,6 +45,10 @@
 
   @include tablet {
     width: rem(220);
+  }
+
+  @include desktop {
+    width: auto;
   }
 }
 

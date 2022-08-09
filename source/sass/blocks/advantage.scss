@@ -19,13 +19,14 @@
     grid-template-rows: rem(38) 1fr;
     row-gap: rem(16);
     align-self: start;
+  }
 
+  @include desktop {
+    row-gap: rem(17.5);
   }
 }
 
 .advantage__icon {
-  // margin-inline-start: rem(10);
-  // margin-block-end: rem(10);
   min-width: rem(55);
   max-height: rem(38);
   fill: #63d1bb;
@@ -36,8 +37,12 @@
     grid-row: 1 / 2 ;
     align-self: center;
     justify-self: center;
-    // margin-block-end: rem(17);
   }
+
+  @include desktop {
+
+  }
+
 }
 
 .advantage__text {

@@ -29,31 +29,9 @@
     grid-template-areas:
       ". title title fb"
       ". quote quote quote";
-    padding-block-end: rem(180);
+    padding-block-start: rem(78);
+    padding-block-end: rem(183);
     background-position: rem(50) top;
-  }
-}
-
-.reviews::after {
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  content: "";
-  width: 100vw;
-  height: rem(6);
-  background-image: url("../img/icons/wave-line.svg");
-  background-size: contain;
-  background-position: center;
-  background-repeat: repeat-x;
-
-  @include tablet {
-    height: rem(17);
-  }
-
-  @include desktop {
-    width: calc(100% - (50px * 2));
   }
 }
 
@@ -69,6 +47,11 @@
     line-height: calc(50 / 43);
     grid-area: title;
     align-self: end;
+  }
+
+  @include desktop {
+    font-size: rem(53);
+    line-height: calc(57 / 53);
   }
 }
 
@@ -127,5 +110,9 @@
   @include tablet {
     align-self: start;
     grid-area: fb;
+  }
+
+  @include desktop {
+margin-block-start: rem(1);
   }
 }

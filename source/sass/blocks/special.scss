@@ -25,38 +25,42 @@
   @include desktop {
     padding-block-start: rem(54);
     padding-block-end: rem(96);
-    grid-template-columns: rem(175) rem(292) rem(50) 1fr;
-    grid-template-rows: repeat(4, auto);
+    grid-template-columns: rem(175) rem(292) rem(58) rem(525);
+    grid-template-rows: minmax(rem(123), auto) minmax(rem(145), auto) repeat(2, auto);
     column-gap: 0;
     grid-template-areas:
       "k t . i"
       ". d . i "
       ". p . i"
       ". b . i";
+      justify-content: end;
+      align-content: start;
   }
 }
 
-.special::after {
-  position: absolute;
-  display: block;
-  content: "";
-  background-image: url("../img/icons/wave-line.svg");
-  background-position: center;
-  background-size: contain;
-  width: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 0;
-  height: rem(6);
+// .special::after {
+//   position: absolute;
+//   display: block;
+//   content: "";
+//   background-image: url("../img/icons/wave-line.svg");
+//   background-position: center;
+//   background-size: contain;
+//   width: 100%;
+//   left: 50%;
+//   transform: translateX(-50%);
+//   bottom: 0;
+//   height: rem(6);
 
-  @include tablet {
-    height: rem(17);
-  }
+//   @include tablet {
+//     height: rem(17);
+//   }
 
-  @include desktop {
-    width: calc(100% - (50px * 2));
-  }
-}
+//   @include desktop {
+//     height: rem(23);
+//     background-size: 53px 23px;
+//     width: calc(100% - (50px * 2));
+//   }
+// }
 
 .special__title {
   color: $black;
@@ -75,14 +79,15 @@
   }
 
   @include desktop {
-    margin-block-end: initial;
+    margin: 0;
     max-width: rem(545);
     font-size: rem(53);
     line-height: calc(57 / 53);
     z-index: 2;
     grid-column: 2 / 6;
     grid-row: 1 / 2;
-    align-self: center;
+    margin-block-start: rem(61);
+    align-self: start;
   }
 }
 
@@ -106,8 +111,10 @@
   }
 
   @include desktop {
+    margin: 0;
+    margin-inline-end: rem(13);
+    margin-block-start: rem(69);
     grid-area: k;
-    margin-block-end: initial;
   }
 }
 
@@ -122,7 +129,11 @@
     grid-area: d;
     margin-block-start: -1ex;
     margin-block-end: 0;
+  }
 
+  @include desktop{
+    margin-block-start: rem(16);
+    margin-block-end: 0;
   }
 }
 
@@ -147,12 +158,19 @@
   display: block;
   width: 100%;
   height: 100%;
+  max-height: rem(500);
   margin-block-end: rem(28);
-  object-fit: contain;
+  object-fit: cover;
 
   @include tablet {
-    margin-block-end: initial;
+    // max-width: rem(500);
+    max-height: rem(570);
+    margin: 0;
     object-fit: cover;
+  }
+
+  @include desktop {
+    max-height: none;
   }
 }
 
@@ -174,5 +192,9 @@
     font-size: rem(20);
     line-height: calc(24 / 20);
     margin-block-end: rem(34);
+  }
+
+  @include tablet {
+    margin-block-end: rem(33);
   }
 }
