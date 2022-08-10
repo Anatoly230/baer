@@ -1,8 +1,18 @@
 .assortiment {
   padding-block-start: rem(30);
-  padding-block-end: rem(30);
+  padding-block-end: rem(20);
 
   @include section-wrapper;
+
+  @include tablet {
+    padding-block-start: rem(66);
+    padding-block-end: rem(10);
+  }
+
+  @include desktop {
+    padding-block-start: rem(110);
+    padding-block-end: rem(30);
+  }
 }
 
 .assortiment__list {
