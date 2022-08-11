@@ -23,14 +23,19 @@ $font-color: $black;
   @include desktop {
     grid-template-columns: repeat(2, auto);
     justify-content: start;
-    gap: rem(72);
+    column-gap: rem(72);
+    row-gap: rem(5);
   }
 }
 
 .menu--helper {
   @include tablet {
     grid-template-columns: rem(82) 1fr;
-    gap: rem(16);
+    column-gap: rem(16);
+  }
+
+  @include desktop {
+    column-gap: rem(5);
   }
 }
 
@@ -49,10 +54,10 @@ $font-color: $black;
 }
 
 .menu--events {
- @include desktop {
-  grid-template-columns: repeat(2, auto);
-  gap: rem(63);
- }
+  @include desktop {
+    grid-template-columns: repeat(2, auto);
+    gap: rem(63);
+  }
 }
 
 .menu__item {
@@ -68,6 +73,7 @@ $font-color: $black;
 
 .menu__item--separator::before {
   position: absolute;
+
   @include tablet {
     display: block;
     right: 0;
@@ -81,7 +87,7 @@ $font-color: $black;
 }
 
 .menu__item--separator-between::before {
-  @include desktop{
+  @include desktop {
     right: rem(-36);
   }
 }
@@ -178,8 +184,8 @@ $font-color: $black;
 }
 
 .menu__item-icon {
-margin-inline-start: auto;
-fill: #cccccc;
+  margin-inline-start: auto;
+  fill: #cccccc;
 
   @include tablet {
     margin-inline-start: 0;

@@ -5,7 +5,7 @@
   @include tablet {
     @include section-wrapper;
     display: grid;
-    grid-template-columns: rem(150) 1fr;
+    grid-template-columns: minmax(rem(150), min-content) 1fr;
     column-gap: rem(20);
     row-gap: rem(34);
     padding-block-start: rem(50);
