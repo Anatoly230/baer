@@ -11,4 +11,8 @@
     column-gap: rem(5);
     row-gap: rem(30);
   }
+
+  @include desktop {
+    column-gap: rem(20);
+  }
 }

@@ -13,7 +13,6 @@
     height: rem(24);
     content: "";
     background-image: url("../img/icons/wave-tablet.svg");
-    // background-repeat: no-repeat;
     background-color: transparent;
     background-position: center;
     background-size: auto;
@@ -25,7 +24,6 @@
     background-size: rem(57) rem(34);
     background-image: url("../img/icons/wave-desktop.svg");
   }
-
 }
 
 .wave--promo::after {

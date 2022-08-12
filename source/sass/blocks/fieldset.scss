@@ -1,6 +1,5 @@
 .fieldset {
-  padding-block-start: rem(30);
-
+  padding-block-start: rem(24);
 
   @include tablet {
     @include section-wrapper;
@@ -8,8 +7,7 @@
     grid-template-columns: minmax(rem(150), min-content) 1fr;
     column-gap: rem(20);
     row-gap: rem(34);
-    padding-block-start: rem(50);
-    padding-block-end: rem(50);
+    padding: rem(50);
   }
 
   @include desktop {
@@ -17,12 +15,87 @@
   }
 }
 
-.fieldset__title {
 
+.fieldset--type {
+  @include tablet {
+    column-gap: rem(20);
+    padding-block-start: rem(64);
+  }
+
+  @include desktop {
+    grid-template-columns: rem(150) rem(700) 1fr;
+    column-gap: rem(25);
+  }
+}
+
+.fieldset--color {
+  @include mobile-only {
+    column-gap: rem(17);
+    padding-block-start: rem(28);
+  }
+
+  @include desktop {
+    padding-block-start: rem(48);
+    padding-block-end: rem(52);
+    grid-template-columns: rem(150) rem(770) 1fr;
+    column-gap: rem(25);
+  }
+}
+
+.fieldset--full-name {
+  @include mobile-only {
+    padding-block-start: rem(29);
+  }
+
+  @include tablet {
+    column-gap: rem(18);
+  }
+
+  @include desktop {
+    padding-block-start: rem(50);
+    grid-template-columns: rem(150) rem(700) 1fr;
+    column-gap: rem(25);
+  }
+}
+
+.fieldset--contacts {
+  @include mobile-only {
+    padding-block-start: rem(29);
+  }
+
+  @include tablet {
+    row-gap: rem(20);
+  }
+
+  @include desktop {
+    grid-template-columns: rem(150) rem(700) 1fr;
+    column-gap: rem(25);
+    padding-block-end: rem(49);
+  }
+}
+
+.fieldset--message {
+  @include mobile-only {
+    padding-block-start: rem(30);
+  }
+
+  @include tablet {
+    column-gap: rem(17);
+    padding-block-end: rem(51);
+  }
+
+  @include desktop {
+    grid-template-columns: rem(150) rem(700) 1fr;
+    column-gap: rem(25);
+    padding-block-end: rem(48);
+  }
+}
+
+.fieldset__title {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
-  margin-block-end: rem(25);
+  margin-block-end: rem(26);
 
   @include tablet {
     align-self: start;
@@ -38,6 +111,24 @@
   margin: 0;
 }
 
+.fieldset__title--color {
+  margin-block-end: rem(18);
+}
+
+.fieldset__title--full-name {
+  margin-block-end: rem(22);
+}
+
+.fieldset__title--message {
+  margin-block-end: rem(16);
+}
+
+.fieldset__title--contacts {
+  @include desktop {
+    grid-column: 1 / 2;
+  }
+}
+
 .fieldset__title-text {
   max-width: 100%;
   text-transform: uppercase;
@@ -49,10 +140,10 @@
 
 .fieldset__title::after {
   content: "";
-  width: 100%;
+  flex-basis: calc(200 / 260 * 100%);
   height: 1px;
   background-color: #63d1ba;
-  margin-inline-start: rem(25);
+  margin-inline-start: rem(21);
 
   @include tablet {
     display: none;
@@ -61,13 +152,18 @@
 
 .fieldset__group {
   display: grid;
-  gap: rem(10);
+  gap: rem(12);
   justify-content: start;
-  // @include show-outline(violet);
 
   @include tablet {
     padding: 0;
     gap: rem(24);
+  }
+}
+
+.fieldset__group--type {
+  @include tablet {
+    row-gap: rem(26);
   }
 }
 
@@ -82,14 +178,22 @@
 
   @include desktop {
     grid-template-columns: repeat(3, 1fr);
+    column-gap: rem(20);
+    row-gap: rem(23);
   }
 }
 
 .fieldset__group-text {
   justify-content: initial;
-  row-gap: rem(22);
+  row-gap: rem(23);
 
   @include tablet {
-    row-gap: rem(22);
+    row-gap: rem(24);
+  }
+}
+
+.fieldset__item--contacts {
+  @include desktop {
+    grid-column: 2 / 3;
   }
 }

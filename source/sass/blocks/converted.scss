@@ -1,21 +1,20 @@
 .menu__item--on-mobile {
-    @include tablet {
-        display: none;
-    }
+  @include tablet {
+    display: none;
+  }
 }
 
-
 .form__calculate {
-    @include tablet {
-        order: -1;
-    }
+  @include tablet {
+    order: -1;
+  }
 
-    @include desktop {
-        grid-column: 2 / 3;
-    }
+  @include desktop {
+    grid-column: 2 / 3;
+  }
 }
 
 .field--textarea-calculate {
-    min-height: rem(142);
-    max-height: auto;
+  min-height: rem(142);
+  max-height: auto;
 }

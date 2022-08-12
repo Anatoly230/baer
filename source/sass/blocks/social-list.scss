@@ -5,8 +5,9 @@ $green: #46c1ae;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 100%;
-  gap: rem(34);
+  width: 100%;
+  max-width: rem(140);
+  gap: rem(32);
 }
 
 .social-list__item:hover .social-list__item-pic {

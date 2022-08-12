@@ -63,7 +63,6 @@
 
   @include desktop {
     transform: translateX(-50%) translateY(-50%);
-
   }
 }
 
@@ -137,8 +136,6 @@
 .video-review__text-wrapper {
   padding-block-start: rem(35);
   padding-block-end: rem(33);
-  // padding-inline-start: rem(33);
-  // padding-inline-end: rem(32);
   border: 1px solid #ececec;
   border-block-start: none;
 

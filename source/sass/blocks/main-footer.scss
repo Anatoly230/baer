@@ -13,7 +13,7 @@ $green: #46c1ae;
   @include section-wrapper;
 
   @include tablet {
-    padding-block-start: rem(48.5);
+    padding-block-start: rem(48);
     padding-block-end: rem(58);
     flex-direction: row;
     gap: rem(30);
@@ -36,8 +36,14 @@ $green: #46c1ae;
 
   @include tablet {
     border: none;
-    width: calc(100 / 3) * 1%;
+    width: auto;
     padding: 0;
+  }
+}
+
+.main-footer__social-list {
+  @include tablet {
+    margin: 0 auto;
   }
 }
 
@@ -49,6 +55,7 @@ $green: #46c1ae;
   display: none;
 
   @include tablet {
+    margin-block-start: rem(2);
     display: initial;
     padding: 0;
     text-align: left;
@@ -105,7 +112,11 @@ $green: #46c1ae;
 .main-footer__devs-logo {
   margin-inline-start: rem(25);
 
-  @include desktop {
+  @include tablet {
     margin-inline-start: rem(27);
+  }
+
+  @include desktop {
+    margin-inline-start: rem(30);
   }
 }
