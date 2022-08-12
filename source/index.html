@@ -32,37 +32,41 @@
         </button>
       </div>
       <ul class="header__menu menu ">
-        <li class="menu__item menu__item--main menu__item--separator">
-          <a href="catalog.html" class="menu__item-link"> Каталог товаров</a>
+        <li class="menu__item menu__item--main menu__item--separator menu__item--separator-between">
+          <a href="catalog.html" class="menu__item-link menu__item-link--base">
+            <span class="menu__item-link-text">Каталог товаров</span>
+          </a>
         </li>
         <li class="menu__item">
-          <a href="./form.html" class="menu__item-link">Вязание на заказ</a>
+          <a href="./form.html" class="menu__item-link menu__item-link--base">
+            <span class="menu__item-link-text">Вязание на заказ</span>
+          </a>
         </li>
       </ul>
       <ul class="header__menu header__menu--helper menu menu--helper">
         <li class="menu__item menu__item--separator">
-          <a href="#" class="menu__item-link menu__item-link--helper">
-            <svg class="menu__item-icon" width="18" height="18">
+          <a href="#" class="menu__item-link menu__item-link--base menu__item-link--helper menu__item-link--search">
+            <svg aria-hidden="true" class="menu__item-icon" width="18" height="18">
               <use xlink:href="./img/icons/sprite.svg#search"></use>
             </svg>
-            <span class="menu__item-hide"> Поиск по сайту</span>
+            <span role="search" class="menu__item-link-text menu__item-hide"> Поиск по сайту</span>
           </a>
         </li>
         <li class="menu__item">
-          <a href="#" class="menu__item-link menu__item-link--helper">
-            <svg class="menu__item-icon " width="21" height="18">
+          <a href="#" class="menu__item-link menu__item-link--base menu__item-link--helper menu__item-link--basket">
+            <svg aria-hidden="true" class="menu__item-icon " width="21" height="18">
               <use xlink:href="./img/icons/sprite.svg#cart"></use>
             </svg>
-            Корзина: пока пуста
+            <span role="search" class="menu__item-link-text"> Корзина: пока пуста</span>
           </a>
         </li>
       </ul>
-      <ul class="header__menu header__menu--events menu">
+      <ul class="header__menu header__menu--events menu menu--events">
         <li class="menu__item">
-          <a href="#" class="menu__item-link">Новые поступления</a>
+          <a href="#" class="menu__item-link menu__item-link--events">Новые поступления</a>
         </li>
         <li class="menu__item">
-          <a href="#" class="menu__item-link">Распродажа</a>
+          <a href="#" class="menu__item-link menu__item-link--events">Распродажа</a>
         </li>
       </ul>
       <p class="header__sheep-info">Бесплатная доставка по России</p>
@@ -70,22 +74,26 @@
   </header>
   <main class="page-body__content content">
     <h1 class="visually-hidden">Вязанные изделия</h1>
-    <section class="content__promo promo wave">
-      <h2 class="promo__title">Милые штуки ручной<br/> работы для дома</h2>
+    <section class="content__promo promo wave wave--promo">
+      <h2 class="promo__title">Милые штуки ручной<br /> работы для дома</h2>
       <div class="promo__link-btns-wrapper">
         <a href="#" class="promo__link link-btn">
+          <div class="link-btn__info-wrapper">
           <p class="link-btn__text">
             Предметы интерьера
           </p>
+          </div>
         </a>
         <a href="#" class="promo__link link-btn">
+          <div class="link-btn__info-wrapper">
           <p class="link-btn__text">
             Детские игрушки
           </p>
+          </div>
         </a>
       </div>
     </section>
-    <section class="content__special special">
+    <section class="content__special special wave-line">
       <h2 class="special__title">Вязаные корзинки</h2>
       <p class="special__category">Товар недели</p>
       <p class="special__desc">
@@ -123,17 +131,17 @@
     <section class="content__advantages">
       <div class="content__advantages-wrapper">
         <h2 class="content__advantages-title">Коротко о нас:</h2>
-        <ul class="advantages">
-          <li class="advantage">
+        <ul class="content__advantages-list advantages">
+          <li class="advantage ">
             <svg class="advantage__icon" width="33" height="38">
               <use xlink:href="./img/icons/sprite.svg#adv-flower"></use>
             </svg>
             <p class="advantage__text">
-              Экологически<br/>чистые материалы
+              Экологически<br />чистые материалы
             </p>
           </li>
           <li class="advantage">
-            <svg class="advantage__icon" width="44" height="27">
+            <svg aria-hidden="true" class="advantage__icon" width="44" height="27">
               <use xlink:href="./img/icons/sprite.svg#adv-money"></use>
             </svg>
             <p class="advantage__text">
@@ -141,7 +149,7 @@
             </p>
           </li>
           <li class="advantage">
-            <svg class="advantage__icon" width="34" height="27">
+            <svg aria-hidden="true" class="advantage__icon" width="34" height="27">
               <use xlink:href="./img/icons/sprite.svg#adv-heart"></use>
             </svg>
             <p class="advantage__text">
@@ -149,7 +157,7 @@
             </p>
           </li>
           <li class="advantage">
-            <svg class="advantage__icon" width="35" height="34">
+            <svg aria-hidden="true" class="advantage__icon" width="35" height="34">
               <use xlink:href="./img/icons/sprite.svg#adv-ball"></use>
             </svg>
             <p class="advantage__text">
@@ -157,7 +165,7 @@
             </p>
           </li>
           <li class="advantage">
-            <svg class="advantage__icon" width="55" height="23">
+            <svg aria-hidden="true" class="advantage__icon" width="55" height="23">
               <use xlink:href="./img/icons/sprite.svg#adv-rocket"></use>
             </svg>
             <p class="advantage__text">
@@ -165,17 +173,17 @@
             </p>
           </li>
           <li class="advantage">
-            <svg class="advantage__icon" width="33" height="32">
+            <svg aria-hidden="true" class="advantage__icon" width="33" height="32">
               <use xlink:href="./img/icons/sprite.svg#adv-gift"></use>
             </svg>
-            <p class="advantage__text">
+            <p class="advantage__text advantage__text--other-width">
               Поставляется в&nbsp;подарочной упаковке
             </p>
           </li>
         </ul>
       </div>
     </section>
-    <section class="content__reviews reviews">
+    <section class="content__reviews reviews wave-line">
       <h2 class="reviews__title">Отзывы</h2>
       <blockquote class="quote quote--show">
         <p class="quote__text">
@@ -262,8 +270,7 @@
             <dt class="contact-info__name">адрес:</dt>
             <dd class="contact-info__value">
               <address class="contact-info__value-addres">
-                г. Санкт-Петербург<br />
-                ул. Большая Конюшенная д. 19/8, офис 101
+                г. Санкт-Петербург<br />ул. Большая Конюшенная д. 19/8, офис 101
               </address>
             </dd>
           </div>
@@ -293,43 +300,40 @@
   <footer class="page-body__footer main-footer">
     <div class="main-footer__wrapper">
       <div class="main-footer__item main-footer__item--logo">
-        <a href="#" class="main-footer__link main-footer__link--logo">
-          <span class="visually-hidden">перейти на главную</span>
-          <svg class="main-footer__logo-pic" width="102" height="34">
+        <a href="#" aria-label="перейти на главную" class="main-footer__link main-footer__link--logo">
+          <svg aria-hidden="true" class="main-footer__logo-pic" width="102" height="34">
             <use xlink:href="./img/icons/sprite.svg#logo-footer"></use>
           </svg>
         </a>
       </div>
       <ul class="main-footer__item main-footer__social-list social-list">
         <li class="social-list__item">
-          <a class="social-list__item-link" href="#">
-            <span class="visually-hidden">мы во Вконтакте</span>
-            <svg class="social-list__item-pic" width="26" height="17">
+          <a aria-label="мы во Вконтакте" class="social-list__item-link" href="#">
+            <svg aria-hidden="true" class="social-list__item-pic" width="26" height="17">
               <use xlink:href="./img/icons/sprite.svg#vk"></use>
             </svg>
           </a>
         </li>
         <li class="social-list__item">
-          <a class="social-list__item-link" href="#">
-            <span class="visually-hidden">мы на Youtube</span>
+          <a aria-label="мы на Youtube" class="social-list__item-link" href="#">
             <svg class="social-list__item-pic" width="24" height="19">
               <use xlink:href="./img/icons/sprite.svg#yt"></use>
             </svg>
           </a>
         </li>
         <li class="social-list__item">
-          <a class="social-list__item-link" href="#">
-            <span class="visually-hidden">наш канал в телеграмм</span>
-            <svg class="social-list__item-pic" width="20" height="17">
+          <a aria-label="наш канал в телеграмм" class="social-list__item-link" href="#">
+            <svg aria-hidden="true" class="social-list__item-pic" width="20" height="17">
               <use xlink:href="./img/icons/sprite.svg#tm"></use>
             </svg>
           </a>
         </li>
       </ul>
       <div class="main-footer__item main-footer__item--devs">
-        <a class="main-footer__link main-footer__link--devs" href="https://htmlacademy.ru/intensive/adaptive">
+        <a aria-label="Перейти на сайт разработчика" class="main-footer__link main-footer__link--devs"
+          href="https://htmlacademy.ru/intensive/adaptive">
           <span class="main-footer__devs">Разработано</span>
-          <svg class="main-footer__devs-logo" width="27" height="34">
+          <svg aria-label="Логотип компании" class="main-footer__devs-logo" width="27" height="34">
             <use xlink:href="./img/icons/sprite.svg#logo-htmlacademy"></use>
           </svg>
         </a>
@@ -337,9 +341,8 @@
     </div>
   </footer>
   <div class="window-background js-modal">
-
     <div class="window-background__modal modal">
-      <button class="modal__close">
+      <button type="button" aria-label="Закрыть" class="modal__close">
         <span class="modal__close-line"></span>
         <span class="modal__close-line"></span>
       </button>
@@ -347,13 +350,14 @@
       <p class="modal__desc">Выберите размер:</p>
       <div class="modal__choice-wrapper">
 
-        <input class="modal__choice modal-choice modal-choice--s" id="small" type="checkbox" name="size" value="small"
-          checked>
+        <input aria-labelledby="small" class="modal__choice modal-choice modal-choice--s" id="small" type="checkbox"
+          name="size" value="small" checked>
         <label class="modal__choice-name" for="small">s</label>
-        <input class="modal__choice modal-choice modal-choice--m" id="medium" type="checkbox" name="size"
-          value="medium">
+        <input aria-labelledby="medium" class="modal__choice modal-choice modal-choice--m" id="medium" type="checkbox"
+          name="size" value="medium">
         <label class="modal__choice-name" for="medium">m</label>
-        <input class="modal__choice modal-choice modal-choice--l" id="large" type="checkbox" name="size" value="large">
+        <input aria-labelledby="large" class="modal__choice modal-choice modal-choice--l" id="large" type="checkbox"
+          name="size" value="large">
         <label class="modal__choice-name" for="large">l</label>
       </div>
       <button class="modal__submit btn btn--modal" type="button">Добавить</button>

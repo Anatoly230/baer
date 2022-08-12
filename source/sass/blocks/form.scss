@@ -7,9 +7,13 @@
 
   @include tablet {
     padding-block-start: rem(54);
-    padding-block-end: rem(50);
+    padding-block-end: rem(49);
     padding-inline-start: 0;
     padding-inline-end: 0;
+  }
+
+  @include desktop {
+    padding-block-start: rem(99);
   }
 }
 
@@ -26,14 +30,14 @@
 
   @include desktop {
     display: grid;
-    grid-template-columns: rem(150) 1fr;
-    column-gap: rem(20);
+    grid-template-columns: rem(150) rem(700) 1fr;
+    column-gap: rem(25);
   }
 }
 
 .form__desc-text {
   font-size: rem(13);
-  line-height: calc(24 / 13);
+  line-height: calc(20 / 13);
 
   @include tablet {
     font-size: rem(17);
@@ -41,12 +45,12 @@
   }
 
   @include desktop {
-    grid-column: -1 / -2;
+    grid-column: 2 / -2;
   }
 }
 
 .form__submit-wrapper {
-  padding-block-start: rem(17);
+  padding-block-start: rem(11);
 
   @include tablet {
     @include section-wrapper;
@@ -57,22 +61,26 @@
   }
 
   @include desktop {
-    grid-template-columns: rem(150) rem(230) 1fr;
-    column-gap: rem(20);
+    grid-template-columns: rem(150) rem(230) rem(445) 1fr;
+    column-gap: rem(25);
   }
 }
 
 .form__submit-obligatory {
   margin-block-end: rem(30);
+  font-size: rem(14);
+  line-height: calc(16 / 14);
 
   @include tablet {
+    font-size: rem(17);
+    line-height: calc(30 / 17);
     margin: 0;
     justify-self: end;
     align-self: center;
   }
 
   @include desktop {
-    grid-column: -1 / -2;
+    grid-column: 3 / 4;
   }
 }
 

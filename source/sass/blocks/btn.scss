@@ -27,6 +27,11 @@ $hover-show-clr: #ebebeb;
   border-color: transparent;
 }
 
+.btn--form {
+  font-size: rem(17);
+  padding-block-start: rem(16);
+}
+
 .btn:hover {
   border-color: transparent;
   background-color: $off-black;

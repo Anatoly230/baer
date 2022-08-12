@@ -8,13 +8,13 @@
 
   @include tablet {
     position: relative;
-    padding-block-start: rem(41);
+    padding-block-start: rem(36);
     padding-block-end: rem(87);
   }
 
   @include desktop {
-    padding-block-start: rem(39);
-    padding-block-end: rem(112);
+    padding-block-start: rem(38);
+    padding-block-end: rem(113);
   }
 }
 

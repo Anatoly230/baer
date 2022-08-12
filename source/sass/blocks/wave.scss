@@ -10,12 +10,25 @@
     transform: translateX(-50%);
     display: block;
     width: 100%;
-    height: rem(34);
+    height: rem(24);
     content: "";
-    background-image: url("../img/icons/pattern.svg");
+    background-image: url("../img/icons/wave-tablet.svg");
     background-color: transparent;
     background-position: center;
-    background-size: contain;
+    background-size: auto;
     border: none;
+  }
+
+  @include desktop {
+    height: rem(34);
+    background-size: rem(57) rem(34);
+    background-image: url("../img/icons/wave-desktop.svg");
+  }
+}
+
+.wave--promo::after {
+  @include desktop {
+    background-size: rem(63) rem(34);
+    height: rem(34);
   }
 }

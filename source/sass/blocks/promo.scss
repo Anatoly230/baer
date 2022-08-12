@@ -1,10 +1,10 @@
 .promo {
   background-image: url("../img/background/hero-mobile.jpg");
   background-color: #f9f9f9;
-  background-size: initial;
+  background-size: contain;
   background-position: center -19px;
-  // background-position: center rem(62);
   background-repeat: no-repeat;
+  padding-block-start: rem(73);
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/background/hero-mobile@2x.jpg");
@@ -12,8 +12,10 @@
 
   @include tablet {
     position: relative;
-    background-position: center -30px;
+    background-position: center -65px;
     background-image: url("../img/background/hero-tablet.jpg");
+    background-size: cover;
+    padding-block-start: rem(90);
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/background/hero-tablet@2x.jpg");
@@ -21,7 +23,10 @@
   }
 
   @include desktop {
+    background-size: auto;
+    background-position: center -65px;
     background-image: url("../img/background/hero-desktop.jpg");
+    padding-block-start: rem(95);
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/background/hero-desktop@2x.jpg");
@@ -36,11 +41,9 @@
   font-weight: bold;
   margin-inline-start: auto;
   margin-inline-end: auto;
-  // margin-block-start: rem(78);
   margin-block-end: rem(119);
   text-align: center;
   max-width: rem(250);
-
 
   @include tablet {
     font-size: rem(43);
@@ -56,12 +59,6 @@
     max-width: rem(620);
   }
 }
-
-// .promo__title-transfer {
-//   @include tablet {
-//     display: none;
-//   }
-// }
 
 .promo__link-btns-wrapper {
   @include tablet {

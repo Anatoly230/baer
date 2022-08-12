@@ -5,4 +5,18 @@
   padding-block-start: rem(8);
   padding-block-end: rem(8);
   border-block-end: 1px solid #ececec;
+
+  @include tablet {
+    grid-template-columns: 1fr 3fr;
+    gap: rem(30);
+    font-size: rem(15);
+    line-height: calc(20 / 15);
+    padding-block-start: rem(10);
+    padding-block-end: rem(10);
+  }
+
+  @include desktop {
+    padding-block-start: rem(5);
+    padding-block-end: rem(14);
+  }
 }

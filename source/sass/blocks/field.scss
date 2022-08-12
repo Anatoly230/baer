@@ -1,6 +1,8 @@
-$box-size: rem(42);
+$box-size: rem(38);
 
 .field {
+  position: relative;
+
   @include tablet {
     display: flex;
     gap: rem(24);
@@ -11,10 +13,18 @@ $box-size: rem(42);
   margin-block-end: rem(35);
 }
 
+.field.field--text.field--phone {
+  margin-block-end: rem(30);
+
+  @include tablet {
+    margin-block-end: rem(5);
+  }
+}
+
 .field--textarea {
   width: 100%;
   padding: rem(17);
-  height: rem(280);
+  height: rem(142);
   resize: none;
   border: 2px solid $black;
   color: $black;
@@ -22,7 +32,7 @@ $box-size: rem(42);
   line-height: calc(18 / 17);
 
   @include tablet {
-    height: rem(142);
+    padding: rem(13);
     font-size: rem(19);
   }
 }
@@ -51,8 +61,7 @@ $box-size: rem(42);
   display: block;
   width: 100%;
   border: none;
-  // box-shadow: 0 2px 0 $black;
-  padding: rem(16) rem(17) rem(17) 0;
+  padding: rem(16) rem(17) rem(15) 0;
   background-color: transparent;
   font-size: rem(17);
   line-height: calc(18 / 17);
@@ -62,15 +71,30 @@ $box-size: rem(42);
   @include tablet {
     font-size: rem(19);
     line-height: calc(19 / 18);
-    padding: rem(16) rem(18) rem(18);
+    padding: rem(16) rem(18) rem(14);
   }
+}
+
+.field__item--icon-place {
+  padding-inline-end: rem(45);
+  padding-block-start: rem(14);
+  padding-block-end: rem(16);
+
+  @include tablet {
+    padding-inline-end: rem(70);
+  }
+}
+
+
+.field__item--mail {
+  padding-block-start: rem(15);
+  padding-block-end: rem(15);
 }
 
 .field__item:-webkit-autofill,
 .field__item:-webkit-autofill:focus {
   transition: background-color 600000s 0s, color 600000s 0s;
   -webkit-text-fill-color: #f89f04;
-  // -webkit-box-shadow: inset 0 0 0 50px $white;
 }
 
 .field__item:hover {
@@ -106,6 +130,44 @@ $box-size: rem(42);
   height: 1;
 }
 
+.field__item-icon-wrapper {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  min-width: rem(38);
+  max-width: 20%;
+  height: 100%;
+}
+
+.field__item-icon {
+  fill: #cccccc;
+  margin-block-end: rem(5);
+
+  @include tablet {
+    margin-inline-end: rem(25);
+  }
+
+  @include desktop {
+    margin-inline-end: rem(5);
+  }
+}
+
+.field__item-icon--mail {
+  margin-block-end: 0;
+}
+
+.field__item--icon-place:hover + .field__item-icon-wrapper .field__item-icon {
+  fill: #62d1ba;
+}
+
+.field__item--icon-place:active + .field__item-icon-wrapper .field__item-icon {
+  fill: #62d1ba;
+}
+
 .field__name {
   display: flex;
   align-items: center;
@@ -128,7 +190,7 @@ $box-size: rem(42);
   border: 2px solid $off-black;
   width: $box-size;
   height: $box-size;
-  margin-inline-end: rem(20);
+  margin-inline-end: rem(23);
 
   @include tablet {
     $box-size: rem(52);
@@ -147,7 +209,16 @@ $box-size: rem(42);
 }
 
 .field__thing-item--radio {
+  width: rem(40);
+  height: rem(40);
+  margin-inline-end: rem(20);
   border-radius: 50%;
+
+  @include tablet {
+    margin-inline-end: rem(28);
+    width: rem(50);
+    height: rem(50);
+  }
 }
 
 .field__item-select:checked + .field__thing > .field__thing-item::before {
@@ -157,6 +228,10 @@ $box-size: rem(42);
 .field__item-select:focus-visible + .field__thing {
   outline: 2px solid rgba(#62d1ba, 0.7);
   outline-offset: -2 px;
+}
+
+.field__item:focus-visible + .field__item-icon-wrapper .field__item-icon {
+  fill: #62d1ba;
 }
 
 .field__thing-item::before {
@@ -172,8 +247,14 @@ $box-size: rem(42);
   background-color: #62d1ba;
 
   @include tablet {
-    width: rem(23);
-    height: rem(23);
+    width: rem(20);
+    height: rem(20);
+  }
+}
+
+.field__thing-item--checkbox {
+  @include tablet {
+    margin-inline-end: rem(28);
   }
 }
 
@@ -187,8 +268,8 @@ $box-size: rem(42);
   height: rem(16);
 
   @include tablet {
-    width: rem(32);
-    height: rem(22);
+    width: rem(30);
+    height: rem(17);
   }
 }
 

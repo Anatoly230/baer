@@ -2,17 +2,32 @@
   background-color: $white;
 }
 
+.content__special {
+  @include section-wrapper;
+}
+
 .content__advantages {
   background-color: $white;
   padding-block-start: rem(30);
+
+  @include tablet {
+    padding-block-start: rem(54);
+    padding-block-end: rem(50);
+  }
+
+  @include desktop {
+    padding-block-start: rem(68);
+    padding-block-end: rem(57);
+  }
 }
 
 .content__advantages-wrapper {
   @include section-wrapper;
 
   @include desktop {
-    max-width: rem(700);
-    padding: 0;
+    display: grid;
+    grid-template-columns: rem(175) rem(680) 1fr;
+    grid-template-rows: repeat(2, auto);
   }
 }
 
@@ -36,17 +51,20 @@
   }
 
   @include desktop {
+    grid-column: 2 / -2;
+    grid-row: 1 / 2;
     font-size: rem(53);
     line-height: calc(57 / 53);
     margin-block-end: rem(16);
   }
 }
 
-.content__promo {
-  padding-block-start: rem(73);
+.content__advantages-list {
+  max-width: rem(900);
 
-  @include tablet {
-    padding-block-start: rem(110);
+  @include desktop {
+    grid-column: 2 / -2;
+    grid-row: 2 / -1;
   }
 }
 

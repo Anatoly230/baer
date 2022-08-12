@@ -9,7 +9,7 @@
     max-width: none;
     display: flex;
     justify-content: flex-start;
-    gap: rem(25);
+    gap: rem(31);
   }
 
   @include desktop {
@@ -21,17 +21,15 @@
 .contact-info__wrapper {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
-  gap: rem(30);
+  gap: rem(26);
 
   @include tablet {
     justify-content: flex-start;
-    width: 50%;
+    width: 45%;
   }
 
   @include desktop {
     gap: rem(25);
-    justify-content: space-between;
     width: 100%;
   }
 }
@@ -45,11 +43,11 @@
   width: rem(183);
 
   @include tablet {
-    width: rem(205);
+    width: rem(220);
   }
 
   @include desktop {
-    max-width: rem(220);
+    width: auto;
   }
 }
 

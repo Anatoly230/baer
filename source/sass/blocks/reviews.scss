@@ -1,12 +1,12 @@
 .reviews {
   position: relative;
   background-color: $white;
-  padding-block-start: rem(13);
+  padding-block-start: rem(14);
   padding-block-end: rem(46);
 
   @include tablet {
-    padding-block-start: rem(70);
-    padding-block-end: rem(141);
+    padding-block-start: rem(80);
+    padding-block-end: rem(130);
     display: grid;
     grid-template-columns: repeat(2, 1fr) rem(175);
     grid-template-rows: repeat(2, auto);
@@ -15,8 +15,7 @@
       "quote quote quote";
     background-image: url("../img/background/review-tablet.jpg");
     background-position: left top;
-    background-size: auto calc(457 / 514 * 100%);
-    // background-size: 350px 457px;
+    background-size: auto calc(434 / 514 * 100%);
     background-repeat: no-repeat;
 
     @media (min-resolution: 2dppx) {
@@ -29,31 +28,9 @@
     grid-template-areas:
       ". title title fb"
       ". quote quote quote";
-    padding-block-end: rem(180);
+    padding-block-start: rem(78);
+    padding-block-end: rem(182);
     background-position: rem(50) top;
-  }
-}
-
-.reviews::after {
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  content: "";
-  width: 100vw;
-  height: rem(6);
-  background-image: url("../img/icons/pattern-wave.svg");
-  background-size: contain;
-  background-position: center;
-  background-repeat: repeat-x;
-
-  @include tablet {
-    height: rem(17);
-  }
-
-  @include desktop {
-    width: calc(100% - (50px * 2));
   }
 }
 
@@ -68,13 +45,19 @@
     font-size: rem(43);
     line-height: calc(50 / 43);
     grid-area: title;
+    align-self: end;
+  }
+
+  @include desktop {
+    font-size: rem(53);
+    line-height: calc(57 / 53);
   }
 }
 
 .reviews__btn-wrapper {
   display: flex;
   justify-content: center;
-  margin-block-end: rem(40);
+  margin-block-end: rem(36);
 
   @include tablet {
     width: 100%;
@@ -87,6 +70,10 @@
     grid-row: -1 / 2;
     margin-block-end: initial;
   }
+
+  @include desktop {
+    margin-block-end: 0;
+  }
 }
 
 .reviews__slide-btn {
@@ -98,13 +85,18 @@
   height: rem(52);
   background-image: url("../img/icons/arrow-l.svg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center rem(10);
   background-size: 50px 26px;
   box-shadow: none;
 
   @include tablet {
     border: none;
     width: 50%;
+    height: rem(54);
+  }
+
+  @include desktop {
+    height: rem(52);
   }
 }
 
@@ -125,5 +117,9 @@
   @include tablet {
     align-self: start;
     grid-area: fb;
+  }
+
+  @include desktop {
+    margin-block-start: rem(1);
   }
 }

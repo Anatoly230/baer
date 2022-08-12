@@ -36,7 +36,6 @@ $toggle-color: $black;
   @include toggle-parametrs;
   content: "";
   transition: transform 0.2s linear 0s;
-
 }
 
 .toggle-menu::before {
@@ -44,17 +43,11 @@ $toggle-color: $black;
   transition: box-shadow 0.2s linear 50ms;
 }
 
-.toggle-menu::after {
-  // top: rem(12);
-
-  // @include toggle-parametrs;
-}
-
 .toggle-menu--close::before {
-width: 100%;
-box-shadow: 0 0 0 rgba($toggle-color, 0);
-background-color: $toggle-color;
-transform: translateY(6px) rotate(45deg);
+  width: 100%;
+  box-shadow: 0 0 0 rgba($toggle-color, 0);
+  background-color: $toggle-color;
+  transform: translateY(6px) rotate(45deg);
 }
 
 
