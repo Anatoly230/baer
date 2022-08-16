@@ -1,34 +1,35 @@
 .modal {
   position: relative;
   width: 100%;
-  padding: rem(29) rem(30) rem(46);
+  padding: 29px 30px 46px;
   background-color: $white;
   box-shadow: 0 5px 10px rgba($black, 0.25);
 
   @include tablet {
-    padding: rem(38) rem(100) rem(45);
-    width: rem(566);
+    padding: 38px 100px 45px;
+    width: 566px;
   }
 }
 
 .modal__close {
   display: none;
   position: absolute;
-  right: rem(15);
-  top: rem(15);
-  width: rem(30);
-  height: rem(30);
-  padding: rem(20);
+  right: 15px;
+  top: 15px;
+  width: 30px;
+  height: 30px;
+  padding: 20px;
   margin: 0;
   background-color: transparent;
   border: none;
   transition: transform;
   transition-duration: 100ms;
+
+  &--show {
+    display: initial;
+  }
 }
 
-.modal__close--show {
-  display: initial;
-}
 
 .modal__close:hover .modal__close-line {
   background-color: #d16363;
@@ -50,7 +51,7 @@
   transform: translateX(-50%) rotate(45deg);
   display: block;
   width: 70%;
-  height: rem(2);
+  height: 2px;
   background-color: $black;
   opacity: 0.6;
 }
@@ -61,35 +62,35 @@
 
 .modal__title {
   text-align: center;
-  font-size: rem(25);
+  font-size: 25px;
   line-height: calc(30 / 25);
   font-weight: bold;
   text-transform: uppercase;
   color: $black;
-  max-width: rem(160);
+  max-width: 160px;
   margin: 0 auto;
-  margin-block-end: rem(14);
+  margin-block-end: 14px;
 
   @include tablet {
-    font-size: rem(30);
+    font-size: 30px;
     line-height: calc(57 / 30);
-    max-width: rem(380);
-    margin-block-end: rem(11);
+    max-width: 380px;
+    margin-block-end: 11px;
   }
 }
 
 .modal__desc {
   text-align: center;
-  font-size: rem(15);
+  font-size: 15px;
   line-height: calc(30 / 15);
-  max-width: rem(160);
+  max-width: 160px;
   margin: 0 auto;
-  margin-block-end: rem(20);
+  margin-block-end: 20px;
 
   @include tablet {
-    font-size: rem(17);
+    font-size: 17px;
     line-height: calc(30 / 17);
-    max-width: rem(380);
+    max-width: 380px;
   }
 }
 
@@ -97,8 +98,8 @@
   overflow: hidden;
   display: flex;
   justify-content: center;
-  gap: rem(7);
-  margin-block-end: rem(30);
+  gap: 7px;
+  margin-block-end: 30px;
 }
 
 .modal__choice {
@@ -115,11 +116,11 @@
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
-  font-size: rem(17);
+  font-size: 17px;
   font-weight: bold;
   border: 2px solid rgba($off-black, 0.1);
-  width: rem(82);
-  height: rem(52);
+  width: 82px;
+  height: 52px;
 
   @include tablet {
     flex-grow: 1;

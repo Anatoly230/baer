@@ -6,10 +6,10 @@ $green: #46c1ae;
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
-  gap: rem(32);
+  gap: 32px;
 
   @include tablet {
-    max-width: rem(140);
+    max-width: 140px;
   }
 }
 

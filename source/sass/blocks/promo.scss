@@ -4,7 +4,7 @@
   background-size: contain;
   background-position: center -19px;
   background-repeat: no-repeat;
-  padding-block-start: rem(73);
+  padding-block-start: 73px;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/background/hero-mobile@2x.jpg");
@@ -15,7 +15,7 @@
     background-position: center -65px;
     background-image: url("../img/background/hero-tablet.jpg");
     background-size: cover;
-    padding-block-start: rem(90);
+    padding-block-start: 90px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/background/hero-tablet@2x.jpg");
@@ -26,7 +26,7 @@
     background-size: auto;
     background-position: center -65px;
     background-image: url("../img/background/hero-desktop.jpg");
-    padding-block-start: rem(95);
+    padding-block-start: 95px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/background/hero-desktop@2x.jpg");
@@ -36,27 +36,27 @@
 
 .promo__title {
   color: $black;
-  font-size: rem(27);
+  font-size: 27px;
   line-height: calc(30 / 27);
   font-weight: bold;
   margin-inline-start: auto;
   margin-inline-end: auto;
-  margin-block-end: rem(119);
+  margin-block-end: 119px;
   text-align: center;
-  max-width: rem(250);
+  max-width: 250px;
 
   @include tablet {
-    font-size: rem(43);
+    font-size: 43px;
     line-height: calc(50 / 43);
-    margin-block-end: rem(372);
-    max-width: rem(500);
+    margin-block-end: 372px;
+    max-width: 500px;
   }
 
   @include desktop {
-    font-size: rem(53);
+    font-size: 53px;
     line-height: calc(57 / 53);
-    margin-block-end: rem(355);
-    max-width: rem(620);
+    margin-block-end: 355px;
+    max-width: 620px;
   }
 }
 

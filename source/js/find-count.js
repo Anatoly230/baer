@@ -1,5 +1,3 @@
-
-
 function equating(domElem, colCount) {
   let element = document.querySelector(`.${domElem}`);
   if (element !== null) {

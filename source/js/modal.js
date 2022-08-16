@@ -4,31 +4,27 @@ const toBasketButtons = document.querySelectorAll(".js-to-basket");
 
 modalCloseBtn.classList.add("modal__close--show");
 
-
-
-modalCloseBtn.addEventListener("click" || "touch", function (event){
+modalCloseBtn.addEventListener("click" || "touch", function (event) {
   event.preventDefault()
   modalBG.classList.remove("window-background--show");
 });
 
-modalBG.addEventListener("click" || "touch", function (event){
-if(event.path.length < 6){
-  modalBG.classList.remove("window-background--show");
-}
+modalBG.addEventListener("click" || "touch", function (event) {
+  if (event.path.length < 6) {
+    modalBG.classList.remove("window-background--show");
+  }
 });
 
-document.addEventListener("keydown", function(e){
-if(e.Code === 27)
-e.preventDefault();
-  modalBG.classList.remove("window-background--show");
+document.addEventListener("keydown", function (e) {
+  e.preventDefault();
+  if (e.keyCode === 27) {
+    modalBG.classList.remove("window-background--show");
+  }
 })
-
 
 function showModal() {
   modalBG.classList.add("window-background--show")
 }
-
-
 
 toBasketButtons.forEach(function (item) {
   item.addEventListener("click" || "touch", function (e) {

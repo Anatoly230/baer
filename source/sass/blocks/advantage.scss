@@ -5,19 +5,19 @@
   color: $black;
   position: relative;
   padding-block-start: 0;
-  padding-block-end: rem(31);
-  min-height: rem(124);
-  max-width: rem(260);
+  padding-block-end: 31px;
+  min-height: 124px;
+  max-width: 260px;
   margin: 0 auto;
 
   @include tablet {
     max-width: initial;
     margin: initial;
-    padding-block-end: rem(0);
+    padding-block-end: 0;
     display: grid;
-    grid-template-columns: rem(45) 1fr;
-    grid-template-rows: rem(38) 1fr;
-    row-gap: rem(18);
+    grid-template-columns: 45px 1fr;
+    grid-template-rows: 38px 1fr;
+    row-gap: 18px;
     align-self: start;
   }
 
@@ -27,11 +27,13 @@
 }
 
 .advantage__icon {
-  min-width: rem(55);
-  max-height: rem(38);
+  margin-inline-start: -5px;
+  min-width: 55px;
+  max-height: 38px;
   fill: #63d1bb;
 
   @include tablet {
+    margin-inline-start: 0;
     display: inline-block;
     grid-column: 1 / 2;
     grid-row: 1 / 2;
@@ -41,19 +43,19 @@
 }
 
 .advantage__text {
-  max-width: rem(250);
+  max-width: 250px;
   line-height: calc(20 / 17);
 
   @include tablet {
     grid-column: 1 / -1;
     grid-row: 2 / -1;
-    max-width: rem(301);
-    font-size: rem(20);
+    max-width: 301px;
+    font-size: 20px;
   }
-}
 
-.advantage__text--other-width {
-  @include tablet {
-    max-width: rem(280);
+  &--other-width {
+    @include tablet {
+      max-width: 280px;
+    }
   }
 }
