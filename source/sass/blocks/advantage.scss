@@ -8,11 +8,10 @@
   padding-block-end: 31px;
   min-height: 124px;
   max-width: 260px;
-  margin: 0 auto;
+
 
   @include tablet {
     max-width: initial;
-    margin: initial;
     padding-block-end: 0;
     display: grid;
     grid-template-columns: 45px 1fr;
