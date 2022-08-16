@@ -48,16 +48,16 @@
 }
 
 .card__info-wrapper {
-  padding-block-start: rem(28);
-  padding-block-end: rem(24);
-  padding-inline-start: rem(27);
-  padding-inline-end: rem(26);
+  padding-block-start: 28px;
+  padding-block-end: 24px;
+  padding-inline-start: 27px;
+  padding-inline-end: 26px;
   border: 1px solid #ececec;
 
   @include tablet {
-    padding-block-start: rem(28);
-    padding-inline-start: rem(33);
-    padding-inline-end: rem(31);
+    padding-block-start: 28px;
+    padding-inline-start: 33px;
+    padding-inline-end: 31px;
     display: flex;
     flex-direction: column;
     border: 1px solid #ececec;
@@ -67,9 +67,9 @@
   @include desktop {
     border: 1px solid #ececec;
     border-block-start: none;
-    padding-block-start: rem(28);
-    padding-inline-start: rem(28);
-    padding-inline-end: rem(31);
+    padding-block-start: 28px;
+    padding-inline-start: 28px;
+    padding-inline-end: 31px;
   }
 }
 
@@ -78,15 +78,15 @@
   color: $black;
   text-decoration: none;
   font-weight: bold;
-  font-size: rem(17);
+  font-size: 17px;
   line-height: calc(24 / 17);
-  margin-block-end: rem(5);
-  max-width: rem(200);
+  margin-block-end: 5px;
+  max-width: 200px;
 
   @include tablet {
-    font-size: rem(20);
+    font-size: 20px;
     line-height: calc(24 / 20);
-    max-width: rem(238);
+    max-width: 238px;
   }
 }
 
@@ -100,27 +100,27 @@
 
 
 .card__parametrs {
-  margin-block-end: rem(17);
-  font-size: rem(13);
+  margin-block-end: 17px;
+  font-size: 13px;
   line-height: calc(30 / 13);
-  max-width: rem(200);
+  max-width: 200px;
 
   @include tablet {
-    font-size: rem(15);
+    font-size: 15px;
     line-height: calc(30 / 15);
-    max-width: rem(238);
+    max-width: 238px;
   }
 
   @include desktop {
-    margin-block-end: rem(12);
+    margin-block-end: 12px;
   }
 }
 
 .card__price {
   display: flex;
   justify-content: space-between;
-  gap: rem(17);
-  padding-block-start: rem(23);
+  gap: 17px;
+  padding-block-start: 23px;
   border-block-start: 1px solid #ececec;
 
   @include tablet {
@@ -128,7 +128,7 @@
   }
 
   @include desktop {
-    padding-block-start: rem(23);
+    padding-block-start: 23px;
   }
 }
 
@@ -142,12 +142,12 @@
   cursor: pointer;
 }
 
-.card__price-basket-btn:hover > * {
+.card__price-basket-btn:hover > .card__price-icon {
   opacity: 1;
   fill: #63d1bb;
 }
 
-.card__price-basket-btn:active > * {
+.card__price-basket-btn:active > .card__price-icon {
   opacity: 0.3;
 }
 

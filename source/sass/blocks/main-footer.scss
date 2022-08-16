@@ -1,5 +1,3 @@
-$green: #46c1ae;
-
 .main-footer {
   background-color: $pale-gray;
 }
@@ -13,14 +11,14 @@ $green: #46c1ae;
   @include section-wrapper;
 
   @include tablet {
-    padding-block-start: rem(48);
-    padding-block-end: rem(58);
+    padding-block-start: 48px;
+    padding-block-end: 58px;
     flex-direction: row;
-    gap: rem(30);
+    gap: 30px;
   }
 
   @include desktop {
-    padding-block-start: rem(50);
+    padding-block-start: 50px;
   }
 }
 
@@ -31,8 +29,8 @@ $green: #46c1ae;
   width: 100%;
   text-align: left;
   border-bottom: 2px solid $whity-gray;
-  padding-block-start: rem(30);
-  padding-block-end: rem(30);
+  padding-block-start: 30px;
+  padding-block-end: 30px;
 
   @include tablet {
     border: none;
@@ -55,7 +53,7 @@ $green: #46c1ae;
   display: none;
 
   @include tablet {
-    margin-block-start: rem(2);
+    margin-block-start: 2px;
     display: initial;
     padding: 0;
     text-align: left;
@@ -63,7 +61,7 @@ $green: #46c1ae;
 }
 
 .main-footer__item--devs {
-  padding-block-start: rem(22);
+  padding-block-start: 22px;
 
   @include tablet {
     padding: 0;
@@ -75,7 +73,7 @@ $green: #46c1ae;
 }
 
 .main-footer__link--logo:hover {
-  fill: $green;
+  fill: #46c1ae;
 }
 
 .main-footer__link--logo:active {
@@ -89,7 +87,7 @@ $green: #46c1ae;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  font-size: rem(19);
+  font-size: 19px;
   font-weight: bold;
 
   @include tablet {
@@ -97,7 +95,7 @@ $green: #46c1ae;
   }
 
   @include desktop {
-    padding-block-end: rem(6);
+    padding-block-end: 6px;
   }
 }
 
@@ -110,13 +108,14 @@ $green: #46c1ae;
 }
 
 .main-footer__devs-logo {
-  margin-inline-start: rem(25);
+  fill: #63d1bb;
+  margin-inline-start: 25px;
 
   @include tablet {
-    margin-inline-start: rem(27);
+    margin-inline-start: 27px;
   }
 
   @include desktop {
-    margin-inline-start: rem(30);
+    margin-inline-start: 30px;
   }
 }

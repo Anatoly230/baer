@@ -2,31 +2,31 @@
   overflow: hidden;
   position: relative;
   background-color: $white;
-  padding-block-start: rem(31);
-  padding-block-end: rem(42);
+  padding-block-start: 31px;
+  padding-block-end: 42px;
 
   @include tablet {
     display: grid;
-    grid-template-columns: rem(292) repeat(2, 1fr);
+    grid-template-columns: 292px repeat(2, 1fr);
     grid-template-rows: repeat(4, auto);
     justify-content: space-between;
     align-items: start;
-    column-gap: rem(40);
-    row-gap: rem(15);
+    column-gap: 40px;
+    row-gap: 15px;
     grid-template-areas:
       "t t k"
       "d i i"
       "p i i"
       "b i i";
-    padding-block-start: rem(40);
-    padding-block-end: rem(69);
+    padding-block-start: 40px;
+    padding-block-end: 69px;
   }
 
   @include desktop {
-    padding-block-start: rem(54);
-    padding-block-end: rem(96);
-    grid-template-columns: rem(175) rem(292) rem(58) rem(525);
-    grid-template-rows: minmax(rem(123), auto) minmax(rem(145), auto) repeat(2, auto);
+    padding-block-start: 54px;
+    padding-block-end: 96px;
+    grid-template-columns: 175px 292px 58px 525px;
+    grid-template-rows: minmax(123px, auto) minmax(145px, auto) repeat(2, auto);
     column-gap: 0;
     grid-template-areas:
       "k t . i"
@@ -40,14 +40,14 @@
 
 .special__title {
   color: $black;
-  font-size: rem(25);
+  font-size: 25px;
   line-height: calc(30 / 25);
   font-weight: bold;
-  margin-block-end: rem(4);
+  margin-block-end: 4px;
 
   @include tablet {
-    max-width: rem(450);
-    font-size: rem(43);
+    max-width: 450px;
+    font-size: 43px;
     line-height: calc(50 / 43);
     grid-area: t;
     margin-block-end: rem(34.5);
@@ -56,49 +56,49 @@
 
   @include desktop {
     margin: 0;
-    max-width: rem(545);
-    font-size: rem(53);
+    max-width: 545px;
+    font-size: 53px;
     line-height: calc(57 / 53);
     z-index: 2;
     grid-column: 2 / 6;
     grid-row: 1 / 2;
-    margin-block-start: rem(61);
+    margin-block-start: 61px;
     align-self: start;
   }
 }
 
 .special__category {
   color: #63d1bb;
-  font-size: rem(17);
+  font-size: 17px;
   line-height: calc(20 / 17);
   font-weight: bold;
   text-transform: uppercase;
-  margin-block-end: rem(17);
+  margin-block-end: 17px;
 
   @include tablet {
     text-align: center;
-    max-width: rem(80);
+    max-width: 80px;
     line-height: calc(17 / 17);
     align-self: start;
     justify-self: center;
-    margin-block-start: rem(7);
-    margin-inline-start: rem(19);
+    margin-block-start: 7px;
+    margin-inline-start: 19px;
   }
 
   @include desktop {
     margin: 0;
-    margin-inline-end: rem(13);
-    margin-block-start: rem(69);
+    margin-inline-end: 13px;
+    margin-block-start: 69px;
     grid-area: k;
   }
 }
 
 .special__desc {
   line-height: calc(24 / 15);
-  margin-block-end: rem(18);
+  margin-block-end: 18px;
 
   @include tablet {
-    font-size: rem(17);
+    font-size: 17px;
     line-height: calc(30 / 17);
     align-self: start;
     grid-area: d;
@@ -107,18 +107,18 @@
   }
 
   @include desktop {
-    margin-block-start: rem(16);
+    margin-block-start: 16px;
     margin-block-end: 0;
   }
 }
 
 .special__parametrs {
-  margin-block-end: rem(28);
+  margin-block-end: 28px;
 
   @include tablet {
     grid-area: p;
     align-self: start;
-    margin-block-end: rem(5);
+    margin-block-end: 5px;
   }
 }
 
@@ -133,12 +133,12 @@
   display: block;
   width: 100%;
   height: 100%;
-  max-height: rem(500);
-  margin-block-end: rem(28);
+  max-height: 500px;
+  margin-block-end: 28px;
   object-fit: cover;
 
   @include tablet {
-    max-height: rem(570);
+    max-height: 570px;
     margin: 0;
     object-fit: cover;
   }
@@ -156,19 +156,19 @@
 }
 
 .special__price {
-  font-size: rem(17);
+  font-size: 17px;
   line-height: calc(24 / 17);
   font-weight: bold;
-  margin-block-end: rem(23);
+  margin-block-end: 23px;
   text-align: center;
 
   @include tablet {
-    font-size: rem(20);
+    font-size: 20px;
     line-height: calc(24 / 20);
-    margin-block-end: rem(34);
+    margin-block-end: 34px;
   }
 
   @include tablet {
-    margin-block-end: rem(33);
+    margin-block-end: 33px;
   }
 }

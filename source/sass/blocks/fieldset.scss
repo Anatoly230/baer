@@ -1,93 +1,92 @@
 .fieldset {
-  padding-block-start: rem(24);
+  padding-block-start: 24px;
 
   @include tablet {
     @include section-wrapper;
     display: grid;
-    grid-template-columns: minmax(rem(150), min-content) 1fr;
-    column-gap: rem(20);
-    row-gap: rem(34);
-    padding: rem(50);
+    grid-template-columns: minmax(150px, min-content) 1fr;
+    column-gap: 20px;
+    row-gap: 34px;
+    padding: 50px;
   }
 
   @include desktop {
-    column-gap: rem(24);
-  }
-}
-
-
-.fieldset--type {
-  @include tablet {
-    column-gap: rem(20);
-    padding-block-start: rem(64);
+    column-gap: 24px;
   }
 
-  @include desktop {
-    grid-template-columns: rem(150) rem(700) 1fr;
-    column-gap: rem(25);
-  }
-}
+  &--type {
+    @include tablet {
+      column-gap: 20px;
+      padding-block-start: 64px;
+    }
 
-.fieldset--color {
-  @include mobile-only {
-    column-gap: rem(17);
-    padding-block-start: rem(28);
-  }
-
-  @include desktop {
-    padding-block-start: rem(48);
-    padding-block-end: rem(52);
-    grid-template-columns: rem(150) rem(770) 1fr;
-    column-gap: rem(25);
-  }
-}
-
-.fieldset--full-name {
-  @include mobile-only {
-    padding-block-start: rem(29);
+    @include desktop {
+      grid-template-columns: 150px 700px 1fr;
+      column-gap: 25px;
+    }
   }
 
-  @include tablet {
-    column-gap: rem(18);
+  &--color {
+    @include mobile-only {
+      column-gap: 17px;
+      padding-block-start: 28px;
+    }
+
+    @include desktop {
+      padding-block-start: 48px;
+      padding-block-end: 52px;
+      grid-template-columns: 150px 770px 1fr;
+      column-gap: 25px;
+    }
   }
 
-  @include desktop {
-    padding-block-start: rem(50);
-    grid-template-columns: rem(150) rem(700) 1fr;
-    column-gap: rem(25);
-  }
-}
+  &--full-name {
+    @include mobile-only {
+      padding-block-start: 29px;
+    }
 
-.fieldset--contacts {
-  @include mobile-only {
-    padding-block-start: rem(29);
-  }
+    @include tablet {
+      column-gap: 18px;
+    }
 
-  @include tablet {
-    row-gap: rem(20);
-  }
-
-  @include desktop {
-    grid-template-columns: rem(150) rem(700) 1fr;
-    column-gap: rem(25);
-    padding-block-end: rem(49);
-  }
-}
-
-.fieldset--message {
-  @include mobile-only {
-    padding-block-start: rem(30);
+    @include desktop {
+      padding-block-start: 50px;
+      grid-template-columns: 150px 700px 1fr;
+      column-gap: 25px;
+    }
   }
 
-  @include tablet {
-    column-gap: rem(17);
-    padding-block-end: rem(51);
+  &--contacts {
+    @include mobile-only {
+      padding-block-start: 29px;
+    }
+
+    @include tablet {
+      row-gap: 20px;
+    }
+
+    @include desktop {
+      grid-template-columns: 150px 700px 1fr;
+      column-gap: 25px;
+      padding-block-end: 49px;
+    }
   }
 
-  @include desktop {
-    grid-template-columns: rem(150) rem(700) 1fr;
-    column-gap: rem(25);
-    padding-block-end: rem(48);
+  &--message {
+    @include mobile-only {
+      padding-block-start: 30px;
+    }
+
+    @include tablet {
+      column-gap: 17px;
+      padding-block-end: 51px;
+    }
+
+    @include desktop {
+      grid-template-columns: 150px 700px 1fr;
+      column-gap: 25px;
+      padding-block-end: 48px;
+    }
   }
 }
 
@@ -95,44 +94,44 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-block-end: rem(26);
+  margin-block-end: 26px;
 
   @include tablet {
     align-self: start;
-    min-height: rem(52);
+    min-height: 52px;
   }
 
   @include desktop {
-    padding-inline-start: rem(60);
+    padding-inline-start: 60px;
   }
-}
 
-.fieldset__title--label {
-  margin: 0;
-}
+  &--label {
+    margin: 0;
+  }
 
-.fieldset__title--color {
-  margin-block-end: rem(18);
-}
+  &--color {
+    margin-block-end: 18px;
+  }
 
-.fieldset__title--full-name {
-  margin-block-end: rem(22);
-}
+  &--full-name {
+    margin-block-end: 22px;
+  }
 
-.fieldset__title--message {
-  margin-block-end: rem(16);
-}
+  &--message {
+    margin-block-end: 16px;
+  }
 
-.fieldset__title--contacts {
-  @include desktop {
-    grid-column: 1 / 2;
+  &--contacts {
+    @include desktop {
+      grid-column: 1 / 2;
+    }
   }
 }
 
 .fieldset__title-text {
   max-width: 100%;
   text-transform: uppercase;
-  font-size: rem(17);
+  font-size: 17px;
   font-weight: bold;
   color: #63d1ba;
   flex-shrink: 0;
@@ -143,7 +142,7 @@
   flex-basis: calc(200 / 260 * 100%);
   height: 1px;
   background-color: #63d1ba;
-  margin-inline-start: rem(21);
+  margin-inline-start: 21px;
 
   @include tablet {
     display: none;
@@ -152,48 +151,42 @@
 
 .fieldset__group {
   display: grid;
-  gap: rem(12);
+  gap: 12px;
   justify-content: start;
 
   @include tablet {
     padding: 0;
-    gap: rem(24);
-  }
-}
-
-.fieldset__group--type {
-  @include tablet {
-    row-gap: rem(26);
-  }
-}
-
-.fieldset__group--some-cols {
-  gap: rem(23);
-  justify-content: stretch;
-
-  @include tablet {
-    grid-template-columns: repeat(2, 1fr);
-    gap: rem(24);
+    gap: 24px;
   }
 
-  @include desktop {
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: rem(20);
-    row-gap: rem(23);
+  &--type {
+    @include tablet {
+      row-gap: 26px;
+    }
+  }
+
+  &--some-cols {
+    gap: 23px;
+    justify-content: stretch;
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    @include desktop {
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 20px;
+      row-gap: 23px;
+    }
   }
 }
 
 .fieldset__group-text {
   justify-content: initial;
-  row-gap: rem(23);
+  row-gap: 23px;
 
   @include tablet {
-    row-gap: rem(24);
-  }
-}
-
-.fieldset__item--contacts {
-  @include desktop {
-    grid-column: 2 / 3;
+    row-gap: 24px;
   }
 }

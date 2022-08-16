@@ -9,8 +9,8 @@
   width: 100%;
   max-width: $desktop-width;
   margin: 0 auto;
-  padding-left: rem(30);
-  padding-right: rem(30);
+  padding-left: 30px;
+  padding-right: 30px;
 
   @media (min-width: 321px) {
     padding-left: calc(30 / 320 * 100%);
@@ -18,8 +18,8 @@
   }
 
   @include tablet {
-    padding-left: rem(50);
-    padding-right: rem(50);
+    padding-left: 50px;
+    padding-right: 50px;
   }
 }
 
@@ -27,8 +27,8 @@
   width: 100%;
   max-width: $max-content-width;
   margin: 0 auto;
-  padding-left: rem(30);
-  padding-right: rem(30);
+  padding-left: 30px;
+  padding-right: 30px;
 
   @media (min-width: 321px) {
     padding-left: calc(30 / 320 * 100%);
@@ -41,8 +41,8 @@
   }
 
   @include desktop {
-    padding-left: rem(224);
-    padding-right: rem(224);
+    padding-left: 224px;
+    padding-right: 224px;
   }
 }
 

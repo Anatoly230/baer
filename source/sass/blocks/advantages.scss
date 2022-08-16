@@ -1,18 +1,18 @@
 .advantages {
   @include reset-list-style;
-  padding-block-start: rem(23);
-  padding-block-end: rem(10);
-  font-size: rem(17);
+  padding-block-start: 23px;
+  padding-block-end: 10px;
+  font-size: 17px;
   font-weight: bold;
 
   @include tablet {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: rem(5);
-    row-gap: rem(30);
+    column-gap: 5px;
+    row-gap: 30px;
   }
 
   @include desktop {
-    column-gap: rem(20);
+    column-gap: 20px;
   }
 }

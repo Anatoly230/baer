@@ -15,7 +15,7 @@
   line-height: calc(24 / 15);
 
   @include tablet {
-    font-size: rem(17);
+    font-size: 17px;
     line-height: calc(24 / 16);
   }
 }
@@ -24,7 +24,7 @@
   position: relative;
   z-index: 2;
   grid-area: header;
-  min-height: rem(56);
+  min-height: 56px;
 }
 
 .page-body__content {

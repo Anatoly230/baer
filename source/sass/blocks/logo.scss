@@ -1,32 +1,30 @@
 .logo {
   display: block;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--active:hover {
+    opacity: 1;
+    cursor: auto;
+  }
 }
 
 .logo__pic {
   display: block;
   margin: 0 auto;
 
-
   @include tablet {
     height: auto;
-    width: rem(114);
+    width: 114px;
   }
 
   @include desktop {
-    width: rem(149);
+    width: 149px;
   }
-}
-
-
-.logo:hover {
-  opacity: 0.6;
-}
-
-.logo:active {
-  opacity: 0.3;
-}
-
-.logo--active:hover {
-  opacity: 1;
-  cursor: auto;
 }

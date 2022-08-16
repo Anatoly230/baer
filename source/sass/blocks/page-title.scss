@@ -1,26 +1,26 @@
 .page-title {
   background-color: #f1f1f1;
-  padding-block-start: rem(73);
-  padding-block-end: rem(73);
-  padding-inline-start: rem(30);
-  padding-inline-end: rem(30);
+  padding-block-start: 73px;
+  padding-block-end: 73px;
+  padding-inline-start: 30px;
+  padding-inline-end: 30px;
   margin: 0;
 
   @include tablet {
     position: relative;
-    padding-block-start: rem(36);
-    padding-block-end: rem(87);
+    padding-block-start: 36px;
+    padding-block-end: 87px;
   }
 
   @include desktop {
-    padding-block-start: rem(38);
-    padding-block-end: rem(113);
+    padding-block-start: 38px;
+    padding-block-end: 113px;
   }
 }
 
 .page-title__text {
   color: $black;
-  font-size: rem(27);
+  font-size: 27px;
   line-height: calc(30 / 27);
   font-weight: bold;
   display: block;
@@ -28,12 +28,12 @@
   text-align: center;
 
   @include tablet {
-    font-size: rem(43);
+    font-size: 43px;
     line-height: calc(50 / 43);
   }
 
   @include desktop {
-    font-size: rem(53);
+    font-size: 53px;
     line-height: calc(57 / 53);
   }
 }

@@ -6,24 +6,24 @@
   @include section-wrapper;
   display: flex;
   flex-direction: column;
-  padding-block-start: rem(10);
-  padding-block-end: rem(57);
+  padding-block-start: 10px;
+  padding-block-end: 57px;
 
   @include tablet {
-    padding-block-start: rem(43);
-    padding-block-end: rem(64);
+    padding-block-start: 43px;
+    padding-block-end: 64px;
   }
 
   @include desktop {
     display: grid;
     align-items: stretch;
-    grid-template-columns: rem(682) 1fr;
-    grid-template-rows: minmax(rem(100), auto) 1fr;
+    grid-template-columns: 682px 1fr;
+    grid-template-rows: minmax(100px, auto) 1fr;
     grid-template-areas:
       "vid-img vid-title"
       "vid-img vid-text";
-    padding-block-start: rem(27);
-    padding-block-end: rem(105);
+    padding-block-start: 27px;
+    padding-block-end: 105px;
   }
 }
 
@@ -40,7 +40,7 @@
   width: 100%;
 
   @include tablet {
-    height: rem(455);
+    height: 455px;
     object-fit: cover;
   }
 
@@ -83,37 +83,37 @@
 .video-review__title {
   display: flex;
   align-items: center;
-  padding-inline-start: rem(33);
-  padding-inline-end: rem(25);
-  gap: rem(25);
+  padding-inline-start: 33px;
+  padding-inline-end: 25px;
+  gap: 25px;
   order: -1;
   position: relative;
-  padding-block-start: rem(23);
-  padding-block-end: rem(26);
+  padding-block-start: 23px;
+  padding-block-end: 26px;
   border: 1px solid #ececec;
   border-block-end: none;
 
   @include tablet {
-    padding-block-start: rem(42);
-    padding-block-end: rem(12);
-    padding-inline-start: rem(42);
-    padding-inline-end: rem(42);
+    padding-block-start: 42px;
+    padding-block-end: 12px;
+    padding-inline-start: 42px;
+    padding-inline-end: 42px;
     order: initial;
     border-block-start: none;
-    gap: rem(32);
+    gap: 32px;
   }
 
   @include desktop {
     flex-direction: column;
     align-items: flex-start;
     grid-area: vid-title;
-    padding-block-start: rem(47);
-    padding-block-end: rem(10);
-    padding-inline-start: rem(80);
+    padding-block-start: 47px;
+    padding-block-end: 10px;
+    padding-inline-start: 80px;
     border: none;
     border-block-start: 1px solid #ececec;
     border-inline-end: 1px solid #ececec;
-    gap: rem(27);
+    gap: 27px;
   }
 }
 
@@ -121,8 +121,8 @@
   display: block;
   content: url("../img/icons/cam.svg");
   object-fit: contain;
-  width: rem(32);
-  height: rem(22);
+  width: 32px;
+  height: 22px;
 
   @include tablet {
     margin-block-start: rem(-7);
@@ -134,24 +134,24 @@
 }
 
 .video-review__text-wrapper {
-  padding-block-start: rem(35);
-  padding-block-end: rem(33);
+  padding-block-start: 35px;
+  padding-block-end: 33px;
   border: 1px solid #ececec;
   border-block-start: none;
 
   @include tablet {
-    padding-inline-start: rem(39);
-    padding-inline-end: rem(39);
-    padding-block-end: rem(46);
-    padding-block-start: rem(12);
+    padding-inline-start: 39px;
+    padding-inline-end: 39px;
+    padding-block-end: 46px;
+    padding-block-start: 12px;
   }
 
   @include desktop {
     grid-area: vid-text;
-    padding-block-start: rem(17);
-    padding-block-end: rem(37);
-    padding-inline-start: rem(80);
-    padding-inline-end: rem(55);
+    padding-block-start: 17px;
+    padding-block-end: 37px;
+    padding-inline-start: 80px;
+    padding-inline-end: 55px;
     border: none;
     border-block-end: 1px solid #ececec;
     border-inline-end: 1px solid #ececec;
@@ -161,37 +161,37 @@
 .video-review__title-text {
   display: block;
   color: $black;
-  font-size: rem(17);
+  font-size: 17px;
   line-height: calc(24 / 17);
   font-weight: bold;
-  max-width: rem(130);
+  max-width: 130px;
 
   @include tablet {
-    font-size: rem(20);
+    font-size: 20px;
     line-height: calc(24 / 20);
-    max-width: rem(270);
+    max-width: 270px;
   }
 
   @include desktop {
-    max-width: rem(150);
+    max-width: 150px;
   }
 }
 
 .video-review__text {
-  font-size: rem(13);
+  font-size: 13px;
   line-height: calc(24 / 13);
   width: calc(239 / 320 * 100%);
   margin: 0 auto;
-  margin-block-end: rem(40);
+  margin-block-end: 40px;
 
   @include tablet {
-    font-size: rem(15);
+    font-size: 15px;
     line-height: calc(30 / 15);
     width: 100%;
   }
 
   @include desktop {
-    margin-block-end: rem(51);
+    margin-block-end: 51px;
   }
 }
 

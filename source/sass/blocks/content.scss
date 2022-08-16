@@ -8,16 +8,16 @@
 
 .content__advantages {
   background-color: $white;
-  padding-block-start: rem(30);
+  padding-block-start: 30px;
 
   @include tablet {
-    padding-block-start: rem(54);
-    padding-block-end: rem(50);
+    padding-block-start: 54px;
+    padding-block-end: 50px;
   }
 
   @include desktop {
-    padding-block-start: rem(68);
-    padding-block-end: rem(57);
+    padding-block-start: 68px;
+    padding-block-end: 57px;
   }
 }
 
@@ -26,41 +26,41 @@
 
   @include desktop {
     display: grid;
-    grid-template-columns: rem(175) rem(680) 1fr;
+    grid-template-columns: 175px 680px 1fr;
     grid-template-rows: repeat(2, auto);
   }
 }
 
 .content__advantages-title {
   color: $black;
-  max-width: rem(260);
-  font-size: rem(25);
+  max-width: 260px;
+  font-size: 25px;
   line-height: calc(30 / 25);
   font-weight: bold;
   margin-inline-start: auto;
   margin-inline-end: auto;
-  margin-block-end: rem(5);
+  margin-block-end: 5px;
 
   @include tablet {
-    max-width: rem(420);
-    font-size: rem(43);
+    max-width: 420px;
+    font-size: 43px;
     line-height: calc(50 / 43);
     margin-inline-start: initial;
     margin-inline-end: initial;
-    margin-block-end: rem(18);
+    margin-block-end: 18px;
   }
 
   @include desktop {
     grid-column: 2 / -2;
     grid-row: 1 / 2;
-    font-size: rem(53);
+    font-size: 53px;
     line-height: calc(57 / 53);
-    margin-block-end: rem(16);
+    margin-block-end: 16px;
   }
 }
 
 .content__advantages-list {
-  max-width: rem(900);
+  max-width: 900px;
 
   @include desktop {
     grid-column: 2 / -2;

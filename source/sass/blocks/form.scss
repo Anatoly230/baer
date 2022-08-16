@@ -1,19 +1,19 @@
 .form {
   background-color: $white;
-  padding-inline-start: rem(30);
-  padding-inline-end: rem(30);
-  padding-block-start: rem(17);
-  padding-block-end: rem(55);
+  padding-inline-start: 30px;
+  padding-inline-end: 30px;
+  padding-block-start: 17px;
+  padding-block-end: 55px;
 
   @include tablet {
-    padding-block-start: rem(54);
-    padding-block-end: rem(49);
+    padding-block-start: 54px;
+    padding-block-end: 49px;
     padding-inline-start: 0;
     padding-inline-end: 0;
   }
 
   @include desktop {
-    padding-block-start: rem(99);
+    padding-block-start: 99px;
   }
 }
 
@@ -30,17 +30,17 @@
 
   @include desktop {
     display: grid;
-    grid-template-columns: rem(150) rem(700) 1fr;
-    column-gap: rem(25);
+    grid-template-columns: 150px 700px 1fr;
+    column-gap: 25px;
   }
 }
 
 .form__desc-text {
-  font-size: rem(13);
+  font-size: 13px;
   line-height: calc(20 / 13);
 
   @include tablet {
-    font-size: rem(17);
+    font-size: 17px;
     line-height: calc(30 / 17);
   }
 
@@ -50,29 +50,29 @@
 }
 
 .form__submit-wrapper {
-  padding-block-start: rem(11);
+  padding-block-start: 11px;
 
   @include tablet {
     @include section-wrapper;
     display: grid;
-    grid-template-columns: rem(230) 1fr;
-    gap: rem(20);
+    grid-template-columns: 230px 1fr;
+    gap: 20px;
     padding: 0;
   }
 
   @include desktop {
-    grid-template-columns: rem(150) rem(230) rem(445) 1fr;
-    column-gap: rem(25);
+    grid-template-columns: 150px 230px 445px 1fr;
+    column-gap: 25px;
   }
 }
 
 .form__submit-obligatory {
-  margin-block-end: rem(30);
-  font-size: rem(14);
+  margin-block-end: 30px;
+  font-size: 14px;
   line-height: calc(16 / 14);
 
   @include tablet {
-    font-size: rem(17);
+    font-size: 17px;
     line-height: calc(30 / 17);
     margin: 0;
     justify-self: end;
