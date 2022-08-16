@@ -98,19 +98,19 @@
   @include desktop {
     height: 52px;
   }
-}
 
-.reviews__slide-btn:nth-of-type(2) {
-  background-image: url("../img/icons/arrow-r.svg");
-  border-inline-start: none;
-}
+  &:nth-of-type(2) {
+    background-image: url("../img/icons/arrow-r.svg");
+    border-inline-start: none;
+  }
 
-.reviews__slide-btn:hover {
-  opacity: 0.6;
-}
+  &:hover {
+    opacity: 0.6;
+  }
 
-.reviews__slide-btn:active {
-  opacity: 0.3;
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .reviews__feebback-btn {

@@ -8,17 +8,17 @@
     grid-template-columns: initial;
     grid-template-rows: auto 1fr;
   }
-}
 
-.card:hover .card__info-wrapper {
-  @include desktop {
-    box-shadow: 0 6px 10px rgba($black, 0.1);
+  &:hover .card__info-wrapper {
+    @include desktop {
+      box-shadow: 0 6px 10px rgba($black, 0.1);
+    }
   }
-}
 
-.card:active .card__info-wrapper {
-  @include desktop {
-    box-shadow: 0 3px 5px rgba($black, 0.1);
+  &:active .card__info-wrapper {
+    @include desktop {
+      box-shadow: 0 3px 5px rgba($black, 0.1);
+    }
   }
 }
 
@@ -88,16 +88,15 @@
     line-height: calc(24 / 20);
     max-width: 238px;
   }
-}
 
-.card__name-link:hover {
-  color: rgba($color: $black, $alpha: 0.6);
-}
+  &:hover {
+    color: rgba($color: $black, $alpha: 0.6);
+  }
 
-.card__name-link:active {
-  color: rgba($color: $black, $alpha: 0.3);
+  &:active {
+    color: rgba($color: $black, $alpha: 0.3);
+  }
 }
-
 
 .card__parametrs {
   margin-block-end: 17px;
@@ -140,15 +139,15 @@
   border: none;
   background-color: transparent;
   cursor: pointer;
-}
 
-.card__price-basket-btn:hover > .card__price-icon {
-  opacity: 1;
-  fill: #63d1bb;
-}
+  &:hover > .card__price-icon {
+    opacity: 1;
+    fill: #63d1bb;
+  }
 
-.card__price-basket-btn:active > .card__price-icon {
-  opacity: 0.3;
+  &:active > .card__price-icon {
+    opacity: 0.3;
+  }
 }
 
 .card__price-value {

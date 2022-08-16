@@ -25,20 +25,19 @@
   transition: transform;
   transition-duration: 100ms;
 
+  &:hover .modal__close-line {
+    background-color: #d16363;
+    opacity: 0.6;
+  }
+
+  &:active .modal__close-line {
+    background-color: #d16363;
+    opacity: 0.4;
+  }
+
   &--show {
     display: initial;
   }
-}
-
-
-.modal__close:hover .modal__close-line {
-  background-color: #d16363;
-  opacity: 0.6;
-}
-
-.modal__close:active .modal__close-line {
-  background-color: #d16363;
-  opacity: 0.4;
 }
 
 .modal__close-line {
@@ -125,14 +124,14 @@
   @include tablet {
     flex-grow: 1;
   }
-}
 
-.modal__choice-name:active {
-  border-color: #62d1ba;
-}
+  &:hover {
+    border-color: rgba($off-black, 0.3);
+  }
 
-.modal__choice-name:hover {
-  border-color: rgba($off-black, 0.3);
+  &:active {
+    border-color: #62d1ba;
+  }
 }
 
 .modal__choice:checked + .modal__choice-name {
