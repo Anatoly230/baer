@@ -19,8 +19,8 @@
     }
 
     @include desktop {
-      height: 34px;
-      background-size: 57px 34px;
+      height: 30px;
+      background-size: 57px auto;
       background-image: url("../img/icons/wave-desktop.svg");
     }
   }

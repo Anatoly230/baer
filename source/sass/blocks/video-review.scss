@@ -115,23 +115,24 @@
     border-inline-end: 1px solid #ececec;
     gap: 27px;
   }
+
+  &::before {
+    display: block;
+    content: url("../img/icons/cam.svg");
+    object-fit: contain;
+    width: 32px;
+    height: 22px;
+
+    @include tablet {
+      margin-block-start: rem(-7);
+    }
+
+    @include desktop {
+      margin-block-start: 0;
+    }
+  }
 }
 
-.video-review__title::before {
-  display: block;
-  content: url("../img/icons/cam.svg");
-  object-fit: contain;
-  width: 32px;
-  height: 22px;
-
-  @include tablet {
-    margin-block-start: rem(-7);
-  }
-
-  @include tablet {
-    margin-block-start: 0;
-  }
-}
 
 .video-review__text-wrapper {
   padding-block-start: 35px;

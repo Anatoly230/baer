@@ -20,24 +20,25 @@
       "flag info-c . map"
       ". btn-c . map";
   }
-}
 
-.contact-us::before {
-  @include desktop {
-    justify-self: center;
-    position: relative;
-    display: block;
-    width: 47px;
-    height: 81px;
-    content: "";
-    background-image: url("/img/icons/flag.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    grid-area: flag;
-    margin-block-start: 63px;
+  &::before {
+    @include desktop {
+      justify-self: center;
+      position: relative;
+      display: block;
+      width: 47px;
+      height: 81px;
+      content: "";
+      background-image: url("/img/icons/flag.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      grid-area: flag;
+      margin-block-start: 63px;
+    }
   }
 }
+
 
 .contact-us__info-wrapper {
   @include section-wrapper;

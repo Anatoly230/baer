@@ -177,18 +177,14 @@
               <use xlink:href="./img/icons/sprite.svg#play-btn"></use>
             </svg>
           </a>
-          <!-- <picture>
+          <picture>
             <source type="image/webp" media="(min-width:768px)"
               srcset="./img/catalog/video-tablet.webp 1x, ./img/catalog/video-tablet@2x.webp 2x">
             <source media="(min-width:768px)"
               srcset="./img/catalog/video-tablet.jpg 1x, ./img/catalog/video-tablet@2x.jpg 2x">
             <img class="video-review__pic" src="./img/catalog/video-mobile.jpg"
               srcset="./img/catalog/video-mobile@2x.jpg 2x" alt="Наглядное видео процеса производства">
-          </picture> -->
-          <video class="video-review__pic video-review__pic--movie" poster="./img/catalog/video-mobile.jpg" controls
-            preload="metadata">
-            <source src="./img/video/mishka_review.mp4" type="video/mp4">
-          </video>
+          </picture>
         </div>
         <p class="video-review__title">
           <span class="video-review__title-text">Процесс производства</span>
@@ -255,14 +251,12 @@
       <p class="modal__desc">Выберите размер:</p>
       <div class="modal__choice-wrapper">
 
-        <input aria-labelledby="small" class="modal__choice" id="small" type="checkbox"
-          name="size" value="small" checked>
+        <input aria-labelledby="small" class="modal__choice" id="small" type="checkbox" name="size" value="small"
+          checked>
         <label class="modal__choice-name" for="small">s</label>
-        <input aria-labelledby="medium" class="modal__choice" id="medium" type="checkbox"
-          name="size" value="medium">
+        <input aria-labelledby="medium" class="modal__choice" id="medium" type="checkbox" name="size" value="medium">
         <label class="modal__choice-name" for="medium">m</label>
-        <input aria-labelledby="large" class="modal__choice" id="large" type="checkbox"
-          name="size" value="large">
+        <input aria-labelledby="large" class="modal__choice" id="large" type="checkbox" name="size" value="large">
         <label class="modal__choice-name" for="large">l</label>
       </div>
       <button class="modal__submit btn btn--modal" type="button">Добавить</button>

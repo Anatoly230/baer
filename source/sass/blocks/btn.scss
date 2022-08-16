@@ -1,6 +1,3 @@
-$hover-clr: #5eaa2f;
-$hover-show-clr: #ebebeb;
-
 .btn {
   display: block;
   width: 100%;
@@ -19,31 +16,31 @@ $hover-show-clr: #ebebeb;
     font-size: 17px;
     line-height: calc(20 / 17);
   }
-}
 
-.btn--modal {
-  color: $white;
-  background-color: #63d1bb;
-  border-color: transparent;
-}
+  &:hover {
+    border-color: transparent;
+    background-color: $off-black;
+    color: $white;
+  }
 
-.btn--form {
-  font-size: 17px;
-  padding-block-start: 16px;
-}
+  &:active {
+    border-color: transparent;
+    color: rgba($white, 0.3);
+  }
 
-.btn:hover {
-  border-color: transparent;
-  background-color: $off-black;
-  color: $white;
-}
+  &--modal {
+    color: $white;
+    background-color: #63d1bb;
+    border-color: transparent;
+  }
 
-.btn:active {
-  border-color: transparent;
-  color: rgba($white, 0.3);
-}
+  &--modal:hover {
+    border-color: #63d1bb;
+    background-color: rgba($color: #63d1bb, $alpha: 0.9);
+  }
 
-.btn--modal:hover {
-  border-color: #63d1bb;
-  background-color: rgba($color: #63d1bb, $alpha: 0.9);
+  &--form {
+    font-size: 17px;
+    padding-block-start: 16px;
+  }
 }

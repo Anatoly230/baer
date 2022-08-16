@@ -1,5 +1,3 @@
-$green: #46c1ae;
-
 .social-list {
   @include reset-list-style;
   display: flex;
@@ -11,14 +9,14 @@ $green: #46c1ae;
   @include tablet {
     max-width: 140px;
   }
-}
 
-.social-list__item:hover .social-list__item-pic {
-  fill: $green;
-}
+  &:hover .social-list__item-pic {
+    fill: #46c1ae;
+  }
 
-.social-list__item:active .social-list__item-pic {
-  opacity: 0.3;
+  &:active .social-list__item-pic {
+    opacity: 0.3;
+  }
 }
 
 .social-list__item-pic {
