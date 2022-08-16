@@ -16,3 +16,11 @@
     column-gap: 20px;
   }
 }
+
+.advantages__item {
+  margin: 0 auto;
+
+  @include tablet {
+    margin: initial;
+  }
+}
