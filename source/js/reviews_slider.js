@@ -69,5 +69,3 @@ slideRight.addEventListener("click" || "touch", function (e) {
 let slideMove = function(){
   return rightSlide(quotes);
 }
-
-window.setInterval(slideMove, 40000)

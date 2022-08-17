@@ -40,14 +40,6 @@
     outline: none;
     border-color: #62d1ba;
   }
-
-  &--phone {
-    margin-block-end: 30px;
-
-    @include tablet {
-      margin-block-end: 5px;
-    }
-  }
 }
 
 .field__item {
