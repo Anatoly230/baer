@@ -190,3 +190,11 @@
     row-gap: 24px;
   }
 }
+
+.fieldset__item--phone {
+  margin-block-end: 30px;
+
+  @include tablet {
+    margin-block-end: 5px;
+  }
+}

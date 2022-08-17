@@ -6,7 +6,7 @@ const nav = header.querySelector(".header__nav");
 if (!nav.classList.contains("header__nav--hide")) {
 
   nav.classList.add("header__nav--hide");
-  header.classList.add("header--hide");
+  header.classList.add("page__header--hide");
   toggleMenu.classList.remove("toggle-menu--hide");
 }
 
