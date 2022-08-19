@@ -9,14 +9,6 @@
   @include tablet {
     max-width: 140px;
   }
-
-  &:hover .social-list__item-pic {
-    fill: #46c1ae;
-  }
-
-  &:active .social-list__item-pic {
-    opacity: 0.3;
-  }
 }
 
 .social-list__item-pic {
@@ -28,4 +20,12 @@
   vertical-align: middle;
   display: flex;
   align-items: center;
+
+  &:hover .social-list__item-pic {
+    fill: #46c1ae;
+  }
+
+  &:active .social-list__item-pic {
+    opacity: 0.3;
+  }
 }

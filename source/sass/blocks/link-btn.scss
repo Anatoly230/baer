@@ -2,10 +2,18 @@
   display: block;
   background-color: #63d1bb;
   text-decoration: none;
+
+  &:hover {
+    background-color: #59d5bc;
+  }
 }
 
 .link-btn:nth-of-type(even) {
   background-color: #56c3b2;
+
+  &:hover {
+    background-color: #46c1ae;
+  }
 }
 
 .link-btn__info-wrapper {

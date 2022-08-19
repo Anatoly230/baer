@@ -16,8 +16,8 @@ modalBG.addEventListener("click" || "touch", function (event) {
 });
 
 document.addEventListener("keydown", function (e) {
-  e.preventDefault();
   if (e.keyCode === 27) {
+    e.preventDefault();
     modalBG.classList.remove("window-background--show");
   }
 })

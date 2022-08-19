@@ -264,7 +264,7 @@
         <dl class="contact-us__contact-info contact-info">
           <div class="contact-info__wrapper">
             <dt class="contact-info__name">e-mail:</dt>
-            <dd class="contact-info__value">info@mimimishkashop.ru</dd>
+            <dd class="contact-info__value"><a class="contact-info__value-link" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></dd>
           </div>
           <div class="contact-info__wrapper">
             <dt class="contact-info__name">адрес:</dt>
@@ -287,7 +287,7 @@
           <source type="image/jpg" media="(min-width: 768px)"
             srcset="./img/tablet-map.jpg 1x, ./img/tablet-map@2x.jpg 2x">
           <img class="map__replacement" src="./img/mobile-map.jpg" alt="карта расположения магазина"
-            srcset="./img/mobile-map@2x.jpg 2x" width="320" height="362">
+            srcset="./img/mobile-map@2x.jpg 2x" width="320" height="454">
         </picture>
         <iframe class="map__reference"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2237.4008564625838!2d37.6357461163052!3d55.89040698059036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b5372cafd22be1%3A0x4718a89e0c347737!2z0JzQtdC40LrQn9GA0L4!5e0!3m2!1sru!2sru!4v1650029500447!5m2!1sru!2sru"
@@ -341,7 +341,7 @@
     </div>
   </footer>
   <div class="window-background js-modal">
-    <div class="window-background__modal modal">
+    <form method="post" action="https://echo.htmlacademy.ru" class="window-background__modal modal">
       <button type="button" aria-label="Закрыть" class="modal__close">
         <span class="modal__close-line"></span>
         <span class="modal__close-line"></span>
@@ -360,8 +360,8 @@
           name="size" value="large">
         <label class="modal__choice-name" for="large">l</label>
       </div>
-      <button class="modal__submit btn btn--modal" type="button">Добавить</button>
-    </div>
+      <button class="modal__submit btn btn--modal" type="submit">Добавить</button>
+    </form>
   </div>
   <script src="js/toggle-menu.min.js"></script>
   <script src="./js/find-count.min.js"></script>

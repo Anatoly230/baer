@@ -64,20 +64,20 @@
   @include desktop {
     transform: translateX(-50%) translateY(-50%);
   }
+
+  &:hover .video-review__btn-pic {
+    transform: scale(120%);
+  }
+
+  &:active .video-review__btn-pic {
+    transform: initial;
+    opacity: 0.8;
+  }
 }
 
 .video-review__btn-pic {
   display: block;
   margin: 0;
-}
-
-.video-review__btn:hover .video-review__btn-pic {
-  transform: scale(120%);
-}
-
-.video-review__btn:active .video-review__btn-pic {
-  transform: initial;
-  opacity: 0.8;
 }
 
 .video-review__title {
