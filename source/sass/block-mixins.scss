@@ -73,6 +73,12 @@
   @content;
 }
 
+@mixin toggle-parametrs() {
+  width: 20px;
+  height: 2px;
+  background-color: $black;
+}
+
 
 // for block debug start
 @mixin show-outline($color: red, $weight: 2px) {

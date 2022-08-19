@@ -51,11 +51,28 @@
   }
 }
 
-.contact-info__wrapper:first-of-type .contact-info__value {
-  text-decoration: underline;
+.contact-info__value-link {
+  color: inherit;
   text-decoration-color: #62d1ba;
   text-decoration-thickness: 1px;
   text-underline-offset: 6px;
+
+  @include tablet {
+    text-underline-offset: 7px;
+  }
+
+  @include desktop {
+    text-underline-offset: 14px;
+  }
+
+  &:hover {
+    color: #46c1ae;
+    text-decoration-color: #46c1ae;
+  }
+
+  &:active {
+    text-decoration: none;
+  }
 }
 
 .contact-info__value-addres {
